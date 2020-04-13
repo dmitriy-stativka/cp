@@ -1,0 +1,97 @@
+body{
+  font: 16px/1.17 'Nunito Sans', sans-serif;
+  font-weight: 500;
+  color: #000;
+
+  & * {
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      border-radius: 2px;
+      background-color: rgba(207,160,92,0.5);
+    }
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 3px;
+    }
+  }
+
+}
+
+a{
+  text-decoration: none;
+  color: $white;
+  transition: color 0.2s ease;
+  cursor: pointer;
+  outline: none!important;
+
+  &:hover{
+    transition: color 0.2s ease;
+  }  
+
+  &:active,
+  &:focus,
+  &:visited{
+    color: $white;
+    transition: color .3 ease;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button{
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+.header,
+.footer {
+	flex-shrink: 1;
+	width: 100%;
+}
+
+.main {
+	flex-grow: 1;
+  width: 100%;
+  position: relative;
+}
+
+input {
+  background: rgb(158, 156, 158);
+  opacity: 1;
+  border-radius: 5px;
+  width: 175px;
+  padding: 7.5px 8px;
+  border: 1px solid transparent;
+  outline: none;
+
+  &[type="submit"]{
+    opacity: 1;
+    font-weight: 600;
+    padding: 15px;
+    cursor: pointer;
+  }
+  
+  &:visited,
+  &:active,
+  &:hover,
+  &:focus {
+    background: $white;
+    opacity: 1;
+  }
+}
+
+
+

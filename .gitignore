@@ -1,0 +1,75 @@
+# W3TC - W3 Total Cache
+w3tc-config/
+cache/
+mobile/cache
+wp-content/cache
+wp-content/advanced-cache.php
+wp-content/object-cache.php
+wp-content/themes/optipack/node_modules
+
+# WP Rocket
+wp-content/plugins/wp-rocket/cache.json
+wp-content/wp-rocket-config/*
+
+# Redirection plugin
+wp-content/plugins/v-catena-redirections/admin/data/*
+
+# Netbeans
+/nbproject/private/
+nbproject
+
+# visual studio code
+.vscode/*
+
+# WebStorm / PhpStorm
+.idea/*
+.idea
+
+# Env
+.htaccess
+.gitkeep
+nginx.conf
+wp-config.php
+wp-config-sample.php
+
+
+
+node_modules
+#bower_components
+.sass-cache
+#Gemfile*
+
+
+
+##########################
+*.log
+*.sql
+*.sh
+sitemap_index.xml
+sitemap.xml
+sitemap.xml.gz
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+readme.html
+license.txt
+#wp-content/upgrade/
+#wp-content/plugins/index.php
+#wp-content/index.php
+#wp-includes
+#wp-admin
+#wp-*.php
+#xmlrpc.php
+
+#toplist-logos
+#bonus-bars
+#bonusAssets
+#brand-logos
+#game-thumbnails
+#rec-logos
+#top3-previews
+#Scheema/
+#scheema/
+#/go/connect.php
+#.DS_Store
+/wp-content/wflogs/
