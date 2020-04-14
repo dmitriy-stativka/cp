@@ -1,5 +1,5 @@
-body{
-  font: 16px/1.17 'Nunito Sans', sans-serif;
+body {
+  font: 16px/1.17 "Nunito Sans", sans-serif;
   font-weight: 500;
   color: #000;
 
@@ -8,10 +8,10 @@ body{
       -webkit-appearance: none;
       width: 7px;
     }
-  
+
     &::-webkit-scrollbar-thumb {
       border-radius: 2px;
-      background-color: rgba(207,160,92,0.5);
+      background-color: rgba(207, 160, 92, 0.5);
     }
 
     &::-webkit-scrollbar {
@@ -19,25 +19,24 @@ body{
       width: 3px;
     }
   }
-
 }
 
-a{
+a {
   text-decoration: none;
   color: $white;
   transition: color 0.2s ease;
   cursor: pointer;
-  outline: none!important;
+  outline: none !important;
 
-  &:hover{
+  &:hover {
     transition: color 0.2s ease;
-  }  
+  }
 
   &:active,
   &:focus,
-  &:visited{
+  &:visited {
     color: $white;
-    transition: color .3 ease;
+    transition: color 0.3 ease;
   }
 }
 
@@ -47,23 +46,21 @@ ul {
   margin: 0;
 }
 
-button{
+button {
   background: none;
   border: none;
   outline: none;
   box-shadow: none;
 }
 
-
-
 .header,
 .footer {
-	flex-shrink: 1;
-	width: 100%;
+  flex-shrink: 1;
+  width: 100%;
 }
 
 .main {
-	flex-grow: 1;
+  flex-grow: 1;
   width: 100%;
   position: relative;
 }
@@ -77,13 +74,16 @@ input {
   border: 1px solid transparent;
   outline: none;
 
-  &[type="submit"]{
+  &[type="submit"] {
     opacity: 1;
     font-weight: 600;
     padding: 15px;
     cursor: pointer;
   }
-  
+
+  &[type="search"] {
+  }
+
   &:visited,
   &:active,
   &:hover,
@@ -93,5 +93,11 @@ input {
   }
 }
 
+.wrapper {
+}
 
 
+.icon {
+  width: 1.5em;
+  height: 1.5em;
+}
