@@ -1,0 +1,16 @@
+.top-site {
+  position: relative;
+  background: url(/wp-content/themes/cp/images/Bg.png) top center no-repeat;
+  background-size: cover;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9;
+  }
+}
