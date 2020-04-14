@@ -299,7 +299,7 @@
   z-index: -1;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
-  &.burger-menu__block-show {    
+  &.burger-menu__block-show {
     opacity: 1;
     transform: translateX(0%);
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
