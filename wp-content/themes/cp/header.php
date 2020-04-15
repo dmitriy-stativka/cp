@@ -13,8 +13,11 @@ section and everything up until
     >
     <head>
       <meta charset="<?php bloginfo( 'charset' ); ?>" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />	  
-	  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat:wght@500&display=swap"
+        rel="stylesheet"
+      />
       <link rel="profile" href="https://gmpg.org/xfn/11" />
       <link
         rel="stylesheet"
@@ -51,37 +54,6 @@ section and everything up until
             </button>
           </div>
         </header>
-        <!-- search block (invisible). After click on search-btn becomes visible-->
-        <div class="nav-tools__search-block_click">
-          <div class="search-block_click-container">
-            <div class="search-block-line">
-              <input type="search" placeholder="Поиск среди 1 статей" />
-              <button>
-                <svg class="icon"><use xlink:href="#fish" /></svg>
-              </button>
-            </div>
-            <div class="search-block-links">
-              <div><span>Часто ищут:</span></div>
-              <div>
-                <a href="">Законы общественного процесса</a>
-                <a href="">Концепции развития общества</a>
-                <a href="">Законы общественного процесса</a>
-                <a href="">Концепции развития общества</a>
-                <a href="">Новая модель организационной деятельности</a>
-                <a href="">Законы общественного процесса</a>
-                <a href="">Новая модель организационной деятельности</a>
-              </div>
-            </div>
-          </div>
-        </div>
-		<!-- end of search block -->
-		<!-- Burger-menu onclick block -->
-			<div class="burger-menu__block">
-				<div class="burger-menu__container">
-					
-				</div>
-			</div>
-		<!-- End of Burger-menu onclick block -->
       </div>
     </body>
   </html>
