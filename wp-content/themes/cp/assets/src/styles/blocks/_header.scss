@@ -9,6 +9,7 @@
   height: 100%;
   align-items: center;
   background: rgba(0, 0, 0, 0.6);
+  transition: background 0.3s ease;
 
   .header_logo {
     display: flex;
@@ -213,5 +214,6 @@
   }
   &.black-header {
     background: #242323;
+    transition: background 0.3s ease;
   }
 }

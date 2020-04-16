@@ -43,6 +43,7 @@ $(function () {
 $("#textArea-connect").on("keydown keyup", function () {
   this.style.height = "1px";
   this.style.height = this.scrollHeight + "px";
+  this.style.transition = "height .3s ease";
 });
 
 $(document).ready(function () {
@@ -56,6 +57,27 @@ $(document).ready(function () {
     });
   }
 });
+
+
+$('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,    
+    fade: true,
+    vertical: false,
+    centerMode: true,
+    asNavFor: '.slider-nav'
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 4,
+    centerPadding: '0px',
+    slidesToScroll: 1, 
+    asNavFor: '.slider-for',
+    dots: true,
+    centerMode: true,
+    vertical: true,
+    focusOnSelect: true
+  });
 
 // var $ua = $(".language-ua"),
 //   $ru = $(".language-ru"),

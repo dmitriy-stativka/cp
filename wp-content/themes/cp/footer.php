@@ -64,8 +64,7 @@
 <!-- wrapper end -->
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script src="/wp-content/themes/cp/js/app.min.js"></script>
 </body>
 </html>

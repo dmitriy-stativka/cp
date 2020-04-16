@@ -13,7 +13,8 @@ section and everything up until
     >
     <head>
       <meta charset="<?php bloginfo( 'charset' ); ?>" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
       <link
         href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat:wght@500&display=swap"
         rel="stylesheet"
@@ -54,7 +55,3 @@ section and everything up until
             </button>
           </div>
         </header>
-      </div>
-    </body>
-  </html>
-</div>
