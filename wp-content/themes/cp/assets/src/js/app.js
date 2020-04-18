@@ -88,4 +88,13 @@ $(".slider-nav__block").click(function() {
   $('.slider-nav__block').removeClass('active-block');
   $(this).addClass('active-block');  
   });
+
+  $(".hidden-block__open").on("click", function() {
+    $(".text-block__half-hidden").css("max-height", "800px");
+    $(".hidden-block__open").hide(1500);
+    $(".text-block__half-hidden").css("box-shadow" , "none");
+    $(".hidden-block__about-link").animate();
+  })
   
+
+
