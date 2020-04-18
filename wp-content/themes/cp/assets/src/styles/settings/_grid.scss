@@ -137,6 +137,11 @@
           width: 100%;
         }
       }
+      &--3-4 {
+        @media (min-width: $desktop) {
+          width: calc(100% - 25%);
+        }
+      }
     }
   }
 }

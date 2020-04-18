@@ -286,6 +286,7 @@ Template Name: Front-page
     </section>     
 </section>
 <!-- End of top-black-slider part -->
+
 <!-- Beginning of section with different single articles and search block -->
 <section class="main-content">
   <div class="main_container">
@@ -386,19 +387,244 @@ Template Name: Front-page
           <span>1 234 просмотров</span>
         </div>
       </a>
-    </div>
 
-    <div class="flex_col--1-4 main-left__conteiner">
+      <a href="#" class="flex_col-desk--1-3 main-content__block">
+        <img src="/wp-content/themes/cp/images/img.png" alt="">
+        <div class="slider-nav__block-top">
+          <span class="nav__block-top__category"> Экспертная деятельность </span>
+          <span class="nav__block-top__single-categ"> Заседания клуба </span>
+        </div>
+        <h3>
+          Законы общественного процесса. 
+          Концепции развития общества.
+        </h3>
+        <div class="slider-nav__block-bottom">
+          <span>04.04.2020</span>
+          <span>1 234 просмотров</span>
+        </div>
+      </a>
+
+      <a href="#" class="flex_col-desk--1-3 main-content__block">
+        <img src="/wp-content/themes/cp/images/img.png" alt="">
+        <div class="slider-nav__block-top">
+          <span class="nav__block-top__category"> Экспертная деятельность </span>
+          <span class="nav__block-top__single-categ"> Заседания клуба </span>
+        </div>
+        <h3>
+          Законы общественного процесса. 
+          Концепции развития общества.
+        </h3>
+        <div class="slider-nav__block-bottom">
+          <span>04.04.2020</span>
+          <span>1 234 просмотров</span>
+        </div>
+      </a>
+
+      <a href="#" class="flex_col-desk--1-3 main-content__block">
+        <img src="/wp-content/themes/cp/images/img.png" alt="">
+        <div class="slider-nav__block-top">
+          <span class="nav__block-top__category"> Экспертная деятельность </span>
+          <span class="nav__block-top__single-categ"> Заседания клуба </span>
+        </div>
+        <h3>
+          Законы общественного процесса. 
+          Концепции развития общества.
+        </h3>
+        <div class="slider-nav__block-bottom">
+          <span>04.04.2020</span>
+          <span>1 234 просмотров</span>
+        </div>
+      </a>
+
+    </div>
+    <div class="flex_col-desk--1-4 main-right__conteiner">
       <div class="main__search-block-line">
-        <input type="search" placeholder="Поиск среди 1 статей" />
+        <input type="search" placeholder="Искать среди 10 статей..." />
         <button>
           <span><svg class="icon"><use xlink:href="#search"/></svg></span>          
         </button>
+      </div>
+      <h2>Популярные статьи</h2>
+      <div class="main-right__conteiner__blocks">
+
+        <a class="main-right__conteiner-article" href="#">
+          <div class="conteiner-article-left">
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </div>
+          <div class="conteiner-article-img">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+          </div>
+        </a>
+
+        <a class="main-right__conteiner-article" href="#">
+          <div class="conteiner-article-left">
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </div>
+          <div class="conteiner-article-img">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+          </div>
+        </a>
+
+        <a class="main-right__conteiner-article" href="#">
+          <div class="conteiner-article-left">
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </div>
+          <div class="conteiner-article-img">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+          </div>
+        </a>
+
+        <a class="main-right__conteiner-article" href="#">
+          <div class="conteiner-article-left">
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </div>
+          <div class="conteiner-article-img">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+          </div>
+        </a>
+
+        <a class="main-right__conteiner-article" href="#">
+          <div class="conteiner-article-left">
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </div>
+          <div class="conteiner-article-img">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+          </div>
+        </a>
+
+        <a class="main-right__conteiner-article" href="#">
+          <div class="conteiner-article-left">
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </div>
+          <div class="conteiner-article-img">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+          </div>
+        </a>
+
+        <a class="main-right__conteiner-article" href="#">
+          <div class="conteiner-article-left">
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </div>
+          <div class="conteiner-article-img">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+          </div>
+        </a>
+
+        <a class="main-right__conteiner-article" href="#">
+          <div class="conteiner-article-left">
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </div>
+          <div class="conteiner-article-img">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+          </div>
+        </a>
+
+        <a class="main-right__conteiner-article" href="#">
+          <div class="conteiner-article-left">
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </div>
+          <div class="conteiner-article-img">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+          </div>
+        </a>
+
+        <a class="main-right__conteiner-article" href="#">
+          <div class="conteiner-article-left">
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </div>
+          <div class="conteiner-article-img">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+          </div>
+        </a>
+
       </div>
     </div>
   </div>
 </section>
 <!-- End of section with different single articles and search block -->
+
+<!-- About us section that is located above footer -->
+<section class="about-us">
+  <div class="about-us__container">
+    <div class="flex_col-desk--1-4 about-us__img-block">
+      <img src="/wp-content/themes/cp/images/About-us-img.png" alt="">
+    </div>
+    <div class="flex_col-desk--3-4 about-us__text-block">
+3
+    </div>
+  </div>
+</section>
+<!-- End of about us section that is located above footer -->
 
 <div style="margin-top: 1500px;">1</div>
 
