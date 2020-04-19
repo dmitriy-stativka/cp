@@ -114,6 +114,7 @@ Template Name: Front-page
   </div>
 </div>
 <!-- End of Burger-menu onclick block -->
+
 <!-- top-black-slider part -->
 <section class="top-site">
     <section class="top-site__bg">
@@ -612,6 +613,44 @@ Template Name: Front-page
   </div>
 </section>
 <!-- End of section with different single articles and search block -->
+
+<!-- Этто видео блог -->
+<section class="vide-block">
+  <div class="bg-video-block">      
+  </div>
+  <div class="video-block__container flex_col-desk">
+    <div class="video-block__top">
+      <h2>Полезные материалы с нашего YouTube канала</h2>
+      <a href="">Посетить YouTube канал  <span class="right-arrow"></span></a>
+    </div>
+
+    <div id="slideBox">
+      <!--Sidebar-->
+      <div class="sliderSidebar">
+        <div><iframe width="100%"  src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div><iframe width="100%"  src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div><iframe width="100%"  src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div><iframe width="100%"  src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div><iframe width="100%"  src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div><iframe width="100%"  src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </div>	
+        
+      <div id="main-image" class="sliderMain">
+        <div><iframe src="https://www.youtube.com/embed/8_kqUfJcJAw"></iframe></div>
+        <div><img  src="/wp-content/themes/cp/images/video-bg.png" alt=""></div>
+        
+        <div><iframe src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div><iframe src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+  
+        <div><img src="/wp-content/themes/cp/images/video-bg.png" alt=""></div>
+        <div><img src="/wp-content/themes/cp/images/video-bg.png" alt=""></div>
+      </div>
+        
+    </div><!--slideBox-->
+  
+  </div>
+</section>
+<!-- Этто был видео блог -->
 
 <!-- About us section that is located above footer -->
 <section class="about-us">
