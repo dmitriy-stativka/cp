@@ -137,9 +137,9 @@ Template Name: Front-page
               </ul>
               <div class="top-slider">
                
-                  <div class="slider-nav">
+                  <div class="slider-nav flex_col-desk--1-4">
                     <div class="slider-nav__block active-block">
-                      <div class="slider-nav__block-top">
+                      <div class="slider-nav__block-top blue">
                         <span class="nav__block-top__category"> Экспертная деятельность </span>
                         <span class="nav__block-top__single-categ"> Заседания клуба </span>
                       </div>
@@ -154,7 +154,7 @@ Template Name: Front-page
                       </div>
                     </div>
                     <div class="slider-nav__block">
-                      <div class="slider-nav__block-top">
+                      <div class="slider-nav__block-top red">
                         <span class="nav__block-top__category"> Публикации </span>
                         <span class="nav__block-top__single-categ"> Корпоративное право </span>
                       </div>
@@ -169,7 +169,7 @@ Template Name: Front-page
                       </div>
                     </div>
                     <div class="slider-nav__block">
-                      <div class="slider-nav__block-top">
+                      <div class="slider-nav__block-top green">
                         <span class="nav__block-top__category"> Научная критика </span>
                         <!-- <span class="nav__block-top__single-categ"> Заседания клуба </span> -->
                       </div>
@@ -184,7 +184,7 @@ Template Name: Front-page
                       </div>
                     </div>
                     <div class="slider-nav__block">
-                      <div class="slider-nav__block-top">
+                      <div class="slider-nav__block-top yellow">
                         <span class="nav__block-top__category"> Мероприятия </span>
                         <span class="nav__block-top__single-categ"> Собрания </span>
                       </div>
@@ -199,9 +199,10 @@ Template Name: Front-page
                       </div>
                     </div>                            
                   </div>
-                  <div class="slider-for">                   
+                  <div class="slider-for flex_col-tab--1-1 flex_col-desk--3-4">
+
                    <div class="slider-for__container content-active">
-                    <div class="slider-nav__block-top">
+                    <div class="slider-nav__block-top blue">
                       <span class="nav__block-top__category"> Экспертная деятельность </span>
                       <span class="nav__block-top__single-categ"> Заседания клуба </span>
                     </div>
@@ -220,8 +221,9 @@ Template Name: Front-page
                       Читать статью полностью
                     </a>
                    </div>    
+
                    <div class="slider-for__container">
-                    <div class="slider-nav__block-top">
+                    <div class="slider-nav__block-top red">
                       <span class="nav__block-top__category"> Экспертная деятельность </span>
                       <span class="nav__block-top__single-categ"> Заседания клуба </span>
                     </div>
@@ -239,9 +241,10 @@ Template Name: Front-page
                     <a href="#" class="read-more">
                       Читать статью полностью
                     </a>
-                   </div>   
+                   </div> 
+
                    <div class="slider-for__container">
-                    <div class="slider-nav__block-top">
+                    <div class="slider-nav__block-top green">
                       <span class="nav__block-top__category"> Экспертная деятельность </span>
                       <span class="nav__block-top__single-categ"> Заседания клуба </span>
                     </div>
@@ -259,9 +262,10 @@ Template Name: Front-page
                     <a href="#" class="read-more">
                       Читать статью полностью
                     </a>
-                   </div>   
+                   </div>  
+
                    <div class="slider-for__container">
-                    <div class="slider-nav__block-top">
+                    <div class="slider-nav__block-top yellow">
                       <span class="nav__block-top__category"> Экспертная деятельность </span>
                       <span class="nav__block-top__single-categ"> Заседания клуба </span>
                     </div>
@@ -279,7 +283,17 @@ Template Name: Front-page
                     <a href="#" class="read-more">
                       Читать статью полностью
                     </a>
-                   </div>                
+                   </div>  
+                      <div class="nav-bar__mobile">
+                          <div class="nav-bar__prev"></div>
+                          <div class="dots-mobile">
+                            <div class="dot dot-active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                          </div>                        
+                          <div class="nav-bar__next"></div>
+                      </div>              
                   </div>
               </div>
           </section>
@@ -292,152 +306,157 @@ Template Name: Front-page
   <div class="main_container">
 
     <div class="flex_col-desk--3-4 main-left__conteiner">
-      <a href="#" class="flex_col-desk--1-3 main-content__block">
-        <img src="/wp-content/themes/cp/images/img.png" alt="">
-        <div class="slider-nav__block-top">
-          <span class="nav__block-top__category"> Экспертная деятельность </span>
-          <span class="nav__block-top__single-categ"> Заседания клуба </span>
-        </div>
-        <h3>
-          Законы общественного процесса. 
-          Концепции развития общества.
-        </h3>
-        <div class="slider-nav__block-bottom">
-          <span>04.04.2020</span>
-          <span>1 234 просмотров</span>
-        </div>
-      </a>
-   
-      <a href="#" class="flex_col-desk--1-3 main-content__block">
-        <img src="/wp-content/themes/cp/images/img.png" alt="">
-        <div class="slider-nav__block-top">
-          <span class="nav__block-top__category"> Экспертная деятельность </span>
-          <span class="nav__block-top__single-categ"> Заседания клуба </span>
-        </div>
-        <h3>
-          Законы общественного процесса. 
-          Концепции развития общества.
-        </h3>
-        <div class="slider-nav__block-bottom">
-          <span>04.04.2020</span>
-          <span>1 234 просмотров</span>
-        </div>
-      </a>
-   
-      <a href="#" class="flex_col-desk--1-3 main-content__block">
-        <img src="/wp-content/themes/cp/images/img.png" alt="">
-        <div class="slider-nav__block-top">
-          <span class="nav__block-top__category"> Экспертная деятельность </span>
-          <span class="nav__block-top__single-categ"> Заседания клуба </span>
-        </div>
-        <h3>
-          Законы общественного процесса. 
-          Концепции развития общества.
-        </h3>
-        <div class="slider-nav__block-bottom">
-          <span>04.04.2020</span>
-          <span>1 234 просмотров</span>
-        </div>
-      </a>
-   
-      <a href="#" class="flex_col-desk--1-3 main-content__block">
-        <img src="/wp-content/themes/cp/images/img.png" alt="">
-        <div class="slider-nav__block-top">
-          <span class="nav__block-top__category"> Экспертная деятельность </span>
-          <span class="nav__block-top__single-categ"> Заседания клуба </span>
-        </div>
-        <h3>
-          Законы общественного процесса. 
-          Концепции развития общества.
-        </h3>
-        <div class="slider-nav__block-bottom">
-          <span>04.04.2020</span>
-          <span>1 234 просмотров</span>
-        </div>
-      </a>
-   
-      <a href="#" class="flex_col-desk--1-3 main-content__block">
-        <img src="/wp-content/themes/cp/images/img.png" alt="">
-        <div class="slider-nav__block-top">
-          <span class="nav__block-top__category"> Экспертная деятельность </span>
-          <span class="nav__block-top__single-categ"> Заседания клуба </span>
-        </div>
-        <h3>
-          Законы общественного процесса. 
-          Концепции развития общества.
-        </h3>
-        <div class="slider-nav__block-bottom">
-          <span>04.04.2020</span>
-          <span>1 234 просмотров</span>
-        </div>
-      </a>
-   
-      <a href="#" class="flex_col-desk--1-3 main-content__block">
-        <img src="/wp-content/themes/cp/images/img.png" alt="">
-        <div class="slider-nav__block-top">
-          <span class="nav__block-top__category"> Экспертная деятельность </span>
-          <span class="nav__block-top__single-categ"> Заседания клуба </span>
-        </div>
-        <h3>
-          Законы общественного процесса. 
-          Концепции развития общества.
-        </h3>
-        <div class="slider-nav__block-bottom">
-          <span>04.04.2020</span>
-          <span>1 234 просмотров</span>
-        </div>
-      </a>
+       <div class="blocks-container">
+          <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
+            <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
+            <div class="slider-nav__block-top blue">
+              <span class="nav__block-top__category"> Экспертная деятельность </span>
+              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            </div>
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития общества.
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </a>
+      
+          <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
+            <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
+            <div class="slider-nav__block-top yellow">
+              <span class="nav__block-top__category"> Экспертная деятельность </span>
+              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            </div>
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития общества.
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </a>
+      
+          <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
+            <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
+            <div class="slider-nav__block-top green">
+              <span class="nav__block-top__category"> Экспертная деятельность </span>
+              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            </div>
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития общества.
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </a>
+      
+          <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
+            <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
+            <div class="slider-nav__block-top red">
+              <span class="nav__block-top__category"> Экспертная деятельность </span>
+              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            </div>
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития общества.
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </a>
+      
+          <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
+            <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
+            <div class="slider-nav__block-top green">
+              <span class="nav__block-top__category"> Экспертная деятельность </span>
+              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            </div>
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития общества.
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </a>
+      
+          <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
+            <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
+            <div class="slider-nav__block-top blue">
+              <span class="nav__block-top__category"> Экспертная деятельность </span>
+              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            </div>
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития общества.
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </a>
 
-      <a href="#" class="flex_col-desk--1-3 main-content__block">
-        <img src="/wp-content/themes/cp/images/img.png" alt="">
-        <div class="slider-nav__block-top">
-          <span class="nav__block-top__category"> Экспертная деятельность </span>
-          <span class="nav__block-top__single-categ"> Заседания клуба </span>
-        </div>
-        <h3>
-          Законы общественного процесса. 
-          Концепции развития общества.
-        </h3>
-        <div class="slider-nav__block-bottom">
-          <span>04.04.2020</span>
-          <span>1 234 просмотров</span>
-        </div>
-      </a>
+          <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
+            <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
+            <div class="slider-nav__block-top red">
+              <span class="nav__block-top__category"> Экспертная деятельность </span>
+              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            </div>
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития общества.
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </a>
 
-      <a href="#" class="flex_col-desk--1-3 main-content__block">
-        <img src="/wp-content/themes/cp/images/img.png" alt="">
-        <div class="slider-nav__block-top">
-          <span class="nav__block-top__category"> Экспертная деятельность </span>
-          <span class="nav__block-top__single-categ"> Заседания клуба </span>
-        </div>
-        <h3>
-          Законы общественного процесса. 
-          Концепции развития общества.
-        </h3>
-        <div class="slider-nav__block-bottom">
-          <span>04.04.2020</span>
-          <span>1 234 просмотров</span>
-        </div>
-      </a>
+          <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
+            <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
+            <div class="slider-nav__block-top green">
+              <span class="nav__block-top__category"> Экспертная деятельность </span>
+              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            </div>
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития общества.
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </a>
 
-      <a href="#" class="flex_col-desk--1-3 main-content__block">
-        <img src="/wp-content/themes/cp/images/img.png" alt="">
-        <div class="slider-nav__block-top">
-          <span class="nav__block-top__category"> Экспертная деятельность </span>
-          <span class="nav__block-top__single-categ"> Заседания клуба </span>
-        </div>
-        <h3>
-          Законы общественного процесса. 
-          Концепции развития общества.
-        </h3>
-        <div class="slider-nav__block-bottom">
-          <span>04.04.2020</span>
-          <span>1 234 просмотров</span>
-        </div>
-      </a>
+          <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
+            <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
+            <div class="slider-nav__block-top yellow">
+              <span class="nav__block-top__category"> Экспертная деятельность </span>
+              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            </div>
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития общества.
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </a>
+       </div>
 
+       <a href="#" class="btn__more-blocks">
+        Загрузить еще
+       </a>
     </div>
-    <div class="flex_col-desk--1-4 main-right__conteiner">
+    <div class="flex_col--1-1 flex_col-tab--4-5 flex_col-desk--1-4 main-right__conteiner">
       <div class="main__search-block-line">
         <input type="search" placeholder="Искать среди 10 статей..." />
         <button>
@@ -459,7 +478,7 @@ Template Name: Front-page
             </div>
           </div>
           <div class="conteiner-article-img">
-            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.jpg" alt="">
           </div>
         </a>
 
@@ -475,7 +494,7 @@ Template Name: Front-page
             </div>
           </div>
           <div class="conteiner-article-img">
-            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.jpg" alt="">
           </div>
         </a>
 
@@ -491,7 +510,7 @@ Template Name: Front-page
             </div>
           </div>
           <div class="conteiner-article-img">
-            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.jpg" alt="">
           </div>
         </a>
 
@@ -507,7 +526,7 @@ Template Name: Front-page
             </div>
           </div>
           <div class="conteiner-article-img">
-            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.jpg" alt="">
           </div>
         </a>
 
@@ -523,7 +542,7 @@ Template Name: Front-page
             </div>
           </div>
           <div class="conteiner-article-img">
-            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.jpg" alt="">
           </div>
         </a>
 
@@ -539,7 +558,7 @@ Template Name: Front-page
             </div>
           </div>
           <div class="conteiner-article-img">
-            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.jpg" alt="">
           </div>
         </a>
 
@@ -555,7 +574,7 @@ Template Name: Front-page
             </div>
           </div>
           <div class="conteiner-article-img">
-            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.jpg" alt="">
           </div>
         </a>
 
@@ -571,7 +590,7 @@ Template Name: Front-page
             </div>
           </div>
           <div class="conteiner-article-img">
-            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.jpg" alt="">
           </div>
         </a>
 
@@ -587,7 +606,7 @@ Template Name: Front-page
             </div>
           </div>
           <div class="conteiner-article-img">
-            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.jpg" alt="">
           </div>
         </a>
 
@@ -603,7 +622,7 @@ Template Name: Front-page
             </div>
           </div>
           <div class="conteiner-article-img">
-            <img src="/wp-content/themes/cp/images/img-for-right-main-block.png" alt="">
+            <img src="/wp-content/themes/cp/images/img-for-right-main-block.jpg" alt="">
           </div>
         </a>
 

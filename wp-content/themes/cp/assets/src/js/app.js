@@ -87,14 +87,43 @@ $(".slider-nav__block").click(function() {
   $(".slider-for__container").hide().eq( $(this).index()).fadeIn();  
   $('.slider-nav__block').removeClass('active-block');
   $(this).addClass('active-block');  
-  });
+});
 
-  $(".hidden-block__open").on("click", function() {
-    $(".text-block__half-hidden").css("max-height", "800px");
-    $(".hidden-block__open").hide(1500);
-    $(".text-block__half-hidden").css("box-shadow" , "none");
-    $(".hidden-block__about-link").animate();
-  })
+$(".dot").click(function() {  
+  $(".slider-for__container").hide().eq( $(this).index()).fadeIn();    
+  $(".dot").removeClass('dot-active');
+  $(this).addClass('dot-active');  
+});
+
+$(".nav-bar__prev").click(function() {  
+  var activeDot = $(".dot-active");
+  var indexOfDot = $(".dot-active").index();
+  $(".slider-for__container").hide().eq( $(".dot-active").index() - 1).fadeIn(); 
+  activeDot.removeClass("dot-active");
+  $(".dot").eq(indexOfDot - 1).addClass("dot-active");
+});
+
+$(".nav-bar__next").click(function() {  
+  var activeDot = $(".dot-active");
+  var indexOfDot = $(".dot-active").index();
+   
+  activeDot.removeClass("dot-active");
+  if(indexOfDot === 3) {
+    $(".dot").eq(0).addClass("dot-active");
+  }
+  $(".dot").eq(indexOfDot + 1).addClass("dot-active");
+
+  $(".slider-for__container").hide().eq( $(".dot-active").index()).fadeIn();
+  
+});
+
+
+$(".hidden-block__open").on("click", function() {
+  $(".text-block__half-hidden").css("max-height", "800px");
+  $(".hidden-block__open").hide(1500);
+  $(".text-block__half-hidden").css("box-shadow" , "none");
+  $(".hidden-block__about-link").animate();
+})
   
 
 

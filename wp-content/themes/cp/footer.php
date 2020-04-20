@@ -21,30 +21,30 @@
 					</a>
 				</div>
 				<div class="footer-menu_block flex_col-desk--4-5">
-					<ul>
+					<ul class="flex_col-desk--1-5">
 						<li><a href="">Навчальні заходи</a></li>
 						<li><a href="">Форумы и конференции</a></li>
 						<li><a href="">Круглые столы</a></li>
 						<li><a href="">Заседания клуба</a></li>
 						<li><a href="">Публичные лекции </a></li>
 					</ul>
-					<ul>
+					<ul class="flex_col-desk--1-5">
 						<li><a href="">Експертна діяльність</a></li>
 						<li><a href="">Форумы и конференции</a></li>
 						<li><a href="">Круглые столы</a></li>
 						<li><a href="">Заседания клуба</a></li>	
 					</ul>
-					<ul>
+					<ul class="flex_col-desk--1-5">
 						<li><a href="">Дискусії та діалоги</a></li>
 						<li><a href="">Форумы и конференции</a></li>
 						<li><a href="">Круглые столы</a></li>
 						<li><a href="">Заседания клуба</a></li>
 						<li><a href="">Публичные лекции </a></li>
 					</ul>
-					<ul>
+					<ul class="flex_col-desk--1-5">
 						<li><a href="">Наукова критика </a></li>
 					</ul>
-					<ul>
+					<ul class="flex_col-desk--1-5">
 						<li><a href="">Публікації</a></li>
 					</ul>
 				</div>
@@ -70,7 +70,8 @@
 				  <div class="footer-bottom__right-block flex_col-desk--4-5">
 					<a class="flex_col-desk--1-5" href="">Контакты</a>
 					<a class="flex_col-desk--1-5" href="">О проекте</a>
-					<span >©Цивилистическая платформа. Все права защищены</span>
+					<div class="flex_col-desk--1-5 empty"></div>
+					<span class="flex_col-desk--2-5">©Цивилистическая платформа. Все права защищены</span>
 				  </div>				 
 			</div>
 		</div>
