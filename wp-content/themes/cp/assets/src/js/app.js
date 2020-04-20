@@ -106,6 +106,8 @@ $(".nav-bar__prev").click(function() {
 $(".nav-bar__next").click(function() {  
   var activeDot = $(".dot-active");
   var indexOfDot = $(".dot-active").index();
+  var sliderBlock = $(".slider-for__container");
+  var currentColor = $('.content-active');
    
   activeDot.removeClass("dot-active");
   if(indexOfDot === 3) {
@@ -113,8 +115,11 @@ $(".nav-bar__next").click(function() {
   }
   $(".dot").eq(indexOfDot + 1).addClass("dot-active");
 
-  $(".slider-for__container").hide().eq( $(".dot-active").index()).fadeIn();
+  sliderBlock.removeClass('content-active').hide().eq( $(".dot-active").index()).addClass('content-active').fadeIn();
   
+  if(currentColor.children(".slider-nav__block-top").hasClass('green')) {
+    activeDot.css({'background-color' : 'green'});
+  }
 });
 
 
