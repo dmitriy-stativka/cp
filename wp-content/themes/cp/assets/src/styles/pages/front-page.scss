@@ -202,11 +202,7 @@
             }
           }
         }
-      }
-      .empty {
-        max-width: 290px;
-        width: 100%;
-      }
+      }     
     }
     .burger-menu__right-block{
       max-width: 290px;
@@ -674,31 +670,9 @@
             border-radius: 25px;
             transition: all 0.3s ease;            
             position: relative;
-           
-            &:before{
-              position: absolute;
-              content: '';
-              width: 0%; height: 100%;
-              background: #2863a7;
-              top: 0; 
-              left: 50%;
-              z-index: -1;
-              transition: all 0.3s ease;
-              border-radius: 25px;
-            }
             
             &:hover{
-              box-shadow: 0px 4px 10px 2px rgba(black, 0.2);
-              &:before{
-                border-radius: 25px;
-                position: absolute;
-                content: '';
-                width: 100%; height: 100%;
-                background: #2863a7;
-                top: 0; left: 0%;
-                z-index: -1;
-                transition: all .3s ease;
-              }
+              box-shadow: 0px 0px 30px 2px rgba(black, 0.7);
             }
           }
 
@@ -832,6 +806,11 @@
             align-items: center;      
             background-color: #2863a7;
 
+            svg{
+              width: 1em;
+              height: 1em;
+            }
+
             &:hover{
               cursor: pointer;
             }
@@ -930,7 +909,7 @@
 // End of section with article blocks
 
 // Этто Видео блог
-.vide-block{
+.video-block{
  position: relative;
     .bg-video-block{
       background: url(/wp-content/themes/cp/images/video-bg.png) no-repeat top center;
@@ -1012,38 +991,42 @@
       }
 
 
-      #slideBox {       
-        max-height: 700px;
-        overflow: hidden;
-        // margin: 0 auto;
-        position: relative;
-        // top: 1em;
-        background-color: #54585A;
-        border-radius: .3em;
-      }	
+      // #slideBox {       
+      //   max-height: 700px;
+      //   overflow: hidden;
+      //   // margin: 0 auto;
+      //   position: relative;
+      //   // top: 1em;
+      //   background-color: #54585A;
+      //   border-radius: .3em;
+      // }	
       
       
-      #slideBox .slick-vertical .slick-slide {
-        border: none;
-      }
+      // #slideBox .slick-vertical .slick-slide {
+      //   border: none;
+      // }
     
-      .sliderSidebar {
-        width: 25%;
-        // height: 500px;
-        float: left;
-      }
-      
-      #slideBox .slick-vertical .slick-slide {
-        border: none;
-      }
-      
-      
-      .sliderMain {
-        width: 75%;
+      // .sliderSidebar {
+      //   width: 25%;
+      //   height: 500px;
+      //   float: left;
+
+      //   img{
+      //     width: 100%;
          
-        position: relative;
-        float: left;    
-      }
+      //   }
+      // }
+      
+      // #slideBox .slick-vertical .slick-slide {
+      //   border: none;
+      // }
+      
+      
+      // .sliderMain {
+      //   width: 75%;        
+      //   position: relative;
+      //   float: left;    
+      // }
 
 
 

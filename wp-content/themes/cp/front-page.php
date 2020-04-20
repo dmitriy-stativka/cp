@@ -63,8 +63,7 @@ Template Name: Front-page
         <li><a href="">Круглые столы</a></li>
         <li><a href="">Заседания клуба</a></li>
         <li><a href="">Публичные лекции</a></li>
-      </ul>
-      <div class="empty"></div>
+      </ul>     
     </div>
     <div class="burger-menu__right-block">
        <ul class="burger-menu__right-block-top_list">
@@ -615,7 +614,7 @@ Template Name: Front-page
 <!-- End of section with different single articles and search block -->
 
 <!-- Этто видео блог -->
-<section class="vide-block">
+<section class="video-block">
   <div class="bg-video-block">      
   </div>
   <div class="video-block__container flex_col-desk">
@@ -624,29 +623,32 @@ Template Name: Front-page
       <a href="">Посетить YouTube канал  <span class="right-arrow"></span></a>
     </div>
 
-    <div id="slideBox">
+  
       <!--Sidebar-->
-      <div class="sliderSidebar">
-        <div><iframe width="100%"  src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        <div><iframe width="100%"  src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        <div><iframe width="100%"  src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        <div><iframe width="100%"  src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        <div><iframe width="100%"  src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        <div><iframe width="100%"  src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <!-- <div id="slideBox"> -->
+      <!-- <div class="sliderSidebar">
+        <div class="height"><img src="/wp-content/themes/cp/images/video-bg.png" alt=""></div>
+        <div class="height"><img src="/wp-content/themes/cp/images/video-bg.png" alt=""></div>
+        <div class="height"><img src="/wp-content/themes/cp/images/video-bg.png" alt=""></div>
+        <div class="height"><img src="/wp-content/themes/cp/images/video-bg.png" alt=""></div>
+        <div class="height"><iframe   src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="height"><iframe  src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
       </div>	
         
       <div id="main-image" class="sliderMain">
+        <div><img src="/wp-content/themes/cp/images/video-bg.png" alt=""></div>
         <div><iframe src="https://www.youtube.com/embed/8_kqUfJcJAw"></iframe></div>
         <div><img  src="/wp-content/themes/cp/images/video-bg.png" alt=""></div>
         
         <div><iframe src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         <div><iframe src="https://www.youtube.com/embed/8_kqUfJcJAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
   
-        <div><img src="/wp-content/themes/cp/images/video-bg.png" alt=""></div>
+      
         <div><img src="/wp-content/themes/cp/images/video-bg.png" alt=""></div>
       </div>
         
-    </div><!--slideBox-->
+    </div> -->
+    <!--slideBox-->
   
   </div>
 </section>

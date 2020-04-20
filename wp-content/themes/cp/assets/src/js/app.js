@@ -98,26 +98,28 @@ $(".slider-nav__block").click(function() {
   
 
 
-    $('.sliderMain').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: true,
-      asNavFor: '.sliderSidebar',
-      centerMode: true,
-      autoplay: false,    
-    });
-    $('.sliderSidebar').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      asNavFor: '.sliderMain',
-      dots: false,
-      centerMode: false,
-      focusOnSelect: true,
-      vertical: true,
-      arrows: false
-    });
-    
+    // $('.sliderMain').slick({
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1,
+    //   arrows: false,
+    //   fade: true,
+    //   adaptiveHeight: true,
+    //   asNavFor: '.sliderSidebar',
+    //   centerMode: true,
+    //   autoplay: false,    
+    // });
+    // $('.sliderSidebar').slick({
+    //   slidesToShow: 4,
+    //   slidesToScroll: 1,
+    //   asNavFor: '.sliderMain',
+    //   dots: false,
+    //   centerMode: false,
+    //   adaptiveHeight: true,
+    //   focusOnSelect: true,
+    //   vertical: true,
+    //   arrows: false
+    // });
+
     // $('.sliderMain').on('afterChange', function(event, slick, currentSlide){
     //   if (currentSlide == 12) {
     //   $('.sliderMain').slick('slickPause');
