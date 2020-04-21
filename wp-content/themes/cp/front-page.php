@@ -199,7 +199,7 @@ Template Name: Front-page
                       </div>
                     </div>                            
                   </div>
-                  <div class="slider-for flex_col-tab--1-1 flex_col-desk--3-4">
+                  <div class="flex_col-tab--1-1 flex_col-desk--3-4 slider-for">
 
                    <div class="slider-for__container content-active">
                     <div class="slider-nav__block-top blue">

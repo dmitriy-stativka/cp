@@ -36,15 +36,15 @@ section and everything up until
           <div class="header_logo">
             <?php the_custom_logo();?>
           </div>
-          <div class="header_nav-bar">
-            <ul>
+      
+            <ul class="header_nav-bar">
               <li><a href="#">Мероприятия</a></li>
               <li><a href="#">Експертная деятельность</a></li>
               <li><a href="#">Дискуссии и диалоги</a></li>
               <li><a href="#">Научная критика</a></li>
               <li><a href="#">Публикации</a></li>
             </ul>
-          </div>
+
           <div class="header_nav-tools">
             <span class="nav-tools__search"></span>
             <a class="nav-tools__connect popup__toggle" href="#"
