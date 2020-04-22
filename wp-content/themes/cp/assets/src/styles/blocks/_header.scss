@@ -15,9 +15,9 @@
 
   .header_logo {
     display: flex;
-    max-width: 20%;
+    max-width: 10%;
     width: 100%;
-    padding-left: 40px;
+    justify-content: center;
   }
 
     .header_nav-bar {
@@ -25,11 +25,12 @@
       flex-direction: row;
       max-width: 60%;
       width: 100%;
+      justify-content: space-around;
 
       li {
-        margin: 0 10px;
+        // margin: 0 10px;
         font-family: "Montserrat", sans-serif;
-        font-size: 15px;
+        font-size: 11px;
 
         // font-family: 'Merriweather Sans', sans-serif;
 
@@ -50,7 +51,10 @@
             opacity: 0.5;
             transition: opacity 0.3s ease, transform 0.3s ease;
           }
-        }
+        }        
+      @media(min-width: 1440px) {
+        font-size: 15px;
+      }
       }
       @media(min-width:$desktop) {      
         display: flex;          
@@ -61,17 +65,15 @@
 
   .header_nav-tools {
     display: flex;
-    justify-content: flex-end;
-    max-width: 370px;
-    width: 100%;
-    padding-right: 40px;
+    justify-content: center;
+    padding-right: 5px;
 
     .nav-tools__search {
       display: flex;
       align-items: center;
       position: relative;
       margin-right: 15px;
-      transition: opacity .3s ease, transform .3s ease;
+      transition: opacity .3s ease;
 
       &:after {
         content: "";
@@ -97,8 +99,7 @@
       }
 
       &:hover {
-        cursor: pointer;
-        transform: scale(1.4);
+        cursor: pointer;       
       }
 
       &.nav-tools-close {
@@ -126,14 +127,11 @@
     .nav-tools__connect {
       border: 2px solid #ffffff;
       border-radius: 25px;
-      max-width: 175px;
-      min-width: 170px;
-      width: 100%;
       height: 50px;
       display: flex;
-      justify-content: center;
       align-items: center;
-      margin: 0 20px;
+      margin: 0 15px;
+      padding: 0px 10px;
       font-family: "Montserrat", sans-serif;
       font-size: 14px;
       transition: background 0.3s ease, color 0.3s ease;
@@ -212,6 +210,9 @@
           margin-bottom: -5px;
         }
       }    
+    }
+    @media(min-width:1440px) {      
+     padding-right: 40px;
     }
   }
   &.black-header {

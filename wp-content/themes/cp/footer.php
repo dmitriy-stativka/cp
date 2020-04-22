@@ -15,42 +15,49 @@
 	<footer class="footer">
 		<div class="footer-container">
 			<div class="flex_col-desk top-footer">
-				<div class="footer-logo flex_col-desk--1-5">
+				<div class="flex_col-desk--1-5 flex_col--1-1 footer-logo">
 					<a href="//localhost:3000/" class="custom-logo-link" rel="home">
 						<img width="65" height="41" src="//localhost:3000/wp-content/uploads/2020/04/cropped-logo.jpg" class="custom-logo" alt="Цивілістична Платформа">
 					</a>
 				</div>
-				<div class="footer-menu_block flex_col-desk--4-5">
-					<ul class="flex_col-desk--1-5">
-						<li><a href="">Навчальні заходи</a></li>
+				<div class="flex_col-desk--4-5 footer-menu_block">
+					<ul class="flex_col-desk--1-6">
+						<li><a href="">Фахові заходи</a></li>
 						<li><a href="">Форумы и конференции</a></li>
-						<li><a href="">Круглые столы</a></li>
-						<li><a href="">Заседания клуба</a></li>
-						<li><a href="">Публичные лекции </a></li>
+						<li><a href="">Круглі столи</a></li>
+						<li><a href="">Засідання клубу</a></li>
+						<li><a href="">Публічні лекції</a></li>
 					</ul>
-					<ul class="flex_col-desk--1-5">
-						<li><a href="">Експертна діяльність</a></li>
-						<li><a href="">Форумы и конференции</a></li>
-						<li><a href="">Круглые столы</a></li>
-						<li><a href="">Заседания клуба</a></li>	
+					<ul class="flex_col-desk--1-6">
+						<li><a href="">Позиції</a></li>
+						<li><a href="">Теорія і методологія цивільного права</a></li>
+						<li><a href="">Суб’єкти цивільного права</a></li>
+						<li><a href="">Корпоративне право</a></li>
+						<li><a href="">Майно. Право власності</a></li>
+						<li><a href="">Спадкове право</a></li>
+						<li><a href="">Право інтелектуальної власності</a></li>
+						<li><a href="">Особисті немайнові права</a></li>
+						<li><a href="">Правочини. Договори. Представницво</a></li>
+						<li><a href="">Недоговірні зобов’язання</a></li>
+						<li><a href="">Строки. Позовна давність</a></li>
+						<li><a href="">Захист. Відповідальність</a></li>
 					</ul>
-					<ul class="flex_col-desk--1-5">
-						<li><a href="">Дискусії та діалоги</a></li>
-						<li><a href="">Форумы и конференции</a></li>
-						<li><a href="">Круглые столы</a></li>
-						<li><a href="">Заседания клуба</a></li>
-						<li><a href="">Публичные лекции </a></li>
+					<ul class="flex_col-desk--1-6">
+						<li><a href="">Експертная деятельность</a></li>
 					</ul>
-					<ul class="flex_col-desk--1-5">
+					<ul class="flex_col-desk--1-6">
+						<li><a href="">Дискуссии и диалоги</a></li>
+					</ul>
+					<ul class="flex_col-desk--1-6">
 						<li><a href="">Наукова критика </a></li>
 					</ul>
-					<ul class="flex_col-desk--1-5">
+					<ul class="flex_col-desk--1-6">
 						<li><a href="">Публікації</a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="flex_col-desk bottom-footer">
-				<ul class="flex_col-desk--1-5 footer-icons">
+				<ul class="flex_col--1-1 flex_col-desk--1-5 footer-icons">
 					<li class="bottom_list__icons">
 					  <a href="#"
 						><svg class="icon"><use xlink:href="#inst" /></svg
@@ -67,7 +74,7 @@
 					  ></a>
 					</li>
 				  </ul>
-				  <div class="footer-bottom__right-block flex_col-desk--4-5">
+				  <div class="flex_col--1-1 flex_col-desk--4-5 footer-bottom__right-block">
 					<a class="flex_col-desk--1-5" href="">Контакты</a>
 					<a class="flex_col-desk--1-5" href="">О проекте</a>
 					<div class="flex_col-desk--1-5 empty"></div>

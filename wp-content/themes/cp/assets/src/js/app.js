@@ -167,7 +167,7 @@ rightArrow.click(function() {
 
 
 $(".hidden-block__open").on("click", function() {
-  $(".text-block__half-hidden").css("max-height", "800px");
+  $(".text-block__half-hidden").css("max-height", "100%");
   $(".hidden-block__open").hide(1500);
   $(".text-block__half-hidden").css("box-shadow" , "none");
   $(".hidden-block__about-link").animate();

@@ -142,6 +142,12 @@
         }
       }
 
+      &--1-6 {
+        @media (min-width: $desktop) {
+          width: calc(100% - (100%/6)*5);
+        }
+      }
+
       &--2-5 {
         @media (min-width: $desktop) {
           width: calc(100% - 60%);

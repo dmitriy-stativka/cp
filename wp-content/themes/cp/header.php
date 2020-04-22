@@ -38,11 +38,12 @@ section and everything up until
           </div>
       
             <ul class="header_nav-bar">
-              <li><a href="#">Мероприятия</a></li>
-              <li><a href="#">Експертная деятельность</a></li>
+              <li><a href="#">Фахові заходи</a></li>
+              <li><a href="#">Позиції</a></li>
+              <li><a href="#">Експертна діяльність</a></li>
               <li><a href="#">Дискуссии и диалоги</a></li>
-              <li><a href="#">Научная критика</a></li>
-              <li><a href="#">Публикации</a></li>
+              <li><a href="#">Научна критика</a></li>
+              <li><a href="#">Публикації</a></li>
             </ul>
 
           <div class="header_nav-tools">
