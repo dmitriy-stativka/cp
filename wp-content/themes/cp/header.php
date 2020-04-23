@@ -48,9 +48,10 @@ section and everything up until
 
           <div class="header_nav-tools">
             <span class="nav-tools__search"></span>
-            <a class="nav-tools__connect popup__toggle" href="#"
-              >Обратная связь</a
-            >
+            <a class="nav-tools__connect popup__toggle" href="#">
+              <span class="nav-tools__connect-text">Обратная связь</span>
+              <span class="nav-tools__connect-icon"><span><svg class="icon"><use xlink:href="#letter"/></svg></span></span>
+            </a>
             <button class="nav-tools__burger">
               <span></span>
             </button>

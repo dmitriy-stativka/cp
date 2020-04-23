@@ -231,7 +231,7 @@
           li {
             &:first-child {
               a {
-                color:#e4a6e2;
+                color:#8c8ce5;
               }
             }
           }
@@ -613,12 +613,12 @@
   &.purple{
     span{
       &.nav__block-top__category{
-        background-color: #e4a6e2;
+        background-color: #8c8ce5;
       }
       &.nav__block-top__single-categ{
-        color: #e4a6e2;
+        color: #8c8ce5;
         &:before{
-          background-color: #e4a6e2;
+          background-color: #8c8ce5;
         }
       }
     }
@@ -661,15 +661,15 @@
   margin: 0;
 
   .top-site__bg {
-    position: relative;
-    background: url(/wp-content/themes/cp/images/bg-blur-top-site.jpg) no-repeat top center;
-    background-size: cover;
+   position: relative;
+    // background: url(/wp-content/themes/cp/images/bg-blur-top-site.jpg) no-repeat top center;
+    // background-size: cover;
     margin: auto;
     z-index: 0;
     height: 100%;  
 
     .top-site__content {
-      position: relative;
+     
       z-index: 9;
       padding-top: 99px;
       height: 100%;
@@ -684,6 +684,8 @@
         justify-content: center;
         align-items: center;
         margin: 30px 0;
+        position: relative;
+        z-index: 8;
         
     
         li {
@@ -716,7 +718,9 @@
         width: 100%;
 
         .slider-nav{                 
-          display: none;
+          display: none;     
+          position: relative;
+          z-index: 8;    
  
           .slider-nav__block{  
             display: flex;
@@ -728,7 +732,7 @@
             transition: background-color 0.3s ease;
             border-bottom: 1px solid rgba(255, 255, 255, 0.4);
             border-right: 1px solid rgba(255, 255, 255, 0.4);
-            border-left: 1px solid rgba(255, 255, 255, 0.4);
+            border-left: 1px solid rgba(255, 255, 255, 0.4);            
          
             .slider-nav__block-center{                         
               p{
@@ -754,7 +758,7 @@
           @media(min-width:$desktop) {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;  
+            justify-content: space-between;              
           }
          }
 
@@ -767,6 +771,18 @@
         .slider-for__container{
           display: none;
           max-width: 700px;
+
+          .slider-for__bg-img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -3;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
 
           .slider-nav__block-top{
             display: flex;
@@ -837,7 +853,8 @@
           }
 
           &.content-active{
-            display: block;         
+            display: block;    
+            
           }
         }   
         .nav-bar__mobile{
@@ -953,7 +970,7 @@
       left: 0;
       right: 0;
       background: rgba(0, 0, 0, 0.4);
-      z-index: 2;
+      z-index: -1;
     }
   }
   @media(min-width: $desktop) {
@@ -1326,8 +1343,8 @@
       display: flex;
       flex-direction: column;
       .text-block__half-hidden{
-        transition: max-height 3s ease;
-        max-height: 380px;
+        transition: max-height .7s ease;
+        max-height: 280px;
         overflow: hidden;
         display: flex;
         box-shadow: inset 0px -109px 78px -74px white;
@@ -1412,21 +1429,24 @@
           max-height: fit-content;
           transition: max-height 0.3s ease;
         }
-        @media(min-width: $desktop) {    
-          max-height: 280px;
-        }  
+        &.text-block__half-hidden__open{
+          max-height: 100%;
+          box-shadow: none;
+          transition: max-height 0.5s ease;
+        }
       }
       .text-block__btn{
         margin-top: 30px;
         margin-bottom: 50px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         .hidden-block__open{
           color: #2863a7;
           font-size: 14px;
           font-family: "Montserrat", sans-serif;
           font-weight: 500;
-          letter-spacing: 0.21px;          
+          letter-spacing: 0.21px;   
+          width: 120px;       
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -1437,7 +1457,7 @@
           }
 
           @media(min-width: $desktop) {    
-            display: inline;
+            display: flex;
             margin:0px 40px 0px 10px;
           }  
         }
@@ -1462,7 +1482,8 @@
           }  
         }
         @media(min-width: $desktop) {    
-          display: block;
+          display: flex;
+          justify-content: flex-start;
         }  
       }
     }

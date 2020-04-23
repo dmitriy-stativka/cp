@@ -213,6 +213,7 @@ Template Name: Front-page
                   <div class="flex_col-tab--1-1 flex_col-desk--3-4 slider-for">
 
                    <div class="slider-for__container content-active">
+                   <img class="slider-for__bg-img" src="/wp-content/themes/cp/images/bg-blur-top-site.jpg" alt=""></img>
                     <div class="slider-nav__block-top blue">
                       <span class="nav__block-top__category"> Экспертная деятельность </span>
                       <span class="nav__block-top__single-categ"> Заседания клуба </span>
@@ -234,6 +235,7 @@ Template Name: Front-page
                    </div>    
 
                    <div class="slider-for__container">
+                   <img class="slider-for__bg-img" src="/wp-content/themes/cp/images/bg-blur-top-site.jpg" alt=""></img>
                     <div class="slider-nav__block-top red">
                       <span class="nav__block-top__category"> Экспертная деятельность </span>
                       <span class="nav__block-top__single-categ"> Заседания клуба </span>
@@ -255,6 +257,7 @@ Template Name: Front-page
                    </div> 
 
                    <div class="slider-for__container">
+                   <img class="slider-for__bg-img" src="/wp-content/themes/cp/images/bg-blur-top-site.jpg" alt=""></img>
                     <div class="slider-nav__block-top green">
                       <span class="nav__block-top__category"> Экспертная деятельность </span>
                       <span class="nav__block-top__single-categ"> Заседания клуба </span>
@@ -276,6 +279,7 @@ Template Name: Front-page
                    </div>  
 
                    <div class="slider-for__container">
+                   <img class="slider-for__bg-img" src="/wp-content/themes/cp/images/bg-2.jpg" alt=""></img>
                     <div class="slider-nav__block-top yellow">
                       <span class="nav__block-top__category"> Экспертная деятельность </span>
                       <span class="nav__block-top__single-categ"> Заседания клуба </span>
