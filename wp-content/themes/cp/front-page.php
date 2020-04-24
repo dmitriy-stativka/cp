@@ -88,18 +88,18 @@ Template Name: Front-page
         <ul>
           <li class="bottom_list__icons">
             <a href="#"
-              ><svg class="icon"><use xlink:href="#inst" /></svg
-            ></a>
+              ><svg class="icon"><use xlink:href="#inst" /></svg>
+            </a>
           </li>
           <li class="bottom_list__icons">
             <a href="#"
-              ><svg class="icon"><use xlink:href="#telegram" /></svg
-            ></a>
+              ><svg class="icon"><use xlink:href="#telegram" /></svg>
+              </a>
           </li>
           <li class="bottom_list__icons">
             <a href="#"
-              ><svg class="icon"><use xlink:href="#youtube" /></svg
-            ></a>
+              ><svg class="icon"><use xlink:href="#youtube" /></svg>
+              </a>
           </li>
         </ul>
         <ul>
@@ -132,188 +132,143 @@ Template Name: Front-page
             <ul class="top-social">
                 <li>
                   <a href="#"
-                    ><svg class="icon"><use xlink:href="#inst" /></svg
-                  ></a>
+                    ><svg class="icon"><use xlink:href="#inst" /></svg>
+                    </a>
                 </li>
                 <li>
                   <a href="#"
-                    ><svg class="icon"><use xlink:href="#telegram" /></svg
-                  ></a>
+                    ><svg class="icon"><use xlink:href="#telegram" /></svg>
+                    </a>
                 </li>
                 <li>
                   <a href="#"
-                    ><svg class="icon"><use xlink:href="#youtube" /></svg
-                  ></a>
+                    ><svg class="icon"><use xlink:href="#youtube" /></svg>
+                    </a>
                 </li>
               </ul>
               <div class="top-slider">
-               
+              
                   <div class="slider-nav flex_col-desk--1-4">
-                    <div class="slider-nav__block active-block">
-                      <div class="slider-nav__block-top blue">
-                        <span class="nav__block-top__category"> Экспертная деятельность </span>
-                        <span class="nav__block-top__single-categ"> Заседания клуба </span>
-                      </div>
-                      <div class="slider-nav__block-center">
-                        <p>Законы общественного процесса. 
-                          Концепции развития общества. 
-                          Название статьи.</p>
-                      </div>
-                      <div class="slider-nav__block-bottom">
-                        <span>04.04.2020</span>
-                        <span>1 234 просмотров</span>
-                      </div>
-                    </div>
-                    <div class="slider-nav__block">
-                      <div class="slider-nav__block-top red">
-                        <span class="nav__block-top__category"> Публикации </span>
-                        <span class="nav__block-top__single-categ"> Корпоративное право </span>
-                      </div>
-                      <div class="slider-nav__block-center">
-                        <p>Законы общественного процесса. 
-                          Концепции развития общества. 
-                          Название статьи.</p>
-                      </div>
-                      <div class="slider-nav__block-bottom">
-                        <span>04.04.2020</span>
-                        <span>1 234 просмотров</span>
-                      </div>
-                    </div>
-                    <div class="slider-nav__block">
-                      <div class="slider-nav__block-top green">
-                        <span class="nav__block-top__category"> Научная критика </span>
-                        <!-- <span class="nav__block-top__single-categ"> Заседания клуба </span> -->
-                      </div>
-                      <div class="slider-nav__block-center">
-                        <p>Законы общественного процесса. 
-                          Концепции развития общества. 
-                          Название статьи.</p>
-                      </div>
-                      <div class="slider-nav__block-bottom">
-                        <span>04.04.2020</span>
-                        <span>1 234 просмотров</span>
-                      </div>
-                    </div>
-                    <div class="slider-nav__block">
-                      <div class="slider-nav__block-top yellow">
-                        <span class="nav__block-top__category"> Мероприятия </span>
-                        <span class="nav__block-top__single-categ"> Собрания </span>
-                      </div>
-                      <div class="slider-nav__block-center">
-                        <p>Законы общественного процесса. 
-                          Концепции развития общества. 
-                          Название статьи.</p>
-                      </div>
-                      <div class="slider-nav__block-bottom">
-                        <span>04.04.2020</span>
-                        <span>1 234 просмотров</span>
-                      </div>
-                    </div>                            
+         
+                    <?php
+                      global $post;
+                      $args = array( 'numberposts' => 4 , 'category' => 2, 'orderby' => 'date');
+                      $myposts = get_posts( $args );
+                      foreach( $myposts as $post ){ setup_postdata($post); ?>
+                        <div class="slider-nav__block">
+                          <div class="slider-nav__block-top blue">
+                              <?php
+                                $categories = get_the_category();
+                                $output = '';
+                                if($categories){
+                                    foreach($categories as $category) {
+                                        $rl_category_color = rl_color($category->cat_ID);
+                                        $output = $category->cat_name;
+                                    }
+                                    echo '<span class="nav__block-top__category" style="background: '.$rl_category_color.' ;">'. trim($output) . '</span>';
+
+                                    $posttags = get_the_tags();
+                                    if ($posttags) {
+                                        foreach($posttags as $tag) {
+                                          echo '<span class="nav__block-top__single-categ" style="color: '.$rl_category_color.'">'. $tag->name . ' ' . ' </span>'; 
+                                        }
+                                    }
+
+                                }
+                              ?>
+                          </div>
+                          <div class="slider-nav__block-center">
+                              <p><?php the_title(); ?></p>
+                            </div>
+                          <div class="slider-nav__block-bottom">
+                              <span><?php echo get_the_date('d.m.Y'); ?></span>
+                              <span> <?php 
+                              if(get_post_meta ($post->ID,'views',true)){
+                                  echo get_post_meta ($post->ID,'views',true);
+                                }else{
+                                  echo '0';
+                                }?> <?php pll_e('views'); ?></span>
+                          </div>
+                        </div>
+                        <?php
+                      }
+                      wp_reset_postdata();
+                    ?>
+                   
                   </div>
-                  <div class="flex_col-tab--1-1 flex_col-desk--3-4 slider-for">
+                  <div class="slider-for">    
+                      
 
-                   <div class="slider-for__container content-active">
-                   <img class="slider-for__bg-img" src="/wp-content/themes/cp/images/bg-blur-top-site.jpg" alt=""></img>
-                    <div class="slider-nav__block-top blue">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
-                    </div>
-                    <h2 class="slider-for-center">
-                     Законы общественного процесса. 
-                        Концепции развития общества.                       
-                    </h2>
-                    <p class="slider-for__text">
-                      Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения дальнейших направлений развития.                      
-                    </p>
-                    <div class="slider-nav__block-bottom">
-                      <span>04.04.2020</span>
-                      <span>1 234 просмотров</span>
-                    </div>
-                    <a href="#" class="read-more">
-                      Читать статью полностью
-                    </a>
-                   </div>    
+                    <?php
+                      global $post;
+                      $args = array( 'numberposts' => 4 , 'category' => 2, 'orderby' => 'date');
+                      $myposts = get_posts( $args );
+                      foreach( $myposts as $post ){ setup_postdata($post); ?>
+                        <div class="slider-for__container">
+                          <div class="slider-nav__block-top">
+                              <?php
+                                $categories = get_the_category();
+                                $output = '';
+                                if($categories){
+                                    foreach($categories as $category) {
+                                        $rl_category_color = rl_color($category->cat_ID);
+                                        $output = $category->cat_name;
+                                    }
+                                    echo '<span class="nav__block-top__category" style="background: '.$rl_category_color.' ;">'. trim($output) . '</span>';
 
-                   <div class="slider-for__container">
-                   <img class="slider-for__bg-img" src="/wp-content/themes/cp/images/bg-blur-top-site.jpg" alt=""></img>
-                    <div class="slider-nav__block-top red">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
-                    </div>
-                    <h2 class="slider-for-center">
-                     Законы общественного процесса. 
-                        Концепции развития общества. 
-                    </h2>
-                    <p class="slider-for__text">
-                      Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения дальнейших направлений развития.
-                    </p>
-                    <div class="slider-nav__block-bottom">
-                      <span>04.04.2020</span>
-                      <span>1 234 просмотров</span>
-                    </div>
-                    <a href="#" class="read-more">
-                      Читать статью полностью
-                    </a>
-                   </div> 
+                                    $posttags = get_the_tags();
+                                    if ($posttags) {
+                                        foreach($posttags as $tag) {
+                                          echo '<span class="nav__block-top__single-categ" style="color: '.$rl_category_color.'">'. $tag->name . ' ' . ' </span>'; 
+                                        }
+                                    }
 
-                   <div class="slider-for__container">
-                   <img class="slider-for__bg-img" src="/wp-content/themes/cp/images/bg-blur-top-site.jpg" alt=""></img>
-                    <div class="slider-nav__block-top green">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
-                    </div>
-                    <h2 class="slider-for-center">
-                     Законы общественного процесса. 
-                        Концепции развития общества. 
-                    </h2>
-                    <p class="slider-for__text">
-                      Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения дальнейших направлений развития.
-                    </p>
-                    <div class="slider-nav__block-bottom">
-                      <span>04.04.2020</span>
-                      <span>1 234 просмотров</span>
-                    </div>
-                    <a href="#" class="read-more">
-                      Читать статью полностью
-                    </a>
-                   </div>  
+                                }
+                              ?>
+                          </div>
 
-                   <div class="slider-for__container">
-                   <img class="slider-for__bg-img" src="/wp-content/themes/cp/images/bg-2.jpg" alt=""></img>
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
-                    </div>
-                    <h2 class="slider-for-center">
-                     Законы общественного процесса. 
-                        Концепции развития общества. 
-                    </h2>
-                    <p class="slider-for__text">
-                      Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения дальнейших направлений развития.
-                    </p>
-                    <div class="slider-nav__block-bottom">
-                      <span>04.04.2020</span>
-                      <span>1 234 просмотров</span>
-                    </div>
-                    <a href="#" class="read-more">
-                      Читать статью полностью
-                    </a>
-                   </div>  
-                      <div class="nav-bar__mobile">
-                          <div class="nav-bar__prev"></div>
-                          <div class="dots-mobile">
-                            <div class="dot dot-active"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                          </div>                        
-                          <div class="nav-bar__next"></div>
-                      </div>              
-                  </div>
+
+                          <h2 class="slider-for-center"><?php the_title(); ?></h2>
+
+                          <p class="slider-for__text">
+                          Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения дальнейших направлений развития.                      
+                        </p>
+
+
+                        
+                          <div class="slider-nav__block-bottom">
+                              <span><?php echo get_the_date('d.m.Y'); ?></span>
+                              <span> <?php 
+                              if(get_post_meta ($post->ID,'views',true)){
+                                  echo get_post_meta ($post->ID,'views',true);
+                                }else{
+                                  echo '0';
+                                }?> <?php pll_e('views'); ?></span>
+                          </div>
+
+                          <a href="#" class="read-more">Читать статью полностью</a>
+
+                        </div>
+                        <?php
+                      }
+                      wp_reset_postdata();
+                    ?>
+
+
+
+
+
+
+
+                </div>
               </div>
           </section>
     </section>     
 </section>
+
+<script>
+  $('.slider-nav .slider-nav__block:first-child').addClass('content-active');
+</script>
 <!-- End of top-black-slider part -->
 
 <!-- Beginning of section with different single articles and search block -->

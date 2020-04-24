@@ -27,8 +27,7 @@ section and everything up until
       <?php wp_head(); ?>
     </head>
 
-    <body <?php body_class(); ?>
-      >
+    <body <?php body_class(); ?> >
       <?php wp_body_open(); ?>
 
       <div class="wrapper">
@@ -36,24 +35,26 @@ section and everything up until
           <div class="header_logo">
             <?php the_custom_logo();?>
           </div>
-      
-            <ul class="header_nav-bar">
-              <li><a href="#">Фахові заходи</a></li>
-              <li><a href="#">Позиції</a></li>
-              <li><a href="#">Експертна діяльність</a></li>
-              <li><a href="#">Дискуссии и диалоги</a></li>
-              <li><a href="#">Научна критика</a></li>
-              <li><a href="#">Публикації</a></li>
-            </ul>
+
+          <div class="header_nav-bar">
+            <?php
+              $args = array(
+                'orderby'            => 'name',
+                'order'              => 'desc',
+                'style'              => 'list',
+                'title_li'           => '',
+              );
+            ?>
+            <ul>
+              <?php
+                wp_list_categories($args);
+              ?>
 
           <div class="header_nav-tools">
             <span class="nav-tools__search"></span>
-            <a class="nav-tools__connect popup__toggle" href="#">
-              <span class="nav-tools__connect-text">Обратная связь</span>
-              <span class="nav-tools__connect-icon"><span><svg class="icon"><use xlink:href="#letter"/></svg></span></span>
-            </a>
+            <a class="nav-tools__connect popup__toggle" href="#"><?php pll_e('callback'); ?></a>
             <button class="nav-tools__burger">
               <span></span>
             </button>
-          </div>         
+          </div>
         </header>
