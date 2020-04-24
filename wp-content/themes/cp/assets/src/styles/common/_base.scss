@@ -81,7 +81,34 @@ input {
     cursor: pointer;
   }
 
-  &[type="search"] {
+  &[type="text"] {
+    margin: 10px auto;
+    height: 50px;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    background: transparent;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  &[type="email"] {
+    margin: 10px auto;
+    height: 50px;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    background: transparent;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
   }
 
   &:visited,
@@ -95,7 +122,6 @@ input {
 
 .wrapper {
 }
-
 
 .icon {
   width: 1.5em;
