@@ -60,18 +60,15 @@
 				<ul class="flex_col--1-1 flex_col-desk--1-5 footer-icons">
 					<li class="bottom_list__icons">
 					  <a href="#"
-						><svg class="icon"><use xlink:href="#inst" /></svg
-					  ></a>
+						><svg class="icon"><use xlink:href="#inst" /></svg></a>
 					</li>
 					<li class="bottom_list__icons">
 					  <a href="#"
-						><svg class="icon"><use xlink:href="#telegram" /></svg
-					  ></a>
+						><svg class="icon"><use xlink:href="#telegram" /></svg></a>
 					</li>
 					<li class="bottom_list__icons">
 					  <a href="#"
-						><svg class="icon"><use xlink:href="#youtube" /></svg
-					  ></a>
+						><svg class="icon"><use xlink:href="#youtube" /></svg></a>
 					</li>
 				  </ul>
 				  <div class="flex_col--1-1 flex_col-desk--4-5 footer-bottom__right-block">
@@ -146,6 +143,13 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script src="/wp-content/themes/cp/js/app.min.js"></script>
+
+
+<script>
+  $('.slider-nav .slider-nav__block:first-child').addClass('active-block');
+  $('.slider-for .slider-for__container:first-child').addClass('content-active');
+
+</script>
 
 </body>
 </html>

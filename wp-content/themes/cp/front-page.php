@@ -170,7 +170,7 @@ Template Name: Front-page
                                     $posttags = get_the_tags();
                                     if ($posttags) {
                                         foreach($posttags as $tag) {
-                                          echo '<span class="nav__block-top__single-categ" style="color: '.$rl_category_color.'">'. $tag->name . ' ' . ' </span>'; 
+                                          echo '<span class="nav__block-top__single-categ" style="color: '.$rl_category_color.'">'. $tag->name . '<i style="background: ' .$rl_category_color .';" class="dot-color"></i>' . ' </span>'; 
                                         }
                                     }
 
@@ -196,15 +196,15 @@ Template Name: Front-page
                     ?>
                    
                   </div>
-                  <div class="slider-for">    
-                      
-
+                  <div class="flex_col-tab--1-1 flex_col-desk--3-4 slider-for">    
+                    
                     <?php
                       global $post;
                       $args = array( 'numberposts' => 4 , 'category' => 2, 'orderby' => 'date');
                       $myposts = get_posts( $args );
                       foreach( $myposts as $post ){ setup_postdata($post); ?>
                         <div class="slider-for__container">
+                        <img class="slider-for__bg-img" src="/wp-content/themes/cp/images/bg-blur-top-site.jpg" alt=""></img>
                           <div class="slider-nav__block-top">
                               <?php
                                 $categories = get_the_category();
@@ -219,7 +219,7 @@ Template Name: Front-page
                                     $posttags = get_the_tags();
                                     if ($posttags) {
                                         foreach($posttags as $tag) {
-                                          echo '<span class="nav__block-top__single-categ" style="color: '.$rl_category_color.'">'. $tag->name . ' ' . ' </span>'; 
+                                          echo '<span class="nav__block-top__single-categ" style="color: '.$rl_category_color.'">'. $tag->name . '<i style="background: ' .$rl_category_color .';" class="dot-color"></i>' . ' </span>'; 
                                         }
                                     }
 
@@ -227,15 +227,11 @@ Template Name: Front-page
                               ?>
                           </div>
 
-
                           <h2 class="slider-for-center"><?php the_title(); ?></h2>
-
                           <p class="slider-for__text">
-                          Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения дальнейших направлений развития.                      
-                        </p>
+                            Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения дальнейших направлений развития.                      
+                          </p>
 
-
-                        
                           <div class="slider-nav__block-bottom">
                               <span><?php echo get_the_date('d.m.Y'); ?></span>
                               <span> <?php 
@@ -254,21 +250,23 @@ Template Name: Front-page
                       wp_reset_postdata();
                     ?>
 
-
-
-
-
-
-
+                    <div class="nav-bar__mobile">
+                          <div class="nav-bar__prev"></div>
+                          <div class="dots-mobile">
+                            <div class="dot dot-active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                          </div>                        
+                          <div class="nav-bar__next"></div>
+                      </div>          
+                    </div>
                 </div>
               </div>
           </section>
     </section>     
 </section>
 
-<script>
-  $('.slider-nav .slider-nav__block:first-child').addClass('content-active');
-</script>
 <!-- End of top-black-slider part -->
 
 <!-- Beginning of section with different single articles and search block -->

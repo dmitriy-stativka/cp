@@ -776,6 +776,7 @@
         .slider-for__container{
           display: none;
           max-width: 700px;
+          padding: 25px 0;
 
           .slider-for__bg-img{
             position: absolute;
@@ -915,10 +916,6 @@
                 width: 30px;
                 border-radius: 5px;
                 background-color: #2863a7;              
-              }
-
-              &.dot-active__colorfull{
-                
               }
             }
           }
@@ -1504,3 +1501,12 @@
 
 
 
+.dot-color{
+  position: absolute;
+  top: 45%;
+  left: -15px;
+  height: 4px;
+  width: 4px;
+  display: block;
+  transform: rotate(45deg);
+}
