@@ -27,8 +27,7 @@ section and everything up until
       <?php wp_head(); ?>
     </head>
 
-    <body <?php body_class(); ?>
-      >
+    <body <?php body_class(); ?> >
       <?php wp_body_open(); ?>
 
       <div class="wrapper">
@@ -37,19 +36,23 @@ section and everything up until
             <?php the_custom_logo();?>
           </div>
           <div class="header_nav-bar">
+            <?php
+              $args = array(
+                'orderby'            => 'name',
+                'order'              => 'desc',
+                'style'              => 'list',
+                'title_li'           => '',
+              );
+            ?>
             <ul>
-              <li><a href="#">Мероприятия</a></li>
-              <li><a href="#">Експертная деятельность</a></li>
-              <li><a href="#">Дискуссии и диалоги</a></li>
-              <li><a href="#">Научная критика</a></li>
-              <li><a href="#">Публикации</a></li>
+              <?php
+                wp_list_categories($args);
+              ?>
             </ul>
           </div>
           <div class="header_nav-tools">
             <span class="nav-tools__search"></span>
-            <a class="nav-tools__connect popup__toggle" href="#"
-              >Обратная связь</a
-            >
+            <a class="nav-tools__connect popup__toggle" href="#"><?php pll_e('callback'); ?></a>
             <button class="nav-tools__burger">
               <span></span>
             </button>

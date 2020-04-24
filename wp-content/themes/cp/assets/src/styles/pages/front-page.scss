@@ -403,7 +403,6 @@
       padding: 7px 15px;
       font-size: 12px;
       font-family: "Montserrat", sans-serif;                  
-      margin-right: 30px;
     }
     &.nav__block-top__single-categ{
       position: relative;
@@ -465,7 +464,7 @@
 
   .top-site__bg {
     position: relative;
-    background: url(/wp-content/themes/cp/images/Bg.png) no-repeat top center;
+    background: url('/wp-content/themes/cp/images/bg-top-site.jpg') no-repeat top center;
     background-size: cover;
     margin: auto;
     z-index: 0;
@@ -526,6 +525,10 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.4);
             border-right: 1px solid rgba(255, 255, 255, 0.4);
             border-left: 1px solid rgba(255, 255, 255, 0.4);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
          
             .slider-nav__block-center{
               max-width: 90%;            
@@ -544,6 +547,7 @@
                   }
                   &.nav__block-top__single-categ{
                     color: #2863a7;
+                    margin-left: 30px;
                     &:before{
                       background-color: #2863a7;
                     }
@@ -559,6 +563,7 @@
                   }
                   &.nav__block-top__single-categ{
                     color: #ed5152;
+                    margin-left: 30px;
                     &:before{
                       background-color: #ed5152;
                     }
@@ -574,6 +579,7 @@
                   }
                   &.nav__block-top__single-categ{
                     color: #38bb8a;
+                    margin-left: 30px;
                     &:before{
                       background-color: #38bb8a;
                     }
@@ -589,6 +595,7 @@
                   }
                   &.nav__block-top__single-categ{
                     color: #efc066;
+                    margin-left: 30px;
                     &:before{
                       background-color: #efc066;
                     }
@@ -626,6 +633,7 @@
             }
             .nav__block-top__single-categ{
               color: #2863a7;
+              margin-left: 30px;
               &:before{
                 background-color: #2863a7;
               }
@@ -676,7 +684,7 @@
             }
           }
 
-          &.content-active{
+          &:first-child{
             display: block;         
           }
         }         
@@ -723,6 +731,7 @@
           }
           .nav__block-top__single-categ{
             color: #2863a7;
+            margin-left: 30px;
             &:before{
               background-color: #2863a7;
             }
