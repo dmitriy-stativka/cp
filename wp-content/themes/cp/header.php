@@ -35,6 +35,7 @@ section and everything up until
           <div class="header_logo">
             <?php the_custom_logo();?>
           </div>
+
           <div class="header_nav-bar">
             <?php
               $args = array(
@@ -48,8 +49,7 @@ section and everything up until
               <?php
                 wp_list_categories($args);
               ?>
-            </ul>
-          </div>
+
           <div class="header_nav-tools">
             <span class="nav-tools__search"></span>
             <a class="nav-tools__connect popup__toggle" href="#"><?php pll_e('callback'); ?></a>

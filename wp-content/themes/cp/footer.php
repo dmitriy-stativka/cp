@@ -15,42 +15,49 @@
 	<footer class="footer">
 		<div class="footer-container">
 			<div class="flex_col-desk top-footer">
-				<div class="footer-logo flex_col-desk--1-5">
+				<div class="flex_col-desk--1-5 flex_col--1-1 footer-logo">
 					<a href="//localhost:3000/" class="custom-logo-link" rel="home">
 						<img width="65" height="41" src="//localhost:3000/wp-content/uploads/2020/04/cropped-logo.jpg" class="custom-logo" alt="Цивілістична Платформа">
 					</a>
 				</div>
-				<div class="footer-menu_block flex_col-desk--4-5">
-					<ul>
-						<li><a href="">Навчальні заходи</a></li>
+				<div class="flex_col-desk--4-5 footer-menu_block">
+					<ul class="flex_col-desk--1-6">
+						<li><a href="">Фахові заходи</a></li>
 						<li><a href="">Форумы и конференции</a></li>
-						<li><a href="">Круглые столы</a></li>
-						<li><a href="">Заседания клуба</a></li>
-						<li><a href="">Публичные лекции </a></li>
+						<li><a href="">Круглі столи</a></li>
+						<li><a href="">Засідання клубу</a></li>
+						<li><a href="">Публічні лекції</a></li>
 					</ul>
-					<ul>
-						<li><a href="">Експертна діяльність</a></li>
-						<li><a href="">Форумы и конференции</a></li>
-						<li><a href="">Круглые столы</a></li>
-						<li><a href="">Заседания клуба</a></li>	
+					<ul class="flex_col-desk--1-6">
+						<li><a href="">Позиції</a></li>
+						<li><a href="">Теорія і методологія цивільного права</a></li>
+						<li><a href="">Суб’єкти цивільного права</a></li>
+						<li><a href="">Корпоративне право</a></li>
+						<li><a href="">Майно. Право власності</a></li>
+						<li><a href="">Спадкове право</a></li>
+						<li><a href="">Право інтелектуальної власності</a></li>
+						<li><a href="">Особисті немайнові права</a></li>
+						<li><a href="">Правочини. Договори. Представницво</a></li>
+						<li><a href="">Недоговірні зобов’язання</a></li>
+						<li><a href="">Строки. Позовна давність</a></li>
+						<li><a href="">Захист. Відповідальність</a></li>
 					</ul>
-					<ul>
-						<li><a href="">Дискусії та діалоги</a></li>
-						<li><a href="">Форумы и конференции</a></li>
-						<li><a href="">Круглые столы</a></li>
-						<li><a href="">Заседания клуба</a></li>
-						<li><a href="">Публичные лекции </a></li>
+					<ul class="flex_col-desk--1-6">
+						<li><a href="">Експертная деятельность</a></li>
 					</ul>
-					<ul>
+					<ul class="flex_col-desk--1-6">
+						<li><a href="">Дискуссии и диалоги</a></li>
+					</ul>
+					<ul class="flex_col-desk--1-6">
 						<li><a href="">Наукова критика </a></li>
 					</ul>
-					<ul>
+					<ul class="flex_col-desk--1-6">
 						<li><a href="">Публікації</a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="flex_col-desk bottom-footer">
-				<ul class="flex_col-desk--1-5 footer-icons">
+				<ul class="flex_col--1-1 flex_col-desk--1-5 footer-icons">
 					<li class="bottom_list__icons">
 					  <a href="#"
 						><svg class="icon"><use xlink:href="#inst" /></svg
@@ -67,10 +74,12 @@
 					  ></a>
 					</li>
 				  </ul>
-				  <div class="footer-bottom__right-block flex_col-desk--4-5">
-					<a class="flex_col-desk--1-5" href="">Контакты</a>
-					<a class="flex_col-desk--1-5" href="">О проекте</a>
-					<span >©Цивилистическая платформа. Все права защищены</span>
+				  <div class="flex_col--1-1 flex_col-desk--4-5 footer-bottom__right-block">
+					<a class="flex_col-desk--1-6" href="">Контакты</a>
+					<a class="flex_col-desk--1-6" href="">О нас</a>
+					<div class="flex_col-desk--1-6 empty"></div>
+					<div class="flex_col-desk--1-6 empty"></div>
+					<span class="flex_col-desk--1-3">©Цивилистическая платформа. Все права защищены</span>
 				  </div>				 
 			</div>
 		</div>
@@ -123,6 +132,9 @@
 		<symbol id="youtube" viewbox="0 0 18 13">
 			<path fill="#fff" d="M11.707 6.762L8.09 8.652a.556.556 0 0 1-.813-.493V4.39a.556.556 0 0 1 .812-.494l3.617 1.878a.556.556 0 0 1 0 .987zm5.5-5.437C16.583.585 15.434.284 13.24.284H5.277c-2.244 0-3.413.321-4.032 1.108C.64 2.16.64 3.292.64 4.857v2.985c0 3.033.717 4.573 4.637 4.573h7.964c1.903 0 2.957-.266 3.64-.919.699-.67.997-1.762.997-3.654V4.857c0-1.65-.047-2.789-.672-3.532z"/>
 		</symbol>
+		<symbol id="letter" viewbox="00 0 24 18">
+		<path fill="#fff" d="M21.56 14.52a1.44 1.44 0 0 1-1.44 1.438H3.75a1.44 1.44 0 0 1-1.438-1.439V3.336a1.44 1.44 0 0 1 1.439-1.44h16.365a1.44 1.44 0 0 1 1.439 1.44v11.183zM20.12.681H3.75a2.651 2.651 0 0 0-2.649 2.65v11.187a2.651 2.651 0 0 0 2.65 2.65h16.365a2.651 2.651 0 0 0 2.65-2.65V3.336A2.649 2.649 0 0 0 20.12.682z"/><path fill="none" stroke="#fff" stroke-miterlimit="20" stroke-width=".8" d="M21.56 14.52a1.44 1.44 0 0 1-1.44 1.438H3.75a1.44 1.44 0 0 1-1.438-1.439V3.336a1.44 1.44 0 0 1 1.439-1.44h16.365a1.44 1.44 0 0 1 1.439 1.44v11.183zM20.12.681H3.75a2.651 2.651 0 0 0-2.649 2.65v11.187a2.651 2.651 0 0 0 2.65 2.65h16.365a2.651 2.651 0 0 0 2.65-2.65V3.336A2.649 2.649 0 0 0 20.12.682z"/><path fill="#fff" d="M14.764 8.786l5.298-4.751a.608.608 0 0 0 .045-.856.608.608 0 0 0-.856-.045l-7.306 6.558-1.426-1.273c-.004-.005-.009-.01-.009-.014a.899.899 0 0 0-.098-.085l-5.8-5.19a.604.604 0 0 0-.857.049.604.604 0 0 0 .05.856l5.36 4.792-5.338 4.998a.608.608 0 0 0 .829.887l5.42-5.07 1.47 1.314a.605.605 0 0 0 .806-.005l1.511-1.353 5.388 5.119a.605.605 0 0 0 .834-.879z"/><path fill="none" stroke="#fff" stroke-miterlimit="20" stroke-width=".8" d="M14.764 8.786v0l5.298-4.751a.608.608 0 0 0 .045-.856.608.608 0 0 0-.856-.045l-7.306 6.558v0l-1.426-1.273c-.004-.005-.009-.01-.009-.014a.899.899 0 0 0-.098-.085l-5.8-5.19a.604.604 0 0 0-.857.049.604.604 0 0 0 .05.856l5.36 4.792v0l-5.338 4.998a.608.608 0 0 0 .829.887l5.42-5.07v0l1.47 1.314a.605.605 0 0 0 .806-.005l1.511-1.353v0l5.388 5.119a.605.605 0 0 0 .834-.879z"/>
+		</symbol>
 	  </svg>
 	</footer>
 
@@ -134,5 +146,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script src="/wp-content/themes/cp/js/app.min.js"></script>
+
 </body>
 </html>
