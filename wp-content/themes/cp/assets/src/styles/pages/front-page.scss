@@ -654,6 +654,64 @@
 }
 // End of styles for date and views located on the bottom of blocks
 
+// styles for main link to single
+.main-content__block{
+  margin: 20px 0;
+  transition: transform 0.3s ease;
+
+  .slider-nav__block-top{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;         
+  }
+
+  h3{
+    color: #232323;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.27px;
+    line-height: 27px;
+    font-family: "Montserrat", sans-serif;
+  }
+  .slider-nav__block-bottom{
+  
+    span{         
+      color: rgba(0, 0, 0, 1);
+      font-weight: 700;
+      letter-spacing: 0.35px;
+      opacity: 0.5;
+  
+      &:first-child{
+
+        &:after{
+    
+          background-color: rgba(0, 0, 0, 1);
+        }
+      }
+    }
+  }
+  &:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+}
+// end styles for main link to single
+
+// styles for btn load more
+.btn__more-blocks{
+  color: #2863a7;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px solid #2863a7;
+  margin: auto;
+  max-width: 220px;
+  padding: 15px 0;
+  border-radius: 25px;
+  text-align: center;
+}
+// End of styles for btn load more
+
 .top-site{
   height: 100%;
   min-height: 600px;
@@ -998,61 +1056,8 @@
         .blocks-container{
           display: flex;
           flex-wrap: wrap;
-          height: fit-content;
-
-          .main-content__block{
-            margin: 20px 0;
-            transition: transform 0.3s ease;
-    
-            .slider-nav__block-top{
-              margin-top: 20px;
-              display: flex;
-              justify-content: flex-start;         
-            }
-    
-            h3{
-              color: #232323;
-              font-weight: 700;
-              font-size: 16px;
-              letter-spacing: 0.27px;
-              line-height: 27px;
-              font-family: "Montserrat", sans-serif;
-            }
-            .slider-nav__block-bottom{
-            
-              span{         
-                color: rgba(0, 0, 0, 1);
-                font-weight: 700;
-                letter-spacing: 0.35px;
-                opacity: 0.5;
-            
-                &:first-child{
-    
-                  &:after{
-              
-                    background-color: rgba(0, 0, 0, 1);
-                  }
-                }
-              }
-            }
-            &:hover{
-              transform: scale(1.05);
-              transition: transform 0.3s ease;
-            }
-          }
-        }
-        .btn__more-blocks{
-          color: #2863a7;
-          font-family: "Montserrat", sans-serif;
-          font-size: 14px;
-          font-weight: 600;
-          border: 2px solid #2863a7;
-          margin: auto;
-          max-width: 220px;
-          padding: 15px 0;
-          border-radius: 25px;
-          text-align: center;
-        }
+          height: fit-content;    
+        }       
       }
     .main-right__conteiner{    
       display: flex;

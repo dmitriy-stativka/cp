@@ -1,0 +1,95 @@
+.page-menu{
+    background: url(/wp-content/themes/cp/images/menu-section-bg.jpg) no-repeat top center;
+}
+
+
+
+.page__container-menu{
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+    .page-menu__content{
+        display: flex;
+        flex-direction: column;
+
+        .page-menu__content-links{           
+            max-width: 50%;
+            margin: 40px auto 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            li{
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                opacity: 0.6;
+
+                a{
+                    color: #232323;
+                    font-size: 16px;
+                    font-family: "Montserrat", sans-serif;    
+                    font-weight: 500;
+                }    
+                
+                &.active-link{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .page-menu__content-blocks{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+
+        h2{            
+            color: #232323;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 0.39px;           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:before{
+                content: "";
+                width: 40px;
+                height: 1px;
+                background-color: #000;
+                opacity: 0.2;
+                display: block;
+                margin-right: 30px;
+            }
+
+            &:after{
+                content: "";
+                width: 40px;
+                height: 1px;
+                background-color: #000;
+                opacity: 0.2;
+                display: block;
+                margin-left: 30px;
+            }
+        }
+
+        .page-menu__content-blocks-items{
+            display: flex;
+            flex-wrap: wrap;
+
+            .main-content__block{
+
+            }           
+        }
+        .btn__more-blocks{
+            margin: auto;
+            width: 200px;
+            color: #efc066;
+        }
+    }
+
