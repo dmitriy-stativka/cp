@@ -6,15 +6,15 @@ Template Name: About-us
  get_header(); ?>
 
 
-<section class="about-top">   
-    <div class="about-top__container">
+<section class="page-top page-about">   
+    <div class="page__container">
         <a class="back" href=""> <span class="left-arrow"></span> Назад</a>
-        <div class="top-nav__links">
+        <div class="top-nav__links page__about-links">
             <a href="">Главная</a>
             <a href="">Мероприятия</a>
             <a href="">Собрания</a>
         </div>
-        <h1 class="page-title">
+        <h1 class="page-title page-about__title">
             О Нас
         </h1>
     </div>

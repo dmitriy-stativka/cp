@@ -1,0 +1,200 @@
+.page-contacts{
+    background: url(/wp-content/themes/cp/images/top-contacts-bg.jpg) no-repeat top center;
+}
+
+
+
+.contacts-content__container{
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $desktop) {
+        padding: 0 200px;
+    }
+}
+
+.main-content__contacts{
+
+    .main-content__contacts-text{
+        max-width: 60%;
+        margin: 80px auto 50px;
+        span{
+            color: #232323;
+            font-family: 'Merriweather Sans', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+            display: block;
+        }
+
+    }        
+
+    .main-content__contacts-mail{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        padding: 50px 0;
+
+        .contacts-mail__bg{
+            position: absolute;
+            width: 80px;
+            height: 60px;
+            opacity: 0.1;
+            top: 30px;
+        }
+        
+        .mail-adress{
+            font-size: 24px;
+            font-weight: 400;
+            color: #232323;
+            font-family: 'Merriweather Sans', sans-serif;
+            letter-spacing: 0.24px;
+        }
+    }
+
+    .main-content__contacts-links{
+        display: flex;
+        justify-content: center;      
+        
+        a{
+
+            &:nth-child(2) {
+                margin: 0 30px
+            }
+        }
+    }
+}
+
+.contacts-form{
+    padding-bottom: 70px;
+    margin-top: 40px;
+    
+    h2{
+        color: #232323;
+        font-size: 36px;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;    
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+       .form-block{
+
+            input{
+                border: 2px solid #d6d8da;
+                padding: 0px 15px;
+                margin: 15px 0;
+
+                &[type="text"]{                
+                width: 85%;
+                max-width: initial;
+
+                    @media (min-width:$desktop) {
+                        width: 47%;
+                    }
+                }
+
+                &[type="email"]{              
+                width: 85%;
+                max-width: initial;
+
+                    @media (min-width:$desktop) {
+                        width: 47%;
+                    }
+                }
+
+                &:first-child{
+                  border-radius: 25px;
+                  margin-bottom: 20px;                  
+                }
+
+                &:focus{
+                    border: #2863a7 2px solid;
+                }
+
+                @media (min-width:$desktop) {
+                    margin: 0;
+                }
+            }
+
+            &:first-child{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                flex-direction: column;
+                align-items: center;
+
+                @media (min-width:$desktop) {
+                    flex-direction: row;
+                    align-items: initial;
+                }
+            }
+
+            &:nth-child(2) {
+                display: flex;
+                justify-content: center;
+
+                textarea{                
+                    height: 100%;
+                    min-height: 150px;              
+                    max-width: 85%;
+                    padding: 15px;
+                    width: 100%;
+                    border-radius: 0;
+                    outline: none;
+                    border: 2px solid #d6d8da;
+                    background: transparent;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 500;
+                    font-size: 15px;
+
+                    &:focus{
+                        border: #2863a7 2px solid;
+                    }
+
+                    @media(min-width: $desktop) {
+                        max-width: 420px;
+                        min-height: 100%;
+                    }
+                }
+
+                @media(min-width: $desktop) {
+                    display: block;
+                }
+            }
+
+            &:last-child{
+                display: flex;
+                justify-content: center;
+                margin-top: 40px;
+
+                button{
+                    max-width: 420px;
+                    width: 100%;
+                    background-color: #2863a7;
+                    border-radius: 25px;
+                    height: 50px;
+                    display: block;
+                    font-size: 14px;
+                    color: #fff;
+                    font-family: "Montserrat", sans-serif;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }            
+       }
+       @media (min-width:$desktop) {
+           flex-direction: row;
+       }
+    }
+}
