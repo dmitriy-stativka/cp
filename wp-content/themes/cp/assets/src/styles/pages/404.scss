@@ -1,0 +1,73 @@
+.error-page{
+    max-width: 1000px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto 0px;
+    align-items: center;
+
+    .error-page__404{          
+        margin-bottom: 40px;
+ 
+        span{
+            font-weight: bold;
+            font-size: 130px;
+            color: #4b4b4b;
+            font-family: "Montserrat", sans-serif;
+            letter-spacing: 1.95px;
+            
+           
+            @media (min-width:$tablet) {
+                padding-right: 50px;
+            }            
+        }
+
+        @media (min-width:$tablet) {
+            border-right: solid 1px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 0;
+        }
+    }
+
+    .error-page__link{
+        max-width: 80%;
+        text-align: center;
+
+        span{
+            font-family: "Montserrat", sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #4b4b4b;
+            letter-spacing: 0.54px;
+        }
+
+        p{
+            font-size: 16px;
+            font-family: "Montserrat", sans-serif;
+            color: #707070;
+            letter-spacing: 0.24px;
+            font-weight: 400;
+            margin: 40px 0;
+        }
+
+        a{
+            color: #2863a7;
+            font-size: 14px;
+            font-family: "Montserrat", sans-serif;
+            border: 2px solid #2863a7;          
+            padding: 15px;
+            border-radius: 25px;
+            display: inline-block;
+        }
+
+        @media (min-width:$tablet) {
+            padding-left: 50px;
+            max-width: 100%;
+            text-align: initial;
+        }
+    }
+
+    @media (min-width:$tablet) {
+        flex-direction: row;
+    }
+}
