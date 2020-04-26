@@ -155,11 +155,15 @@ Template Name: Front-page
 
     <div class="flex_col-desk--3-4 main-left__container">
        <div class="blocks-container">
+
           <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
             <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-            <div class="slider-nav__block-top blue">
-              <span class="nav__block-top__category"> Экспертная деятельность </span>
-              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            <div class="slider-nav__block-top">
+              <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+              <span class="nav__block-top__single-categ" style="color: #efc066">
+                Засідання клубу 
+                <i style="background: #efc066 ;" class="dot-color"></i>
+              </span>
             </div>
             <h3>
               Законы общественного процесса. 
@@ -173,9 +177,12 @@ Template Name: Front-page
       
           <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
             <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-            <div class="slider-nav__block-top yellow">
-              <span class="nav__block-top__category"> Экспертная деятельность </span>
-              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            <div class="slider-nav__block-top">
+              <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+              <span class="nav__block-top__single-categ" style="color: #efc066">
+                Засідання клубу 
+                <i style="background: #efc066 ;" class="dot-color"></i>
+              </span>
             </div>
             <h3>
               Законы общественного процесса. 
@@ -189,9 +196,12 @@ Template Name: Front-page
       
           <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
             <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-            <div class="slider-nav__block-top green">
-              <span class="nav__block-top__category"> Экспертная деятельность </span>
-              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            <div class="slider-nav__block-top">
+              <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+              <span class="nav__block-top__single-categ" style="color: #efc066">
+                Засідання клубу 
+                <i style="background: #efc066 ;" class="dot-color"></i>
+              </span>
             </div>
             <h3>
               Законы общественного процесса. 
@@ -205,9 +215,12 @@ Template Name: Front-page
       
           <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
             <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-            <div class="slider-nav__block-top red">
-              <span class="nav__block-top__category"> Экспертная деятельность </span>
-              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            <div class="slider-nav__block-top">
+              <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+              <span class="nav__block-top__single-categ" style="color: #efc066">
+                Засідання клубу 
+                <i style="background: #efc066 ;" class="dot-color"></i>
+              </span>
             </div>
             <h3>
               Законы общественного процесса. 
@@ -221,9 +234,12 @@ Template Name: Front-page
       
           <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
             <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-            <div class="slider-nav__block-top green">
-              <span class="nav__block-top__category"> Экспертная деятельность </span>
-              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            <div class="slider-nav__block-top">
+              <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+              <span class="nav__block-top__single-categ" style="color: #efc066">
+                Засідання клубу 
+                <i style="background: #efc066 ;" class="dot-color"></i>
+              </span>
             </div>
             <h3>
               Законы общественного процесса. 
@@ -237,9 +253,12 @@ Template Name: Front-page
       
           <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
             <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-            <div class="slider-nav__block-top blue">
-              <span class="nav__block-top__category"> Экспертная деятельность </span>
-              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            <div class="slider-nav__block-top">
+              <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+              <span class="nav__block-top__single-categ" style="color: #efc066">
+                Засідання клубу 
+                <i style="background: #efc066 ;" class="dot-color"></i>
+              </span>
             </div>
             <h3>
               Законы общественного процесса. 
@@ -253,9 +272,12 @@ Template Name: Front-page
 
           <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
             <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-            <div class="slider-nav__block-top red">
-              <span class="nav__block-top__category"> Экспертная деятельность </span>
-              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            <div class="slider-nav__block-top">
+              <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+              <span class="nav__block-top__single-categ" style="color: #efc066">
+                Засідання клубу 
+                <i style="background: #efc066 ;" class="dot-color"></i>
+              </span>
             </div>
             <h3>
               Законы общественного процесса. 
@@ -269,9 +291,12 @@ Template Name: Front-page
 
           <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
             <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-            <div class="slider-nav__block-top green">
-              <span class="nav__block-top__category"> Экспертная деятельность </span>
-              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            <div class="slider-nav__block-top">
+              <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+              <span class="nav__block-top__single-categ" style="color: #efc066">
+                Засідання клубу 
+                <i style="background: #efc066 ;" class="dot-color"></i>
+              </span>
             </div>
             <h3>
               Законы общественного процесса. 
@@ -285,9 +310,12 @@ Template Name: Front-page
 
           <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
             <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-            <div class="slider-nav__block-top yellow">
-              <span class="nav__block-top__category"> Экспертная деятельность </span>
-              <span class="nav__block-top__single-categ"> Заседания клуба </span>
+            <div class="slider-nav__block-top">
+              <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+              <span class="nav__block-top__single-categ" style="color: #efc066">
+                Засідання клубу 
+                <i style="background: #efc066 ;" class="dot-color"></i>
+              </span>
             </div>
             <h3>
               Законы общественного процесса. 
@@ -298,6 +326,7 @@ Template Name: Front-page
               <span>1 234 просмотров</span>
             </div>
           </a>
+          
        </div>
 
        <a href="#" class="btn__more-blocks">

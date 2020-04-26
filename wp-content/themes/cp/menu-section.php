@@ -9,7 +9,7 @@ Template Name: menu-section
         <a class="back" href=""> <span class="left-arrow"></span> Назад</a>
         <div class="top-nav__links page-menu__links">
             <a href="">Главная</a>
-            <a href="">Мероприятия</a>     
+            <a href="">Фаховi заходи</a>     
         </div>
         <h1 class="page-title page-menu__title">
             Фаховi заходи
@@ -44,16 +44,19 @@ Template Name: menu-section
 
         <div class="page-menu__content-blocks">
             <h2>
-                Все статьи на тему «мероприятия»
+                Все статьи на тему «Фахові заходи»
             </h2>
 
             <div class="page-menu__content-blocks-items">      
 
                 <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -67,9 +70,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -83,9 +89,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -99,9 +108,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -115,9 +127,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -131,9 +146,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -147,9 +165,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -163,9 +184,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -179,9 +203,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -195,9 +222,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -211,9 +241,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -227,9 +260,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -243,9 +279,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -259,9 +298,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -275,9 +317,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -291,9 +336,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -307,9 +355,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -323,9 +374,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -339,9 +393,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -355,9 +412,12 @@ Template Name: menu-section
 
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
-                    <div class="slider-nav__block-top yellow">
-                      <span class="nav__block-top__category"> Экспертная деятельность </span>
-                      <span class="nav__block-top__single-categ"> Заседания клуба </span>
+                    <div class="slider-nav__block-top">
+                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                      <span class="nav__block-top__single-categ" style="color: #efc066">
+                        Засідання клубу 
+                        <i style="background: #efc066 ;" class="dot-color"></i>
+                    </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
@@ -371,12 +431,39 @@ Template Name: menu-section
 
             </div>
 
-            <a href="#" class="btn__more-blocks">
+            <a href="#" class="btn__more-blocks" style="border-color: #efc066; color: #efc066;">
                 Загрузить еще
             </a>
         </div>
 
     </section>
+
+    <section class="about-us">
+        <div class="about-us__container">
+          <div class="flex_col--1-2 flex_col-desk--1-4 about-us__img-block">
+            <img src="/wp-content/themes/cp/images/About-us-img.png" alt="">
+          </div>
+          <div class="flex_col-desk--3-4 about-us__text-block">
+            <div class="text-block__half-hidden">
+              <div class="flex_col--1-1 flex_col-tab--1-1 half-hidden__left">
+                <h1>
+                  Содействие совершенствованию гражданского законодательства 
+                </h1>
+                <p>
+                  Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения дальнейших направлений развития.
+                </p>       
+                <p>
+                  Товарищи! новая модель организационной деятельности требуют от нас анализа существенных финансовых и административных условий. Таким образом консультация с широким активом требуют от нас анализа системы обучения кадров, соответствует насущным потребностям.
+                </p>
+              </div>      
+            </div>
+            <div class="text-block__btn">
+              <span class="hidden-block__open" style="color: #efc066;">Развернуть</span>
+              <a class="hidden-block__about-link" href="#" style="background-color: #efc066; color: #fff;">Подробнее о нас</a>
+            </div>
+          </div>
+        </div>
+      </section>
    
 
 </div>

@@ -500,32 +500,30 @@
       justify-content: center;                  
       max-width: fit-content;
       padding: 7px 15px;
-      font-size: 8px;
+      font-size: 10px;
       font-family: "Montserrat", sans-serif;                  
       margin-right: 30px;
 
-      @media(min-width: $tablet) {
-        font-size: 10px;
-      }  
 
       // @media(min-width: $desktop) and (max-width: 1440px) {
       //   font-size: 10px;
       // }  
 
       @media(min-width: 1440px) {
-        font-size: 12px;
+        font-size: 14px;
       }
     }
     &.nav__block-top__single-categ{
       position: relative;
       font-family: "Montserrat", sans-serif;
       font-weight: 500;                  
-      font-size: 8px;
+      font-size: 10px;
       font-weight: bold;
       padding: 7px 0;
       display: flex;
       justify-content: center;
-      &:before{
+
+      i{
         content: "";
         position: absolute;
         top: 45%;
@@ -536,93 +534,90 @@
         transform: rotate(45deg);                    
       }
 
-      @media(min-width: $tablet) {
-        font-size: 10px;
-      }  
      
       @media(min-width: 1440px) {
-        font-size: 12px;
+        font-size: 14px;
       }
     }
   }
-  &.red{
-    span{
-      &.nav__block-top__category{
-        background-color: #ed5152;
-      }
-      &.nav__block-top__single-categ{
-        color: #ed5152;
-        &:before{
-          background-color: #ed5152;
-        }
-      }
-    }
-  }
-  &.blue{
-    span{
-      &.nav__block-top__category{
-        background-color: #2863a7;
-      }
-      &.nav__block-top__single-categ{
-        color: #2863a7;
-        &:before{
-          background-color: #2863a7;
-        }
-      }
-    }
-  }
-  &.green{
-    span{
-      &.nav__block-top__category{
-        background-color: #38bb8a;
-      }
-      &.nav__block-top__single-categ{
-        color: #38bb8a;
-        &:before{
-          background-color: #38bb8a;
-        }
-      }
-    }
-  }
-  &.yellow{
-    span{
-      &.nav__block-top__category{
-        background-color: #efc066;
-      }
-      &.nav__block-top__single-categ{
-        color: #efc066;
-        &:before{
-          background-color: #efc066;
-        }
-      }
-    }
-  }
-  &.salad{
-    span{
-      &.nav__block-top__category{
-        background-color: #3fb6c9;
-      }
-      &.nav__block-top__single-categ{
-        color: #3fb6c9;
-        &:before{
-          background-color: #3fb6c9;
-        }
-      }
-    }
-  }
-  &.purple{
-    span{
-      &.nav__block-top__category{
-        background-color: #8c8ce5;
-      }
-      &.nav__block-top__single-categ{
-        color: #8c8ce5;
-        &:before{
-          background-color: #8c8ce5;
-        }
-      }
-    }
-  }
+  // &.red{
+  //   span{
+  //     &.nav__block-top__category{
+  //       background-color: #ed5152;
+  //     }
+  //     &.nav__block-top__single-categ{
+  //       color: #ed5152;
+  //       &:before{
+  //         background-color: #ed5152;
+  //       }
+  //     }
+  //   }
+  // }
+  // &.blue{
+  //   span{
+  //     &.nav__block-top__category{
+  //       background-color: #2863a7;
+  //     }
+  //     &.nav__block-top__single-categ{
+  //       color: #2863a7;
+  //       &:before{
+  //         background-color: #2863a7;
+  //       }
+  //     }
+  //   }
+  // }
+  // &.green{
+  //   span{
+  //     &.nav__block-top__category{
+  //       background-color: #38bb8a;
+  //     }
+  //     &.nav__block-top__single-categ{
+  //       color: #38bb8a;
+  //       &:before{
+  //         background-color: #38bb8a;
+  //       }
+  //     }
+  //   }
+  // }
+  // &.yellow{
+  //   span{
+  //     &.nav__block-top__category{
+  //       background-color: #efc066;
+  //     }
+  //     &.nav__block-top__single-categ{
+  //       color: #efc066;
+  //       &:before{
+  //         background-color: #efc066;
+  //       }
+  //     }
+  //   }
+  // }
+  // &.salad{
+  //   span{
+  //     &.nav__block-top__category{
+  //       background-color: #3fb6c9;
+  //     }
+  //     &.nav__block-top__single-categ{
+  //       color: #3fb6c9;
+  //       &:before{
+  //         background-color: #3fb6c9;
+  //       }
+  //     }
+  //   }
+  // }
+  // &.purple{
+  //   span{
+  //     &.nav__block-top__category{
+  //       background-color: #8c8ce5;
+  //     }
+  //     &.nav__block-top__single-categ{
+  //       color: #8c8ce5;
+  //       &:before{
+  //         background-color: #8c8ce5;
+  //       }
+  //     }
+  //   }
+  // }
 }
 // End of styles for categories with different colors
 
@@ -704,7 +699,7 @@
   font-size: 14px;
   font-weight: 600;
   border: 2px solid #2863a7;
-  margin: auto;
+  margin: 40px auto;
   max-width: 220px;
   padding: 15px 0;
   border-radius: 25px;
@@ -1476,16 +1471,7 @@
           border-radius: 25px;
           font-size: 14px;
           font-weight: 600;
-          border: 2px solid transparent;
-          transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
-
-          &:hover{
-            transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
-            background-color: white;
-            border: 2px solid #2863a7;
-            color: #2863a7;
-          }
-
+    
           @media(min-width: $desktop) {    
             margin-left: 10px;
           }  
