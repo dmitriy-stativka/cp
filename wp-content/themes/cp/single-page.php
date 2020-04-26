@@ -133,6 +133,7 @@
                 <div class="change-article__block">
                     <a href="" class="change-article__block__link article-prev">
                         <span class="article__block__link-span">
+                            <span class="left-arrow"></span>
                             Предыдущая статья
                         </span>
                         <span class="article__block__link-span">
@@ -145,8 +146,9 @@
                         </div>
                     </a>
                     <a href="" class="change-article__block__link article-next">
-                        <span class="article__block__link-span">
+                        <span class="article__block__link-span">                            
                             Предыдущая статья
+                            <span class="right-arrow"></span>
                         </span>
                         <span class="article__block__link-span">
                             Законы общественного процесса. 
