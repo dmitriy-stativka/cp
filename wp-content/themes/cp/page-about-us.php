@@ -9,7 +9,7 @@ Template Name: About-us
 <section class="page-top page-about">   
     <div class="page__container">
         <a class="back" href=""> <span class="left-arrow"></span> Назад</a>
-        <div class="top-nav__links page__about-links">
+        <div class="page__about-links top-nav__links">
             <a href="">Главная</a>
             <a href="">Мероприятия</a>
             <a href="">Собрания</a>

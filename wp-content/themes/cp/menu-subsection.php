@@ -239,11 +239,11 @@ Template Name: menu-subsection
                   <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
                     <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
                     <div class="slider-nav__block-top">
-                      <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
-                      <span class="nav__block-top__single-categ" style="color: #efc066">
-                        Засідання клубу 
-                        <i style="background: #efc066 ;" class="dot-color"></i>
-                    </span>
+                        <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                        <span class="nav__block-top__single-categ" style="color: #efc066">
+                            Засідання клубу 
+                            <i style="background: #efc066 ;" class="dot-color"></i>
+                        </span>
                     </div>
                     <h3>
                       Законы общественного процесса. 
