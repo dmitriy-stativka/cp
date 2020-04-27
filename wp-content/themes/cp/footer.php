@@ -283,6 +283,14 @@
 		<symbol id="line" viewbox="0 0 2 21">
 			<path fill="none" stroke="#787878" stroke-miterlimit="20" d="M1.5 0v21"/>
 		</symbol>
+
+		<symbol id="left-black__aroow" viewbox="0 0 22 10">
+			<path fill="none" stroke="#232323" stroke-miterlimit="20" stroke-width="2" d="M1.84 5.011h19.5"/><path fill="none" stroke="#232323" stroke-miterlimit="20" stroke-width="2" d="M5.34 9.011v0l-4-4v0l4-4v0"/>
+		</symbol>
+
+		<symbol id="right-black__arrow" viewbox="0 0 22 10">
+			<path fill="none" stroke="#232323" stroke-miterlimit="20" stroke-width="2" d="M19.5 5.011H0"/><path fill="none" stroke="#232323" stroke-miterlimit="20" stroke-width="2" d="M16 9.011v0l4-4v0l-4-4v0"/>
+		</symbol>
 		
 	  </svg>
 	</footer>

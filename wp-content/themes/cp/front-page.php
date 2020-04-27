@@ -326,7 +326,6 @@ Template Name: Front-page
               <span>1 234 просмотров</span>
             </div>
           </a>
-          
        </div>
 
        <a href="#" class="btn__more-blocks">

@@ -12,7 +12,7 @@
 <section class="page-top page-single">   
     <div class="page__container">
         <a class="back" href=""> <span class="left-arrow"></span> Назад</a>
-        <div class="main-content-article__container">
+        <div class="main-content-article-nav__container">
             <div class="page-single__links top-nav__links">
                 <a href="">Главная</a>
                 <a href="">Позиції</a>
@@ -24,8 +24,10 @@
 </section>
 
 <section class="main-content-article">
-    <div class="main-content-article__container">
-        <div class="content-article__block-top">
+    <div class="main-content-article__container">      
+        <div class="flex_col-desk--1-4">
+        </div>
+        <div class="flex_col-desk--3-4 content-article__block-top">
             <div class="slider-nav__block-top">
                 <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
                 <span class="nav__block-top__single-categ" style="color: #efc066">
@@ -128,45 +130,137 @@
                 <p>
                     Таким образом сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Товарищи! укрепление и развитие структуры позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач.
                     С другой стороны рамки и место обучения кадров представляет собой интересный эксперимент проверки дальнейших направлений развития. Товарищи! начало повседневной работы по формированию позиции требуют определения и уточнения форм развития. Разнообразный и богатый опыт укрепление и развитие структуры играет важную роль в формировании соответствующий условий активизации.
-                </p>
-
-                <div class="change-article__block">
-                    <a href="" class="change-article__block__link article-prev">
-                        <span class="article__block__link-span">
-                            <span class="left-arrow"></span>
-                            Предыдущая статья
-                        </span>
-                        <span class="article__block__link-span">
-                            Законы общественного процесса. 
-                            Концепции развития общества.
-                        </span>
-                        <div class="slider-nav__block-bottom">
-                            <span>04.04.2020</span>
-                            <span>1 234 просмотров</span>
-                        </div>
-                    </a>
-                    <a href="" class="change-article__block__link article-next">
-                        <span class="article__block__link-span">                            
-                            Предыдущая статья
-                            <span class="right-arrow"></span>
-                        </span>
-                        <span class="article__block__link-span">
-                            Законы общественного процесса. 
-                            Концепции развития общества.
-                        </span>
-                        <div class="slider-nav__block-bottom">
-                            <span>04.04.2020</span>
-                            <span>1 234 просмотров</span>
-                        </div>
-                    </a>
-                </div>
+                </p>           
+                
             </div>
+        </div>
+    </div>
+    <div class="main-content-article__container">
+        <div class="flex_col-desk--1-4"></div>
+        <div class="flex_col-desk--3-4 change-article__block">
+            <a href="" class="change-article__block__link article-prev">
+                <span class="article__block__link-span">
+                    <span><svg class="icon"><use xlink:href="#left-black__aroow"/></svg></span> 
+                    Предыдущая статья
+                </span>
+                <span class="article__block__link-span">
+                    Законы общественного процесса. 
+                    Концепции развития общества.
+                </span>
+                <div class="slider-nav__block-bottom">
+                    <span>04.04.2020</span>
+                    <span>1 234 просмотров</span>
+                </div>
+            </a>
+            <a href="" class="change-article__block__link article-next">
+                <span class="article__block__link-span">                            
+                    Предыдущая статья
+                    <span><svg class="icon"><use xlink:href="#right-black__arrow"/></svg></span> 
+                </span>
+                <span class="article__block__link-span">
+                    Законы общественного процесса. 
+                    Концепции развития общества.
+                </span>
+                <div class="slider-nav__block-bottom">
+                    <span>04.04.2020</span>
+                    <span>1 234 просмотров</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="main-content-article__container">
+        <div class="flex_col-desk--1-4"></div>
+        <div class="flex_col-desk--3-4 flex_col--1-1 contact-article__block">
+            <span>
+                Появились вопросы? Задайте их нам.
+            </span>
+            <a href="">Задать вопрос</a>
         </div>
     </div>
 </section>
 
 <section class="bottom-content-article">
+    <h2>
+        Читайте также в этой категории
+    </h2>
+    <div class="bottom-content__articles">
+       
+        <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
+            <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
+            <div class="slider-nav__block-top">
+                <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+                <span class="nav__block-top__single-categ" style="color: #efc066">
+                    Засідання клубу 
+                    <i style="background: #efc066 ;" class="dot-color"></i>
+                </span>
+            </div>
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития общества.
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </a>
 
+          <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
+            <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
+            <div class="slider-nav__block-top">
+              <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+              <span class="nav__block-top__single-categ" style="color: #efc066">
+                Засідання клубу 
+                <i style="background: #efc066 ;" class="dot-color"></i>
+            </span>
+            </div>
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития общества.
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </a>
+
+          <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
+            <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
+            <div class="slider-nav__block-top">
+              <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+              <span class="nav__block-top__single-categ" style="color: #efc066">
+                Засідання клубу 
+                <i style="background: #efc066 ;" class="dot-color"></i>
+            </span>
+            </div>
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития общества.
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </a>
+
+          <a href="#" class="flex_col-tab--1-2 flex_col-desk--1-4 main-content__block">
+            <img src="/wp-content/themes/cp/images/img-for-article1.jpg" alt="">
+            <div class="slider-nav__block-top">
+              <span class="nav__block-top__category" style="background: #efc066"> Фахові заходи </span>
+              <span class="nav__block-top__single-categ" style="color: #efc066">
+                Засідання клубу 
+                <i style="background: #efc066 ;" class="dot-color"></i>
+            </span>
+            </div>
+            <h3>
+              Законы общественного процесса. 
+              Концепции развития общества.
+            </h3>
+            <div class="slider-nav__block-bottom">
+              <span>04.04.2020</span>
+              <span>1 234 просмотров</span>
+            </div>
+          </a>
+    </div>
 </section>
 
 
