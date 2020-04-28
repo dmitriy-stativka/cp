@@ -11,49 +11,32 @@
 ?>
 
 <?php wp_reset_query(); ?>
-	
 	<footer class="footer">
 		<div class="footer-container">
 			<div class="flex_col-desk top-footer">
 				<div class="flex_col-desk--1-5 flex_col--1-1 footer-logo">
-					<a href="//localhost:3000/" class="custom-logo-link" rel="home">
-						<img width="65" height="41" src="//localhost:3000/wp-content/uploads/2020/04/cropped-logo.jpg" class="custom-logo" alt="Цивілістична Платформа">
-					</a>
+					<?php the_custom_logo();?>
 				</div>
 				<div class="flex_col-desk--4-5 footer-menu_block">
-					<ul class="flex_col-desk--1-6">
-						<li><a href="">Фахові заходи</a></li>
-						<li><a href="">Форумы и конференции</a></li>
-						<li><a href="">Круглі столи</a></li>
-						<li><a href="">Засідання клубу</a></li>
-						<li><a href="">Публічні лекції</a></li>
-					</ul>
-					<ul class="flex_col-desk--1-6">
-						<li><a href="">Позиції</a></li>
-						<li><a href="">Теорія і методологія цивільного права</a></li>
-						<li><a href="">Суб’єкти цивільного права</a></li>
-						<li><a href="">Корпоративне право</a></li>
-						<li><a href="">Майно. Право власності</a></li>
-						<li><a href="">Спадкове право</a></li>
-						<li><a href="">Право інтелектуальної власності</a></li>
-						<li><a href="">Особисті немайнові права</a></li>
-						<li><a href="">Правочини. Договори. Представницво</a></li>
-						<li><a href="">Недоговірні зобов’язання</a></li>
-						<li><a href="">Строки. Позовна давність</a></li>
-						<li><a href="">Захист. Відповідальність</a></li>
-					</ul>
-					<ul class="flex_col-desk--1-6">
-						<li><a href="">Експертная деятельность</a></li>
-					</ul>
-					<ul class="flex_col-desk--1-6">
-						<li><a href="">Дискуссии и диалоги</a></li>
-					</ul>
-					<ul class="flex_col-desk--1-6">
-						<li><a href="">Наукова критика </a></li>
-					</ul>
-					<ul class="flex_col-desk--1-6">
-						<li><a href="">Публікації</a></li>
-					</ul>
+
+					<?php
+						$рarent_categories = get_categories( 'orderby=name&order=ASC' );
+						foreach ( $рarent_categories as $category ){
+							if ( $category->parent < 1 ) {
+								$rl_category_color = rl_color($category->cat_ID);
+								echo '<ul class="flex_col-desk--1-6">';
+
+								echo '<li><a href="'.get_category_link($category).'" >'.$category->name.'</a></li>';       
+								$childless_categories = get_categories( array( 'parent' => $category->term_id ));
+
+								foreach ( $childless_categories as $childless ){
+									echo '<li><a href="'.get_category_link($childless).'">'.$childless->name.'</a></li>';
+								}
+								echo '</ul>';
+							}
+						}
+					?>
+
 				</div>
 			</div>
 			<div class="flex_col-desk bottom-footer">
@@ -72,35 +55,42 @@
 					</li>
 				  </ul>
 				  <div class="flex_col--1-1 flex_col-desk--4-5 footer-bottom__right-block">
-					<a class="flex_col-desk--1-6" href="">Контакты</a>
-					<a class="flex_col-desk--1-6" href="">О нас</a>
+
+					<?php 
+						$pages = get_pages(); 
+						foreach( $pages as $page ){
+							echo '<a class="flex_col-desk--1-6" href="' . get_page_link( $page->ID ) . '">'. esc_html($page->post_title) .'</a>';
+						}
+					?>
+
 					<div class="flex_col-desk--1-6 empty"></div>
-					<div class="flex_col-desk--1-6 empty"></div>
-					<span class="flex_col-desk--1-3">©Цивилистическая платформа. Все права защищены</span>
+					<span class="flex_col-desk--1-3"><?php pll_e('copyright'); ?></span>
 				  </div>				 
 			</div>
 		</div>
-
 
 		<!-- search block (invisible). After click on search-btn becomes visible-->
 		<div class="nav-tools__search-block_click">
 		<div class="search-block_click-container">
 			<div class="search-block-line">
-			<input type="search" placeholder="Поиск среди 1 статей" />
-			<button>
-				<svg class="icon"><use xlink:href="#search" /></svg>
-			</button>
+				<?php
+					$count_posts = wp_count_posts();
+					$published_posts = $count_posts->publish;
+				?>
+
+				<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ) ?>" >
+					<input type="text" value="<?php echo get_search_query() ?>" name="s" id="s" placeholder='<?php pll_e('searchPlaceholder'); ?> <?php echo $published_posts;?> <?php pll_e('searchlast'); ?>' />
+					<button>
+						<svg class="icon"><use xlink:href="#search"></svg>
+					</button>
+					<input type="submit" id="searchsubmit" value="">
+				</form>
+
 			</div>
 			<div class="search-block-links">
-			<div><span>Часто ищут:</span></div>
+			<div><span><?php pll_e('search'); ?></span></div>
 			<div>
-				<a href="">Законы общественного процесса</a>
-				<a href="">Концепции развития общества</a>
-				<a href="">Законы общественного процесса</a>
-				<a href="">Концепции развития общества</a>
-				<a href="">Новая модель организационной деятельности</a>
-				<a href="">Законы общественного процесса</a>
-				<a href="">Новая модель организационной деятельности</a>
+				<?php recommend();?>
 			</div>
 			</div>
 		</div>
@@ -111,59 +101,86 @@
 		<div class="burger-menu__block">
 		<div class="burger-menu__container">
 			<div class="burger-menu__lists">
+				<?php
+					$рarent_categories = get_categories( 'orderby=name&order=ASC' );
+					foreach ( $рarent_categories as $category ){
+						if ( $category->parent < 1 ) {
+							$rl_category_color = rl_color($category->cat_ID);
+							echo '<ul class="flex_col-desk--1-3 burger-menu__lists-item">';
 
-			<ul class="flex_col-desk--1-3 burger-menu__lists-item">
-				<li><a href="">Фахові заходи</a></li>
-				<li><a href="">Форумы и конференции</a></li>
-				<li><a href="">Круглі столи</a></li>
-				<li><a href="">Засідання клубу</a></li>
-				<li><a href="">Публічні лекції</a></li>
-			</ul>
+							echo '<li><a href="'.get_category_link($category).'"  style="color: '.$rl_category_color.';">'.$category->name.'</a></li>';       
+							$childless_categories = get_categories( array( 'parent' => $category->term_id ));
 
-			<ul class="flex_col-desk--1-3 burger-menu__lists-item">
-				<li><a href="">Позиції</a></li>
-				<li><a href="">Теорія і методологія цивільного права</a></li>
-				<li><a href="">Суб’єкти цивільного права</a></li>
-				<li><a href="">Корпоративне право</a></li>
-				<li><a href="">Майно. Право власності</a></li>
-				<li><a href="">Спадкове право</a></li>
-				<li><a href="">Право інтелектуальної власності</a></li>
-				<li><a href="">Особисті немайнові права</a></li>
-				<li><a href="">Правочини. Договори. Представницво</a></li>
-				<li><a href="">Недоговірні зобов’язання</a></li>
-				<li><a href="">Строки. Позовна давність</a></li>
-				<li><a href="">Захист. Відповідальність</a></li>
-			</ul>
-
-			<ul class="flex_col-desk--1-3 burger-menu__lists-item">
-				<li><a href="">Експертная деятельность</a></li>
-			
-			</ul>
-
-			<ul class="flex_col-desk--1-3 burger-menu__lists-item">
-				<li><a href="">Дискуссии и диалоги</a></li>
-			
-			</ul>  
-
-			<ul class="flex_col-desk--1-3 burger-menu__lists-item">
-				<li><a href="">Научная критика</a></li>
-			
-			</ul>
-
-			<ul class="flex_col-desk--1-3 burger-menu__lists-item">
-				<li><a href="">Публикации</a></li>
-			
-			</ul>     
+							foreach ( $childless_categories as $childless ){
+								echo '<li><a href="'.get_category_link($childless).'">'.$childless->name.'</a></li>';
+							}
+							echo '</ul>';
+						}
+					}
+				?>
 			</div>
 			<div class="burger-menu__right-block">
 			<ul class="burger-menu__right-block-top_list">
-				<li><a href="#">Контакты</a></li>
-				<li><a href="#">О нас</a></li>
+			
+				<?php
+					$array = array(
+					'authors'      => '',
+					'child_of'     => 0, 
+					'date_format'  => get_option('date_format'),
+					'depth'        => 0, 
+					'echo'         => 1, 
+					'exclude'      => '',
+					'include'      => '', 
+					'link_after'   => '', 
+					'link_before'  => '', 
+					'post_type'    => 'page',
+					'post_status'  => 'publish', 
+					'show_date'    => '', 
+					'sort_column'  => 'menu_order, post_title', 
+							'sort_order'   => '', 
+					'title_li'     => __(''), 
+					);
+					wp_list_pages($array)
+				?>
+
+
 			</ul>
 			<div class="burger-menu__right-block-bottom_list">
+
 				<span>Cвяжитесь с нами</span>
-				<span>+38 (066) 521-54-24</span>
-				<span>Info@civliplatform.com</span>
+
+				<span>
+					<a href="tel:+38 (066) 521-54-24">+38 (066) 521-54-24</a>
+				</span>
+
+
+				<?php
+						$params = array(
+							'post_type' => 'capabilities',
+							'posts_per_page' => 3
+						);
+						$query = new WP_Query( $params );
+						?>
+						<?php if($query->have_posts()): ?>
+							<?php $number = 0; ?>
+							<?php while ($query->have_posts()): $query->the_post() ?>
+								<?php $title_capabilities = get_field('title_capabilities'); 
+									$number++;
+								?>
+
+								<li class="capabilities-item">
+									<a>0<?php echo $number;?>. <?php echo $title_capabilities;?></a>
+								</li>
+								
+								<?php endwhile; ?>
+						<?php endif; 
+					?>
+
+				<span>
+					<a href="mailto:Info@civliplatform.com">Info@civliplatform.com</a>
+				</span>
+
+
 				<ul>
 				<li class="bottom_list__icons">
 					<a href="#"

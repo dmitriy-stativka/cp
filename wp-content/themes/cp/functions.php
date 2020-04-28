@@ -121,14 +121,42 @@ function cp_scripts() {
 // animate end
 
 
+register_post_type('settings', array(
+    'labels'             => array(
+      'name'               => 'Главные настройки',
+      'singular_name'      => 'Главные настройки',
+      'add_new'            => 'Добавить настройку',
+      'add_new_item'       => 'Добавить новую настройку',
+      'edit_item'          => 'Редактировать настройку',
+      'new_item'           => 'Новая настройку',
+      'view_item'          => 'Посмотреть настройку',
+      'search_items'       => 'Найти настройку',
+      'not_found'          => 'Не найдено',
+      'not_found_in_trash' => 'В корзине ничего не найдено',
+      'parent_item_colon'  => '',
+      'menu_name'          => 'Главные настройки'
+      ),
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => true,
+    'capability_type'    => 'post',
+    'has_archive'        => false,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
+  ));
+
 
 
 pll_register_string('Обратная связь', 'callback');
 pll_register_string('Просмотров', 'views');
-
-
-
-
+pll_register_string('Копирайтинг', 'copyright');
+pll_register_string('Часто ищут', 'search');
+pll_register_string('Поиск по', 'searchPlaceholder');
+pll_register_string('статей', 'searchlast');
 
 
 
@@ -174,3 +202,33 @@ global $user_ID, $post;
 	}
 	return true;
 }
+
+
+//РЕКОМЕНДОВАННЫЕ
+function recommend() {
+	$categories = get_the_category($post->ID);
+	if ($categories) {
+		$category_ids = array();
+		foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
+		$args=array(
+			'category__in' => $category_ids,
+			'post__not_in' => array($post->ID),
+			'showposts'=>5,
+			'caller_get_posts'=>1
+		);
+		$my_query = new wp_query($args);
+		if( $my_query->have_posts() ) {
+			echo '<ul>';
+			while ($my_query->have_posts()) {
+				$my_query->the_post();
+			?>
+			
+			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+			
+			<?php
+			}
+			echo '</ul>';
+		}
+		wp_reset_query();
+	}
+};

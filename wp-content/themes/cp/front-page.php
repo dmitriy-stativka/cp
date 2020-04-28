@@ -108,9 +108,7 @@ Template Name: Front-page
                           </div>
 
                           <h2 class="slider-for-center"><?php the_title(); ?></h2>
-                          <p class="slider-for__text">
-                            Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения дальнейших направлений развития.                      
-                          </p>
+                          <p class="slider-for__text"> <?php the_field('description');?></p>
 
                           <div class="slider-nav__block-bottom">
                               <span><?php echo get_the_date('d.m.Y'); ?></span>
