@@ -1,0 +1,114 @@
+.page-menu{
+    background: url(/wp-content/themes/cp/images/menu-section-bg.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+
+
+.page__container-menu{
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+    .page-menu__content{
+        display: flex;
+        flex-direction: column;
+
+        .page-menu__content-links{                       
+            margin: 40px auto 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            li{
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                opacity: 0.6;
+                margin: 10px 0;
+                justify-content: center;
+
+                svg{
+                    display: none;
+
+                    @media (min-width: $desktop) {
+                        display: block;
+                    }
+                }
+
+                a{
+                    color: #232323;
+                    font-size: 16px;
+                    font-family: "Montserrat", sans-serif;    
+                    font-weight: 500;
+                }    
+                
+                &.active-link{
+                    opacity: 1;
+                }
+
+                @media (min-width: $desktop) {
+                    margin: 0;
+                    justify-content: initial;
+                }
+            }
+
+            @media (min-width: $desktop) {
+                flex-direction: row;
+            }
+        }
+    }
+
+    .page-menu__content-blocks{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+
+        h2{            
+            color: #232323;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 0.39px;           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            &:before{
+                content: "";
+                width: 40px;
+                height: 1px;
+                background-color: #000;
+                opacity: 0.2;
+                display: block;
+                margin-right: 30px;
+            }
+
+            &:after{
+                content: "";
+                width: 40px;
+                height: 1px;
+                background-color: #000;
+                opacity: 0.2;
+                display: block;
+                margin-left: 30px;
+            }
+        }
+
+        .page-menu__content-blocks-items{
+            display: flex;
+            flex-wrap: wrap;
+
+            .main-content__block{
+
+            }           
+        }
+        .btn__more-blocks{
+            margin: 50px auto 20px;
+            width: 200px;            
+        }
+    }
+

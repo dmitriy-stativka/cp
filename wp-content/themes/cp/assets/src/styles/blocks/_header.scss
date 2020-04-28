@@ -245,16 +245,13 @@
      padding-right: 40px;
     }
   }
-  &.black-header {
-    background: rgba(30, 30, 30, 0.98);
+  &.transparent-header {
+    background: transparent;
     transition: background 0.3s ease;
   }
   &.header-visibility-none{
     visibility:hidden;
     opacity:0;
     transition: background 0.3s ease, visibility 0.3s ease,opacity 0.3s ease;
-  }
-  @media(min-width:$desktop) {      
-    background: transparent;       
   }
 }
