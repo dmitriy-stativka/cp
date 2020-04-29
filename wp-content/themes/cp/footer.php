@@ -41,18 +41,40 @@
 			</div>
 			<div class="flex_col-desk bottom-footer">
 				<ul class="flex_col--1-1 flex_col-desk--1-5 footer-icons">
-					<li class="bottom_list__icons">
-					  <a href="#"
-						><svg class="icon"><use xlink:href="#inst" /></svg></a>
-					</li>
-					<li class="bottom_list__icons">
-					  <a href="#"
-						><svg class="icon"><use xlink:href="#telegram" /></svg></a>
-					</li>
-					<li class="bottom_list__icons">
-					  <a href="#"
-						><svg class="icon"><use xlink:href="#youtube" /></svg></a>
-					</li>
+						<?php
+						$params = array(
+							'post_type' => 'settings',
+							'posts_per_page' => 3,
+						);
+						$query = new WP_Query( $params );
+						?>
+						<?php if($query->have_posts()): ?>
+								<?php while ($query->have_posts()): $query->the_post() ?>
+								<?php while ( have_rows('social_list') ) : the_row(); ?>
+									<?php $instagram = get_sub_field('instagram');
+										$telegram = get_sub_field('telegram');
+										$youtube = get_sub_field('youtube');
+									
+									?>
+									<li class="bottom_list__icons">
+										<a href="<?php echo $instagram;?>"
+											><svg class="icon"><use xlink:href="#inst" /></svg>
+										</a>
+									</li>
+									<li class="bottom_list__icons">
+										<a href="<?php echo $telegram;?>"
+											><svg class="icon"><use xlink:href="#telegram" /></svg>
+										</a>
+									</li>
+									<li class="bottom_list__icons">
+										<a href="<?php echo $youtube;?>"
+											><svg class="icon"><use xlink:href="#youtube" /></svg>
+										</a>
+									</li>
+								<?php endwhile; ?>       
+								<?php endwhile; ?>
+						<?php endif; ?>
+
 				  </ul>
 				  <div class="flex_col--1-1 flex_col-desk--4-5 footer-bottom__right-block">
 
@@ -71,29 +93,29 @@
 
 		<!-- search block (invisible). After click on search-btn becomes visible-->
 		<div class="nav-tools__search-block_click">
-		<div class="search-block_click-container">
-			<div class="search-block-line">
-				<?php
-					$count_posts = wp_count_posts();
-					$published_posts = $count_posts->publish;
-				?>
+			<div class="search-block_click-container">
+				<div class="search-block-line">
+					<?php
+						$count_posts = wp_count_posts();
+						$published_posts = $count_posts->publish;
+					?>
 
-				<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ) ?>" >
-					<input type="text" value="<?php echo get_search_query() ?>" name="s" id="s" placeholder='<?php pll_e('searchPlaceholder'); ?> <?php echo $published_posts;?> <?php pll_e('searchlast'); ?>' />
-					<button>
-						<svg class="icon"><use xlink:href="#search"></svg>
-					</button>
-					<input type="submit" id="searchsubmit" value="">
-				</form>
+					<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ) ?>" >
+						<input type="text" value="<?php echo get_search_query() ?>" name="s" id="s" placeholder='<?php pll_e('searchPlaceholder'); ?> <?php echo $published_posts;?> <?php pll_e('searchlast'); ?>' />
+						<button>
+							<svg class="icon"><use xlink:href="#search"></svg>
+						</button>
+						<input type="submit" id="searchsubmit" value="">
+					</form>
 
+				</div>
+				<div class="search-block-links">
+				<div><span><?php pll_e('search'); ?></span></div>
+					<div>
+						<?php recommend();?>
+					</div>
+				</div>
 			</div>
-			<div class="search-block-links">
-			<div><span><?php pll_e('search'); ?></span></div>
-			<div>
-				<?php recommend();?>
-			</div>
-			</div>
-		</div>
 		</div>
 		<!-- end of search block -->
 
@@ -120,102 +142,78 @@
 				?>
 			</div>
 			<div class="burger-menu__right-block">
-			<ul class="burger-menu__right-block-top_list">
-			
-				<?php
-					$array = array(
-					'authors'      => '',
-					'child_of'     => 0, 
-					'date_format'  => get_option('date_format'),
-					'depth'        => 0, 
-					'echo'         => 1, 
-					'exclude'      => '',
-					'include'      => '', 
-					'link_after'   => '', 
-					'link_before'  => '', 
-					'post_type'    => 'page',
-					'post_status'  => 'publish', 
-					'show_date'    => '', 
-					'sort_column'  => 'menu_order, post_title', 
-							'sort_order'   => '', 
-					'title_li'     => __(''), 
-					);
-					wp_list_pages($array)
-				?>
-
-
-			</ul>
-			<div class="burger-menu__right-block-bottom_list">
-
-				<span>Cвяжитесь с нами</span>
-
-				<span>
-					<a href="tel:+38 (066) 521-54-24">+38 (066) 521-54-24</a>
-				</span>
-
-
-				<?php
-						$params = array(
-							'post_type' => 'capabilities',
-							'posts_per_page' => 3
+				<ul class="burger-menu__right-block-top_list">
+				
+					<?php
+						$array = array(
+						'authors'      => '',
+						'child_of'     => 0, 
+						'date_format'  => get_option('date_format'),
+						'depth'        => 0, 
+						'echo'         => 1, 
+						'exclude'      => '',
+						'include'      => '', 
+						'link_after'   => '', 
+						'link_before'  => '', 
+						'post_type'    => 'page',
+						'post_status'  => 'publish', 
+						'show_date'    => '', 
+						'sort_column'  => 'menu_order, post_title', 
+								'sort_order'   => '', 
+						'title_li'     => __(''), 
 						);
-						$query = new WP_Query( $params );
-						?>
-						<?php if($query->have_posts()): ?>
-							<?php $number = 0; ?>
-							<?php while ($query->have_posts()): $query->the_post() ?>
-								<?php $title_capabilities = get_field('title_capabilities'); 
-									$number++;
-								?>
-
-								<li class="capabilities-item">
-									<a>0<?php echo $number;?>. <?php echo $title_capabilities;?></a>
-								</li>
-								
-								<?php endwhile; ?>
-						<?php endif; 
+						wp_list_pages($array)
 					?>
 
-				<span>
-					<a href="mailto:Info@civliplatform.com">Info@civliplatform.com</a>
-				</span>
 
-
-				<ul>
-				<li class="bottom_list__icons">
-					<a href="#"
-					><svg class="icon"><use xlink:href="#inst" /></svg>
-					</a>
-				</li>
-				<li class="bottom_list__icons">
-					<a href="#"
-					><svg class="icon"><use xlink:href="#telegram" /></svg>
-					</a>
-				</li>
-				<li class="bottom_list__icons">
-					<a href="#"
-					><svg class="icon"><use xlink:href="#youtube" /></svg>
-					</a>
-				</li>
 				</ul>
-				<ul>
-				<li class="language"><a href="">UA</a></li>
+				<div class="burger-menu__right-block-bottom_list">
 
-				<li class="change">
-					<span class="right-arrow"></span>
-					<span class="left-arrow"></span>
-				</li>
+					<span><?php pll_e('callText'); ?></span>
+						<?php
+							$params = array(
+								'post_type' => 'settings',
+								'posts_per_page' => 3
+							);
+							$query = new WP_Query( $params );
+							?>
+							<?php if($query->have_posts()): ?>
+								<?php 
+									$mail_info = get_field('mail', 65); 
+									$tell_info = get_field('tell', 65); 
+								?>
+								<span>
+									<a href="tel:<?php echo $tell_info;?>"><?php echo $tell_info;?></a>
+								</span>
+								<span>
+									<a href="mailto:<?php echo $mail_info;?>"> <?php echo $mail_info;?></a>
+								</span>
+							<?php endif; 
+						?>
+					<!-- 
+					<ul class="lang">
+						<li class="language"><a href="">UA</a></li>
+						<li class="change">
+							<span class="right-arrow"></span>
+							<span class="left-arrow"></span>
+						</li>
+						<li class="language current-lang"><a href="">RU</a></li>
+						<li class="change">
+							<span class="right-arrow"></span>
+							<span class="left-arrow"></span>
+						</li>
+						<li class="language"><a href="">EN</a></li>
+					</ul> -->
 
-				<li class="language current-lang"><a href="">RU</a></li>
 
-				<li class="change">
-					<span class="right-arrow"></span>
-					<span class="left-arrow"></span>
-				</li>
 
-				<li class="language"><a href="">EN</a></li>
-				</ul>
-			</div>
+
+					<ul class="lang">
+						<?php pll_the_languages();?>
+					</ul>
+
+
+				</div>
 			</div>
 		</div>
 		</div>
@@ -325,7 +323,6 @@
 <script>
   $('.slider-nav .slider-nav__block:first-child').addClass('active-block');
   $('.slider-for .slider-for__container:first-child').addClass('content-active');
-
 </script>
 
 </body>

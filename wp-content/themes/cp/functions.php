@@ -157,6 +157,20 @@ pll_register_string('Копирайтинг', 'copyright');
 pll_register_string('Часто ищут', 'search');
 pll_register_string('Поиск по', 'searchPlaceholder');
 pll_register_string('статей', 'searchlast');
+pll_register_string('Cвяжитесь с нами', 'callText');
+pll_register_string('Читать статью полностью', 'readArea');
+pll_register_string('Популярные статьи', 'popular');
+
+
+
+
+pll_register_string('2 тыс', 'two');
+
+pll_register_string('Статей написано', 'readArticles');
+
+pll_register_string('Текст главная', 'textArticles');
+
+
 
 
 
@@ -204,31 +218,143 @@ global $user_ID, $post;
 }
 
 
-//РЕКОМЕНДОВАННЫЕ
-function recommend() {
-	$categories = get_the_category($post->ID);
-	if ($categories) {
-		$category_ids = array();
-		foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
-		$args=array(
-			'category__in' => $category_ids,
-			'post__not_in' => array($post->ID),
-			'showposts'=>5,
-			'caller_get_posts'=>1
-		);
-		$my_query = new wp_query($args);
-		if( $my_query->have_posts() ) {
-			echo '<ul>';
-			while ($my_query->have_posts()) {
-				$my_query->the_post();
-			?>
+ //РЕКОМЕНДОВАННЫЕ
+ function recommend() {
+ 	$categories = get_the_category($post->ID);
+ 	if ($categories) {
+ 		$category_ids = array();
+ 		foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
+ 		$args=array(
+ 			'category__in' => $category_ids,
+ 			'post__not_in' => array($post->ID),
+ 			'showposts'=>5,
+ 			'caller_get_posts'=>1
+ 		);
+ 		$my_query = new wp_query($args);
+ 		if( $my_query->have_posts() ) {
+ 			echo '<ul>';
+ 			while ($my_query->have_posts()) {
+ 				$my_query->the_post();
+ 			?>
 			
-			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+ 			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 			
 			<?php
-			}
-			echo '</ul>';
-		}
-		wp_reset_query();
-	}
-};
+ 			}
+ 			echo '</ul>';
+ 		}
+ 		wp_reset_query();
+ 	}
+ };
+
+
+
+
+
+
+// ПРОСМОТРЫ
+function getPostViews($postID){
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0";
+    }
+    return $count;
+}
+function setPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+add_filter('manage_posts_columns', 'posts_column_views');
+add_action('manage_posts_custom_column', 'posts_custom_column_views',5,2);
+function posts_column_views($defaults){
+    $defaults['post_views'] = __('Просмотры');
+    return $defaults;
+}
+function posts_custom_column_views($column_name, $id){
+        if($column_name === 'post_views'){
+        echo getPostViews(get_the_ID());
+    }
+}
+
+
+add_action('wp_head', 'show_template'); // перед шапкой
+// add_action('wp_footer', 'show_template'); // в подвале
+function show_template(){
+  global $template;
+  echo $template;
+}
+
+
+
+
+
+
+
+
+
+
+
+// AJAX загрузка постов 
+function load_posts () {
+    $args = unserialize( stripslashes( $_POST['query'] ) );
+	$args['paged'] = $_POST['page'] + 2; // следующая страница 
+	$args['posts_per_page'] = 3; // по сколько записей подгружать
+	
+    query_posts( $args );
+    if ( have_posts() ) {
+        while ( have_posts() ) { the_post();
+			?>
+
+			<a href="<?php the_permalink(); ?>" class="flex_col-tab--1-2 flex_col-desk--1-3 main-content__block">
+			<?php the_post_thumbnail( array(400, 400) ); ?>
+				<div class="slider-nav__block-top">
+				<?php
+					$categories = get_the_category();
+					$output = '';
+					if($categories){
+						foreach($categories as $category) {
+							$rl_category_color = rl_color($category->cat_ID);
+							$output = $category->cat_name;
+						}
+						echo '<span class="nav__block-top__category" style="background: '.$rl_category_color.' ;">'. trim($output) . '</span>';
+
+						$posttags = get_the_tags();
+						if ($posttags) {
+							foreach($posttags as $tag) {
+								echo '<span class="nav__block-top__single-categ" style="color: '.$rl_category_color.'">'. $tag->name . '<i style="background: ' .$rl_category_color .';" class="dot-color"></i>' . ' </span>'; 
+							}
+						}
+					}
+					?>
+				</div>
+				<h3><?php the_title();?></h3>
+				<div class="slider-nav__block-bottom">
+					<span><?php echo get_the_date('d.m.Y'); ?></span>
+					<span> <?php 
+					if(get_post_meta ($post->ID,'views',true)){
+						echo get_post_meta ($post->ID,'views',true);
+					}else{
+						echo '0';
+					}?> <?php pll_e('views'); ?></span>
+				</div>
+			</a> 
+			<?php
+
+
+        }
+        die();
+    }
+}
+add_action('wp_ajax_loadmore', 'load_posts');
+add_action('wp_ajax_nopriv_loadmore', 'load_posts');
