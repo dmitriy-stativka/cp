@@ -54,7 +54,7 @@
       button {
         position: absolute;
         right: 0;
-        bottom: 10px;
+        bottom: 18px;
 
         &:hover {
           cursor: pointer;
@@ -703,9 +703,17 @@
   border: 2px solid #2863a7;
   margin: 40px auto;
   max-width: 220px;
-  padding: 15px 0;
+  padding: 15px;
   border-radius: 25px;
   text-align: center;
+  display: flex;
+  align-self: center;
+  position: relative;
+
+  @media (min-width:$tablet) and (max-width:$desktop) {
+    margin: 40px 40%;
+  }
+
 }
 // End of styles for btn load more
 
@@ -1179,8 +1187,9 @@
               }
             }
           }
-          .container-article-img{
+          .conteiner-article-img{
             max-width: 25%;
+            // display: none;
           }
 
           &:before{
