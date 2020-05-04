@@ -91,6 +91,7 @@ $(document).ready(function () {
     $('.slider-nav__block').removeClass('active-block');
     $(this).addClass('active-block');
   }); // End of Desktop slider
+
   // Mobile slider
 
   dot.click(function () {
@@ -148,7 +149,9 @@ $(document).ready(function () {
     $(".dot").eq($(".dot-active").index() - 1).css({
       "background": "#9d9d9d"
     });
-  }); // End of mobile slider
+  });
+
+  // End of mobile slider
   // End of top-site slider functions
 
   $(".hidden-block__open").on("click", function () {

@@ -48,106 +48,107 @@ Template Name: Front-page
                 <?php endif; ?>
               <div class="top-slider">
                   <div class="slider-nav flex_col-desk--1-4">
-                    <?php
-                      global $post;
-                      $args = array( 'numberposts' => 4 , 'category' => 2, 'orderby' => 'date');
-                      $myposts = get_posts( $args );
-                      foreach( $myposts as $post ){ setup_postdata($post); ?>
-                        <div class="slider-nav__block">
-                          <div class="slider-nav__block-top blue">
-                              <?php
-                                $categories = get_the_category();
-                                $output = '';
-                                if($categories){
-                                    foreach($categories as $category) {
-                                        $rl_category_color = rl_color($category->cat_ID);
-                                        $output = $category->cat_name;
-                                    }
-                                    echo '<span class="nav__block-top__category" style="background: '.$rl_category_color.' ;">'. trim($output) . '</span>';
+                      <?php
+                        global $post;
+                        $args = array( 'numberposts' => 4 , 'category' => 2, 'orderby' => 'date');
+                        $myposts = get_posts( $args );
+                        foreach( $myposts as $post ){ setup_postdata($post); ?>
+                          <div class="slider-nav__block">
+                              <div class="slider-nav__block-top blue">
+                                  <?php
+                                    $categories = get_the_category();
+                                    $output = '';
+                                    if($categories){
+                                        foreach($categories as $category) {
+                                            $rl_category_color = rl_color($category->cat_ID);
+                                            $output = $category->cat_name;
+                                        }
+                                        echo '<span class="nav__block-top__category" style="background: '.$rl_category_color.' ;">'. trim($output) . '</span>';
 
-                                    $posttags = get_the_tags();
-                                    if ($posttags) {
-                                        foreach($posttags as $tag) {
-                                          echo '<span class="nav__block-top__single-categ" style="color: '.$rl_category_color.'">'. $tag->name . '<i style="background: ' .$rl_category_color .';" class="dot-color"></i>' . ' </span>'; 
+                                        $posttags = get_the_tags();
+                                        if ($posttags) {
+                                            foreach($posttags as $tag) {
+                                              echo '<span class="nav__block-top__single-categ" style="color: '.$rl_category_color.'">'. $tag->name . '<i style="background: ' .$rl_category_color .';" class="dot-color"></i>' . ' </span>'; 
+                                            }
                                         }
                                     }
-                                }
-                              ?>
+                                  ?>
+                              </div>
+                              <div class="slider-nav__block-center">
+                                  <p><?php the_title(); ?></p>
+                              </div>
+                              <div class="slider-nav__block-bottom">
+                                  <span><?php echo get_the_date('d.m.Y'); ?></span>
+                                  <span> <?php 
+                                  if(get_post_meta ($post->ID,'views',true)){
+                                      echo get_post_meta ($post->ID,'views',true);
+                                    }else{
+                                      echo '0';
+                                    }?> <?php pll_e('views'); ?>
+                                    </span>
+                              </div>
                           </div>
-                          <div class="slider-nav__block-center">
-                              <p><?php the_title(); ?></p>
-                            </div>
-                          <div class="slider-nav__block-bottom">
-                              <span><?php echo get_the_date('d.m.Y'); ?></span>
-                              <span> <?php 
-                              if(get_post_meta ($post->ID,'views',true)){
-                                  echo get_post_meta ($post->ID,'views',true);
-                                }else{
-                                  echo '0';
-                                }?> <?php pll_e('views'); ?></span>
-                          </div>
-                        </div>
-                        <?php
-                      }
-                      wp_reset_postdata();
-                    ?>
+                          <?php
+                        }
+                        wp_reset_postdata();
+                      ?>
                   </div>
                   <div class="flex_col-tab--1-1 flex_col-desk--3-4 slider-for">    
-                    <?php
-                      global $post;
-                      $args = array( 'numberposts' => 4 , 'category' => 2, 'orderby' => 'date');
-                      $myposts = get_posts( $args );
-                      foreach( $myposts as $post ){ setup_postdata($post); ?>
-                        <div class="slider-for__container">
-                        <?php the_post_thumbnail( array(400, 400), ['class' => 'slider-for__bg-img']); ?>
-                          <div class="slider-nav__block-top">
-                              <?php
-                                $categories = get_the_category();
-                                $output = '';
-                                if($categories){
-                                    foreach($categories as $category) {
-                                        $rl_category_color = rl_color($category->cat_ID);
-                                        $output = $category->cat_name;
-                                    }
-                                    echo '<span class="nav__block-top__category" style="background: '.$rl_category_color.' ;">'. trim($output) . '</span>';
-                                    $posttags = get_the_tags();
-                                    if ($posttags) {
-                                        foreach($posttags as $tag) {
-                                          echo '<span class="nav__block-top__single-categ" style="color: '.$rl_category_color.'">'. $tag->name . '<i style="background: ' .$rl_category_color .';" class="dot-color"></i>' . ' </span>'; 
+                      <?php
+                        global $post;
+                        $args = array( 'numberposts' => 4 , 'category' => 2, 'orderby' => 'date');
+                        $myposts = get_posts( $args );
+                        foreach( $myposts as $post ){ setup_postdata($post); ?>
+                          <div class="slider-for__container">
+                            <?php the_post_thumbnail( array(400, 400), ['class' => 'slider-for__bg-img']); ?>
+                              <div class="slider-nav__block-top">
+                                  <?php
+                                    $categories = get_the_category();
+                                    $output = '';
+                                    if($categories){
+                                        foreach($categories as $category) {
+                                            $rl_category_color = rl_color($category->cat_ID);
+                                            $output = $category->cat_name;
+                                        }
+                                        echo '<span class="nav__block-top__category" style="background: '.$rl_category_color.' ;">'. trim($output) . '</span>';
+                                        $posttags = get_the_tags();
+                                        if ($posttags) {
+                                            foreach($posttags as $tag) {
+                                              echo '<span class="nav__block-top__single-categ" style="color: '.$rl_category_color.'">'. $tag->name . '<i style="background: ' .$rl_category_color .';" class="dot-color"></i>' . ' </span>'; 
+                                            }
                                         }
                                     }
-                                }
-                              ?>
+                                  ?>
+                              </div>
+                              <h2 class="slider-for-center"><?php the_title(); ?></h2>
+                              <p class="slider-for__text"> <?php the_field('description');?></p>
+                              <div class="slider-nav__block-bottom">
+                                  <span><?php echo get_the_date('d.m.Y'); ?></span>
+                                  <span> <?php 
+                                  if(get_post_meta ($post->ID,'views',true)){
+                                      echo get_post_meta ($post->ID,'views',true);
+                                    }else{
+                                      echo '0';
+                                    }?> <?php pll_e('views'); ?></span>
+                              </div>
+                              <a href="<?php the_permalink(); ?>" class="read-more"><?php pll_e('readArea'); ?></a>
                           </div>
-                          <h2 class="slider-for-center"><?php the_title(); ?></h2>
-                          <p class="slider-for__text"> <?php the_field('description');?></p>
-                          <div class="slider-nav__block-bottom">
-                              <span><?php echo get_the_date('d.m.Y'); ?></span>
-                              <span> <?php 
-                              if(get_post_meta ($post->ID,'views',true)){
-                                  echo get_post_meta ($post->ID,'views',true);
-                                }else{
-                                  echo '0';
-                                }?> <?php pll_e('views'); ?></span>
-                          </div>
-                          <a href="<?php the_permalink(); ?>" class="read-more"><?php pll_e('readArea'); ?></a>
-                        </div>
-                        <?php
-                      }
-                      wp_reset_postdata();
-                    ?>
-                    <div class="nav-bar__mobile">
-                          <div class="nav-bar__prev"></div>
-                          <div class="dots-mobile">
-                            <div class="dot dot-active"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                          </div>                        
-                          <div class="nav-bar__next"></div>
-                      </div>          
-                    </div>
-                </div>
+                          <?php
+                        }
+                        wp_reset_postdata();
+                      ?>
+                      <div class="nav-bar__mobile">
+                            <div class="nav-bar__prev"></div>
+                            <div class="dots-mobile">
+                              <div class="dot dot-active"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                            </div>                        
+                            <div class="nav-bar__next"></div>
+                        <!-- </div>           -->
+                      </div>
+                  </div>
               </div>
           </section>
     </section>     
