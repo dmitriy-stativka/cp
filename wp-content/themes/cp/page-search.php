@@ -34,7 +34,7 @@ Template Name: page-search
             <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ) ?>" >
                 <input type="text" value="<?php echo get_search_query() ?>" name="s" id="s" placeholder='<?php pll_e('searchPlaceholder'); ?> <?php echo $published_posts;?> <?php pll_e('searchlast'); ?>' />
                 <button>
-                    <svg class="icon"><use xlink:href="#search"></svg>
+                    <svg class="icon"><use xlink:href="#search-black"></svg>
                 </button>
                 <input type="submit" id="searchsubmit" value="">
             </form>

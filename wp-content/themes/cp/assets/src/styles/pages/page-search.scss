@@ -19,5 +19,26 @@
             font-family: "Montserrat", sans-serif;    
             text-align: center;
         }
+
+        .search-block-line{
+
+            form{
+                position: relative;
+
+                input[type="submit"] {
+                    display: none;
+                  }
+
+                button{
+                    position: absolute;
+                    bottom: 18px;
+                    right: 0;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
     }
 }
