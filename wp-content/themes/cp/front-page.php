@@ -166,7 +166,7 @@ Template Name: Front-page
           $mypost_Query = new WP_Query( array(
               'post_type'        => 'post',                           # post, page, custom_post_type 
               'post_status'      => 'publish',                        # статус записи 
-              'posts_per_page'   => 3,                                # кол-во постов вывода/загрузки 
+              'posts_per_page'   => 6,                                # кол-во постов вывода/загрузки 
           ) );
 
           if ( $mypost_Query->have_posts() ) {
@@ -215,6 +215,11 @@ Template Name: Front-page
               <a class="btn-loadmore btn__more-blocks" data-max-pages='<?php echo $mypost_Query->max_num_pages; ?>'>Загрузить ещё </a>
           <?php } ?>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+
+
+
          <script>
               jQuery(function($){
                 $('.btn-loadmore').on('click', function(){
@@ -233,7 +238,7 @@ Template Name: Front-page
                         type: 'POST',
                         success:function(data){
                             if (data) {
-                                _this.html('<a class="btn__more-blocks"> Загрузить ещё </a>');
+                                _this.html('Загрузить ещё');
                                 _this.after(data);       // где вставить данные 
                                 this_page++;                   // увелич. номер страницы +1 
                                 if (this_page == _this.attr('data-max-pages')) {
@@ -247,6 +252,12 @@ Template Name: Front-page
                 });
               });
          </script>
+
+
+
+
+
+
        </div>
     </div>
     <div class="flex_col--1-1 flex_col-tab--4-5 flex_col-desk--1-4 main-right__conteiner">
@@ -298,36 +309,38 @@ Template Name: Front-page
   </div>
   <div class="video-block__container flex_col-desk">
     <div class="video-block__top">
-      <h2>Полезные материалы с нашего YouTube канала</h2>
-      <a href="">Посетить YouTube канал  <span class="right-arrow"></span></a>
+    <h2><?php pll_e('youtubeMaterial'); ?></h2>
+        <?php
+          $params = array(
+              'post_type' => 'settings',
+              'posts_per_page' => 1,
+          );
+          $query = new WP_Query( $params );
+        ?>
+        <?php if($query->have_posts()): ?>
+                <?php while ($query->have_posts()): $query->the_post() ?>
+                  <?php while ( have_rows('social_list') ) : the_row(); ?>
+                    <?php $youtube = get_sub_field('youtube'); ?>
+                    <a href="<?php echo $youtube;?>"><?php pll_e('seeChanel'); ?><span class="right-arrow"></span></a>
+                  <?php endwhile; ?>       
+                <?php endwhile; ?>
+        <?php endif; ?>
     </div>
 
-  
-
-    
-<div class="video_content">
-    
-    <div id="video_row">
-       
-        <div id="playlist">
-            <div id="youtube-playlist"></div>
+    <div class="video_content">        
+        <div id="video_row">
+            <div id="playlist">
+                <div id="youtube-playlist"></div>
+            </div>
+            <div id="ifr">
+                <iframe id="iframe_video" src="" frameborder="0"></iframe>
+            </div>
         </div>
-
-        <div id="ifr">
-            <iframe id="iframe_video" src="" frameborder="0"></iframe>
+        <div class="linkYouTube">
+            <script src="https://apis.google.com/js/platform.js"></script>
+            <div class="g-ytsubscribe" data-channelid="UC--KGm_wXKAEF-48QX69a5w" data-layout="default" data-count="default"></div>
         </div>
-        
     </div>
-    <div class="linkYouTube">
-   
-        <script src="https://apis.google.com/js/platform.js"></script>
-        <div class="g-ytsubscribe" data-channelid="UC--KGm_wXKAEF-48QX69a5w" data-layout="default" data-count="default"></div>
-    </div>
-</div>
-
-
-     
-  
   </div>
 </section>
 <!-- Этто был видео блог -->
@@ -358,8 +371,8 @@ Template Name: Front-page
         </div>
       </div>
       <div class="text-block__btn">
-        <span class="hidden-block__open">Развернуть</span>
-        <a class="hidden-block__about-link" href="#">Подробнее о нас</a>
+        <span class="hidden-block__open"><?php pll_e('seeMore'); ?></span>
+        <a class="hidden-block__about-link" href="#"><?php pll_e('aboutUs'); ?></a>
       </div>
     </div>
   </div>

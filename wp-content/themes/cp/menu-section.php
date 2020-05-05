@@ -6,7 +6,7 @@ Template Name: menu-section
 
 <section class="page-top page-menu">   
     <div class="page__container page__container-menu">
-        <a class="back" href=""> <span class="left-arrow"></span> Назад</a>
+        <a class="back" href="<?php echo esc_url( home_url( '/' ) ); ?>"> <span class="left-arrow"></span> <?php pll_e('back'); ?></a>
         <div class="top-nav__links page-menu__links">
             <a href="">Главная</a>
             <a href="">Фаховi заходи</a>     

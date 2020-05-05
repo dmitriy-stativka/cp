@@ -33,13 +33,6 @@ $(document).ready(function () {
   $(".popup__toggle").click(function () {
     p.addClass("popup_open");
   });
-  p.click(function (event) {
-    e = event || window.event;
-
-    if (e.target == this) {
-      $(p).removeClass("popup_open");
-    }
-  });
   $(".popup__close").click(function () {
     p.removeClass("popup_open");
   });

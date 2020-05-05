@@ -7,7 +7,7 @@ Template Name: menu-subsection
 
 <section class="page-top page-menu-sub">   
     <div class="page__container">
-        <a class="back" href=""> <span class="left-arrow"></span> Назад</a>
+        <a class="back" href="<?php echo esc_url( home_url( '/' ) ); ?>"> <span class="left-arrow"></span> <?php pll_e('back'); ?></a>
         <div class="top-nav__links page-menu-sub__links">
             <a href="">Главная</a>
             <a href="">Позиції</a>

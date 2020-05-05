@@ -200,14 +200,14 @@
                         margin-top: 20px;                        
                     }         
                     
-                    &:last-child{
-                        opacity: 0.6;
-                        display: none;
+                    // &:last-child{
+                    //     opacity: 0.6;
+                    //     display: none;
 
-                        @media (min-width: $desktop) {
-                            display: block;
-                         }
-                    }
+                    //     @media (min-width: $desktop) {
+                    //         display: block;
+                    //      }
+                    // }
 
                     @media (min-width: $desktop) {
                         margin-bottom: 0;
@@ -398,4 +398,13 @@
         display: flex;      
         flex-wrap: wrap;
     }
+}
+
+.user-img{
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
