@@ -19,411 +19,192 @@ Template Name: About-us
 <section class="about-content">   
     <div class="flex_col-desk--1-1 about-content__container">
         <div class="about-content__logo">
+
+
+            <?php
+                $params = array(
+                    'post_type' => 'about',
+                    'posts_per_page' => 1,
+                );
+                $query = new WP_Query( $params );
+            ?>
+            <?php if($query->have_posts()): ?>
+                    <?php while ($query->have_posts()): $query->the_post() ?>
+                    <?php $big_logo = get_field('big_logo')['url']; ?>
+                    <img src="<?php echo $big_logo;?>" alt="">
+                    <?php endwhile; ?>
+            <?php endif; ?>
+            
+
         </div>
 
         <div class="about-content__under-logo-text">
-            <p>
-                Ми є командою однодумців – і це головне!  Ми є «пташенятами гнізда» - Харківської цивілістичної школи, з якої вийшло чимало знаних цивілістів та практиків. Ми є учнями та вчителями. Ми є науковцями і практикуючими юристами. Ми прагнемо більшого, занурюємося глибше, хочемо побачити далі  
-            </p>
+            <?php
+                $params = array(
+                    'post_type' => 'about',
+                    'posts_per_page' => 1,
+                );
+                $query = new WP_Query( $params );
+            ?>
+            <?php if($query->have_posts()): ?>
+                    <?php while ($query->have_posts()): $query->the_post() ?>
+                    <?php $mini_desc = get_field('mini_desc'); ?>
+                    <p><?php echo $mini_desc;?></p>
+                    <?php endwhile; ?>
+            <?php endif; ?>
         </div>
-          
         <div class="about-content__picture">
             <div class="about-content__picture-inside">
-             <p> Ми є «пташенятами гнізда» - Харківської цивілістичної школи, з якої вийшло чимало знаних цивілістів та практиків. </p>
+                <?php
+                    $params = array(
+                        'post_type' => 'about',
+                        'posts_per_page' => 1,
+                    );
+                    $query = new WP_Query( $params );
+                ?>
+                <?php if($query->have_posts()): ?>
+                        <?php while ($query->have_posts()): $query->the_post() ?>
+                        <?php $citata = get_field('citata'); ?>
+                        <p><?php echo $citata;?></p>
+                        <?php endwhile; ?>
+                <?php endif; ?>
             </div>
         </div>
 
         <div class="about-content__mission">
-            <h2>
-                Наша миссия
-            </h2>
-            <p>
-                Своєю діяльністю ми прагнемо довести, що: 
-            </p>
+            <h2><?php pll_e('mission'); ?></h2>
+            <p><?php pll_e('diyalnist'); ?></p>
+        
             <div class="about-content__mission-blocks">
-                <div class="flex_col-tab--1-1 flex_col-desk--1-4 mission-block">
-                    <img src="/wp-content/themes/cp/images/mission-block-img.jpg" alt="">
-                    <h4>Освіта </h4>
-                    <span>
-                        – це не сукупність знань, а вміння їх застосовувати; 
-                    </span>
-                </div>
-                <div class="flex_col-tab--1-1 flex_col-desk--1-4 mission-block">
-                    <img src="/wp-content/themes/cp/images/mission-block-img.jpg" alt="">
-                    <h4>Освіта </h4>
-                    <span>
-                        Без базових знань вирішення конкретних проблем на практиці не можливе; 
-                    </span>
-                </div>
-                <div class="flex_col-tab--1-1 flex_col-desk--1-4 mission-block">
-                    <img src="/wp-content/themes/cp/images/mission-block-img.jpg" alt="">
-                    <h4>Освіта </h4>
-                    <span>
-                        Теорія і практика – два крила цивільного права; 
-                    </span>
-                </div>
-                <div class="flex_col-tab--1-1 flex_col-desk--1-4 mission-block">
-                    <img src="/wp-content/themes/cp/images/mission-block-img.jpg" alt="">
-                    <h4>Освіта </h4>
-                    <span>
-                        Розв’язання суперечностей в законодавстві можливе лише шляхом
-                    </span>
-                </div>
+                <?php
+                $params = array(
+                    'post_type' => 'about',
+                    'posts_per_page' => 1,
+                );
+                $query = new WP_Query( $params );
+                ?>
+                <?php if($query->have_posts()): ?>
+                    <?php while ($query->have_posts()): $query->the_post() ?>
+                        <?php while ( have_rows('mission') ) : the_row(); ?>
+                            <?php   $mission_image = get_sub_field('mission_image')['url'];
+                                    $mission_title = get_sub_field('mission_title');
+                                    $mission_desc = get_sub_field('mission_desc');
+                            ?>        
+                            <div class="flex_col-tab--1-1 flex_col-desk--1-4 mission-block">
+                                <img src="<?php echo $mission_image; ?>" alt="">
+                                <h4><?php echo $mission_title; ?></h4>
+                                <span><?php echo $mission_desc; ?></span>
+                            </div>
+                        <?php endwhile; ?>       
+                    <?php endwhile; ?>
+                <?php endif; ?>
             </div>
-
         </div>
 
         <div class="about-content__list">
             <div class="flex_col-desk--1-3 about-content__list-img">
-                <img src="/wp-content/themes/cp/images/About-us-img.png" alt="">
+                <?php
+                    $params = array(
+                        'post_type' => 'about',
+                        'posts_per_page' => 1,
+                    );
+                    $query = new WP_Query( $params );
+                    ?>
+                    <?php if($query->have_posts()): ?>
+                        <?php while ($query->have_posts()): $query->the_post() ?>
+                        <?php $image = get_field('image')['url']; ?>
+                        <img src="<?php echo $image; ?>" alt="">
+                        <?php endwhile; ?>
+                <?php endif; ?>
             </div>
             <div class="flex_col-desk--2-3 about-content__list-text">
-                <ul>
-                    <li>Нашими основними завданнями є: </li>
-                    <li>Виведення української цивілістики за вузькі межі існування в лоні лише нашої країни; </li>
-                    <li>Досягнення зацікавленості іноземних колег і партнерів у наукових працях українських цивілістів; </li>
-                    <li>
-                        Популяризація високої професійності і кваліфікації, якісних освітніх стандартів, моральності і етичності серед представників юридичної професії;
-                    </li>
-                    <li>
-                        Ми не ставимо перед собою великих завдань – ми хочемо відпрацювати такий механізм: «станеш більше освіченим сам – стануть більше освіченими й ті, хто навколо тебе». Тож починаємо з себе і зрушуємо разом з тими, хто хоче дізнатися про цивільне право більше. 
-                    </li>
-                </ul>
-                <ul>
-                    <li>Структура организации</li>
-                    <li>
-                        Цивілістична Платформа складається з декількох секторів, в яких здійснюється наукова, видавнича та навчально-методична діяльність за такими напрямками:
-                    </li>
-                    <li>
-                        <span>Наукова</span> – проведення фундаментальних та прикладних досліджень цивільного права; організація та участь у клубних (закритих) і публічних заходах (форумах, конференціях, дискусіях, читаннях тощо); 
-                    </li>
-                    <li>
-                        <span>Видавнича</span> – підготовка до видання та сприяння  публікації наукових та науково-практичних творів з цивільного права в Україні та за її межами;
-                    </li>
-                    <li>
-                        <span>Навчально-методична</span> – розробка навчальних курсів, майстер-класів та проведення публічних лекцій, семінарів, інших навчальних заходів для практикуючих юристів, студентів, магістрів, аспірантів та науковців;
-                    </li>
-                    <li>Надання <span>науково-правових висновків</span> та проведення правових <span>експертиз</span>.</li>
-                </ul>
+                <?php
+                    $params = array(
+                        'post_type' => 'about',
+                        'posts_per_page' => 1,
+                    );
+                    $query = new WP_Query( $params );
+                    ?>
+                    <?php if($query->have_posts()): ?>
+                        <?php while ($query->have_posts()): $query->the_post() ?>
+                        <?php $text = get_field('text'); ?>
+                            <?php echo $text;?>
+                        <?php endwhile; ?>
+                <?php endif; ?>
             </div>
         </div>
-        
     </div>   
 </section>
 
 <section class="about-slider">   
-
     <div class="slider slider-single">
-        <div>
-            <div class="about-slider__main-block">
-                <div class="flex_col-desk--2-3 slider__main-block__text">
-                    <h2>
-                        Печений Олег Петрович 
-                    </h2>
-                    <span>
-                        Куратор досліджень
-                    </span>
-                    <p>
-                        Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения
-                    </p>
-                </div>
-                <div class="flex_col-desk--1-3 slider__main-block__img">
-                    <img src="/wp-content/themes/cp/images/person.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="about-slider__main-block">
-                <div class="flex_col-desk--2-3 slider__main-block__text">
-                    <h2>
-                        Печений Олег Петрович 
-                    </h2>
-                    <span>
-                        Куратор досліджень
-                    </span>
-                    <p>
-                        Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения
-                    </p>
-                </div>
-                <div class="flex_col-desk--1-3 slider__main-block__img">
-                    <img src="/wp-content/themes/cp/images/person.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="about-slider__main-block">
-                <div class="flex_col-desk--2-3 slider__main-block__text">
-                    <h2>
-                        Печений Олег Петрович 
-                    </h2>
-                    <span>
-                        Куратор досліджень
-                    </span>
-                    <p>
-                        Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения
-                    </p>
-                </div>
-                <div class="flex_col-desk--1-3 slider__main-block__img">
-                    <img src="/wp-content/themes/cp/images/person.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="about-slider__main-block">
-                <div class="flex_col-desk--2-3 slider__main-block__text">
-                    <h2>
-                        Печений Олег Петрович 
-                    </h2>
-                    <span>
-                        Куратор досліджень
-                    </span>
-                    <p>
-                        Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения
-                    </p>
-                </div>
-                <div class="flex_col-desk--1-3 slider__main-block__img">
-                    <img src="/wp-content/themes/cp/images/person.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="about-slider__main-block">
-                <div class="flex_col-desk--2-3 slider__main-block__text">
-                    <h2>
-                        Печений Олег Петрович 
-                    </h2>
-                    <span>
-                        Куратор досліджень
-                    </span>
-                    <p>
-                        Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения
-                    </p>
-                </div>
-                <div class="flex_col-desk--1-3 slider__main-block__img">
-                    <img src="/wp-content/themes/cp/images/person.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="about-slider__main-block">
-                <div class="flex_col-desk--2-3 slider__main-block__text">
-                    <h2>
-                        Печений Олег Петрович 
-                    </h2>
-                    <span>
-                        Куратор досліджень
-                    </span>
-                    <p>
-                        Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения
-                    </p>
-                </div>
-                <div class="flex_col-desk--1-3 slider__main-block__img">
-                    <img src="/wp-content/themes/cp/images/person.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="about-slider__main-block">
-                <div class="flex_col-desk--2-3 slider__main-block__text">
-                    <h2>
-                        Печений Олег Петрович 
-                    </h2>
-                    <span>
-                        Куратор досліджень
-                    </span>
-                    <p>
-                        Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения
-                    </p>
-                </div>
-                <div class="flex_col-desk--1-3 slider__main-block__img">
-                    <img src="/wp-content/themes/cp/images/person.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="about-slider__main-block">
-                <div class="flex_col-desk--2-3 slider__main-block__text">
-                    <h2>
-                        Печений Олег Петрович 
-                    </h2>
-                    <span>
-                        Куратор досліджень
-                    </span>
-                    <p>
-                        Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения
-                    </p>
-                </div>
-                <div class="flex_col-desk--1-3 slider__main-block__img">
-                    <img src="/wp-content/themes/cp/images/person.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="about-slider__main-block">
-                <div class="flex_col-desk--2-3 slider__main-block__text">
-                    <h2>
-                        Печений Олег Петрович 
-                    </h2>
-                    <span>
-                        Куратор досліджень
-                    </span>
-                    <p>
-                        Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения
-                    </p>
-                </div>
-                <div class="flex_col-desk--1-3 slider__main-block__img">
-                    <img src="/wp-content/themes/cp/images/person.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="about-slider__main-block">
-                <div class="flex_col-desk--2-3 slider__main-block__text">
-                    <h2>
-                        Печений Олег Петрович 
-                    </h2>
-                    <span>
-                        Куратор досліджень
-                    </span>
-                    <p>
-                        Рамки и место обучения кадров представляет собой интересный эксперимент проверки направлений прогрессивного развития. Товарищи! консультация с широким активом позволяет оценить значение модели развития. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения
-                    </p>
-                </div>
-                <div class="flex_col-desk--1-3 slider__main-block__img">
-                    <img src="/wp-content/themes/cp/images/person.jpg" alt="">
-                </div>
-            </div>
-        </div>
+        <?php
+            $params = array(
+                'post_type' => 'about',
+                'posts_per_page' => 1,
+            );
+            $query = new WP_Query( $params );
+            ?>
+            <?php if($query->have_posts()): ?>
+                <?php while ($query->have_posts()): $query->the_post() ?>
+                    <?php while ( have_rows('employees') ) : the_row(); ?>
+                        <?php $foto_employees = get_sub_field('foto_employees')['url'];
+                            $name_employees = get_sub_field('name_employees');
+                            $dolgnost_employees = get_sub_field('dolgnost_employees');
+                            $desc_employees = get_sub_field('desc_employees');
+                        ?>    
+
+                        <div>
+                            <div class="about-slider__main-block">
+                                <div class="flex_col-desk--2-3 slider__main-block__text">
+                                    <h2><?php echo $name_employees;?></h2>
+                                    <span><?php echo $dolgnost_employees;?></span>
+                                    <p><?php echo $desc_employees;?></p>
+                                </div>
+                                <div class="flex_col-desk--1-3 slider__main-block__img">
+                                    <img src="<?php echo $foto_employees;?>" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php endwhile; ?>       
+                <?php endwhile; ?>
+            <?php endif; 
+        ?>
     </div>
     <div class="slider-nav-about__container">
         <div class="slider-nav-about__container-blocks">
             <div class="slider slider-nav-about">
-                <div>
-                    <div class="slider-nav-about-block">
-                        <img src="/wp-content/themes/cp/images/slider-for-about-img.jpg" alt="">
-                        <h4>
-                            Спасибо-Фатєєва
-                            Інна Валентинівна
-                        </h4>
-                        <span>
-                            Куратор досліджень
-                        </span>
-                    </div>
-                </div>
-                <div>
-                    <div class="slider-nav-about-block">
-                        <img src="/wp-content/themes/cp/images/slider-for-about-img.jpg" alt="">
-                        <h4>
-                            Спасибо-Фатєєва
-                            Інна Валентинівна
-                        </h4>
-                        <span>
-                            Куратор досліджень
-                        </span>
-                    </div>
-                </div>
-                <div>
-                    <div class="slider-nav-about-block">
-                        <img src="/wp-content/themes/cp/images/slider-for-about-img.jpg" alt="">
-                        <h4>
-                            Спасибо-Фатєєва
-                            Інна Валентинівна
-                        </h4>
-                        <span>
-                            Куратор досліджень
-                        </span>
-                    </div>
-                </div>
-                <div>
-                    <div class="slider-nav-about-block">
-                        <img src="/wp-content/themes/cp/images/slider-for-about-img.jpg" alt="">
-                        <h4>
-                            Спасибо-Фатєєва
-                            Інна Валентинівна
-                        </h4>
-                        <span>
-                            Куратор досліджень
-                        </span>
-                    </div>
-                </div>
-                <div>
-                    <div class="slider-nav-about-block">
-                        <img src="/wp-content/themes/cp/images/slider-for-about-img.jpg" alt="">
-                        <h4>
-                            Спасибо-Фатєєва
-                            Інна Валентинівна
-                        </h4>
-                        <span>
-                            Куратор досліджень
-                        </span>
-                    </div>
-                </div>
-                <div>
-                    <div class="slider-nav-about-block">
-                        <img src="/wp-content/themes/cp/images/slider-for-about-img.jpg" alt="">
-                        <h4>
-                            Спасибо-Фатєєва
-                            Інна Валентинівна
-                        </h4>
-                        <span>
-                            Куратор досліджень
-                        </span>
-                    </div>
-                </div>
-                <div>
-                    <div class="slider-nav-about-block">
-                        <img src="/wp-content/themes/cp/images/slider-for-about-img.jpg" alt="">
-                        <h4>
-                            Спасибо-Фатєєва
-                            Інна Валентинівна
-                        </h4>
-                        <span>
-                            Куратор досліджень
-                        </span>
-                    </div>
-                </div>
-                <div>
-                    <div class="slider-nav-about-block">
-                        <img src="/wp-content/themes/cp/images/slider-for-about-img.jpg" alt="">
-                        <h4>
-                            Спасибо-Фатєєва
-                            Інна Валентинівна
-                        </h4>
-                        <span>
-                            Куратор досліджень
-                        </span>
-                    </div>
-                </div>
-                <div>
-                    <div class="slider-nav-about-block">
-                        <img src="/wp-content/themes/cp/images/slider-for-about-img.jpg" alt="">
-                        <h4>
-                            Спасибо-Фатєєва
-                            Інна Валентинівна
-                        </h4>
-                        <span>
-                            Куратор досліджень
-                        </span>
-                    </div>
-                </div>
-                <div>
-                    <div class="slider-nav-about-block">
-                        <img src="/wp-content/themes/cp/images/slider-for-about-img.jpg" alt="">
-                        <h4>
-                            Спасибо-Фатєєва
-                            Інна Валентинівна
-                        </h4>
-                        <span>
-                            Куратор досліджень
-                        </span>
-                    </div>
-                </div>
+
+                <?php
+                    $params = array(
+                        'post_type' => 'about',
+                        'posts_per_page' => 1,
+                    );
+                    $query = new WP_Query( $params );
+                    ?>
+                    <?php if($query->have_posts()): ?>
+                        <?php while ($query->have_posts()): $query->the_post() ?>
+                            <?php while ( have_rows('employees') ) : the_row(); ?>
+                                <?php $foto_employees = get_sub_field('foto_employees')['url'];
+                                    $name_employees = get_sub_field('name_employees');
+                                    $dolgnost_employees = get_sub_field('dolgnost_employees');
+                                ?>    
+
+                                <div>
+                                    <div class="slider-nav-about-block">
+                                        <img src="<?php echo $foto_employees;?>" alt="">
+                                        <h4><?php echo $name_employees;?></h4>
+                                        <span><?php echo $dolgnost_employees;?></span>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>       
+                        <?php endwhile; ?>
+                    <?php endif; 
+                ?>
             </div>
         </div>
     </div>
 </section>
-
-
-
 
 <?php get_footer(); ?>

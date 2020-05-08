@@ -151,6 +151,36 @@ register_post_type('settings', array(
 
 
 
+  register_post_type('about', array(
+    'labels'             => array(
+      'name'               => 'О нас',
+      'singular_name'      => 'О нас',
+      'add_new'            => 'Добавить настройку',
+      'add_new_item'       => 'Добавить новую настройку',
+      'edit_item'          => 'Редактировать настройку',
+      'new_item'           => 'Новая настройку',
+      'view_item'          => 'Посмотреть настройку',
+      'search_items'       => 'Найти настройку',
+      'not_found'          => 'Не найдено',
+      'not_found_in_trash' => 'В корзине ничего не найдено',
+      'parent_item_colon'  => '',
+      'menu_name'          => 'О нас'
+      ),
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => true,
+    'capability_type'    => 'post',
+    'has_archive'        => false,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
+  ));
+
+
+
 pll_register_string('Обратная связь', 'callback');
 pll_register_string('Просмотров', 'views');
 pll_register_string('Копирайтинг', 'copyright');
@@ -182,6 +212,11 @@ pll_register_string('Ничего не найдено', 'noSearch');
 pll_register_string('Извините, но ничего не соответствует вашим критериям поиска.', 'noSearchText');
 pll_register_string('Мы всегда рады видеть и слышать своих единомышленников', 'contactText');
 pll_register_string('Назад', 'back');
+pll_register_string('Наша миссия', 'mission');
+pll_register_string('Своєю діяльністю ми прагнемо довести, що:', 'diyalnist');
+pll_register_string('Страница не найдена', 'errorTitile');
+pll_register_string('Вернуться на главную', 'returnGeneral');
+pll_register_string('Страница, на которую вы пытаетесь перейти временно не доступна', 'errorText');
 
 
 
@@ -298,18 +333,6 @@ function posts_custom_column_views($column_name, $id){
         echo getPostViews(get_the_ID());
     }
 }
-
-
-add_action('wp_head', 'show_template'); // перед шапкой
-// add_action('wp_footer', 'show_template'); // в подвале
-function show_template(){
-  global $template;
-  echo $template;
-}
-
-
-
-
 
 // Хлебные крошки
 
@@ -508,7 +531,7 @@ function dimox_breadcrumbs() {
 function load_posts () {
     $args = unserialize( stripslashes( $_POST['query'] ) );
 	$args['paged'] = $_POST['page'] + 2; // следующая страница 
-	$args['posts_per_page'] = 3; // по сколько записей подгружать
+	$args['posts_per_page'] = 6; // по сколько записей подгружать
 	
     query_posts( $args );
     if ( have_posts() ) {
