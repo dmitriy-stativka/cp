@@ -20,9 +20,9 @@
 
 <section class="main-content-article">
     <div class="main-content-article__container">      
-        <div class="flex_col-desk--1-4">
-        </div>
-        <div class="flex_col-desk--3-4 content-article__block-top">
+        <!-- <div class="flex_col-desk--1-4">
+        </div> -->
+        <div class="content-article__block-top">
             <div class="slider-nav__block-top blue">
                 <?php
                 $categories = get_the_category();
@@ -64,29 +64,31 @@
     </div>
     <div class="main-content-article__container">
         <div class="content-article__main-block">
-            <?php while ( have_rows('author') ) : the_row(); ?>
-                <?php $author_image = get_sub_field('author_image')["url"];
-                      $author_name = get_sub_field('author_name');
+            <div class="flex_col-desk--1-4 article__main-block__left">
+                <?php while ( have_rows('author') ) : the_row(); ?>
+                    <?php $author_image = get_sub_field('author_image')["url"];
+                        $author_name = get_sub_field('author_name');
+                            
+                        if($author_name){ ?>
                         
-                      if($author_name){ ?>
-                        <div class="flex_col-desk--1-4 article__main-block__left">
-                            <div class="author-block">
-                  
-                                <div class="user-img">
-                                    <img class="" src="<?php echo $author_image;?>" alt="">
-                                </div>
-                                <h4><?php echo $author_name;?></h4>
-                                <span class="position"><?php pll_e('author'); ?></span>
-                                <span><?php pll_e('shareItem'); ?></span>
-                                <?php echo do_shortcode('[addtoany]');?>  
-
-                            </div>
-
-                        </div>
-
-                      <?php }
+                                <div class="author-block">
                     
-                    endwhile; ?>     
+                                    <div class="user-img">
+                                        <img class="" src="<?php echo $author_image;?>" alt="">
+                                    </div>
+                                    <h4><?php echo $author_name;?></h4>
+                                    <span class="position"><?php pll_e('author'); ?></span>
+                                    <span><?php pll_e('shareItem'); ?></span>
+                                    <?php echo do_shortcode('[addtoany]');?>  
+
+                                </div>
+
+                          
+
+                    <?php }
+                    
+                endwhile; ?>     
+            </div>
                     <!-- 
                     <div class="author-block__contacts-links">
                         <a href="">

@@ -84,14 +84,7 @@
                 font-family: "Montserrat", sans-serif;             
                 position: relative;
                 margin-bottom: 20px;
-                text-align: center;
-
-                // &:first-child{
-                //     margin-left: 0;
-                //     &:before{
-                //         display: none;
-                //     }
-                // }
+                text-align: center;         
 
                 &:after{
                     content: "";
@@ -117,12 +110,8 @@
             }
             @media (min-width: $desktop) {
                 flex-direction: row;
-                padding-top: 0;
-             }
-
-            // @media (min-width: $desktop) {
-            //    padding-top: 0;
-            // }
+                padding-top: 50px;
+            }      
         }
         .page-title{
             font-size: 40px;
@@ -224,13 +213,14 @@
                 flex-direction: column;
 
                 .mission-block{
-                    margin-bottom: 70px;
+                    margin-bottom: 70px;                   
 
                     img{
                         max-height: 200px;
                         height: 100%;
                         width: 100%;
-                        object-fit: cover;
+                        max-width: 200px;  
+                        margin: 0 auto;                      
                     }
 
                     h4{
@@ -283,6 +273,21 @@
 
             .about-content__list-text{
 
+                strong{
+                    color: #232323;
+                    font-size: 34px;
+                    font-weight: 700;
+                    font-family: "Montserrat", sans-serif;
+                    padding-left: 0;
+                    margin-bottom: 40px;
+                    text-align: center;
+                    line-height: 40px;
+
+                    @media (min-width: $desktop) {
+                        text-align: initial;
+                    }
+                }
+
                 ul{
 
                     li{
@@ -306,41 +311,10 @@
                             position: absolute;
                             top: 10px;
                             left: 2px;
-                        }
-
-                        &:first-child{
-                            color: #232323;
-                            font-size: 34px;
-                            font-weight: 700;
-                            font-family: "Montserrat", sans-serif;
-                            padding-left: 0;
-                            margin-bottom: 40px;
-                            text-align: center;
-                            line-height: 40px;
-
-                            &:before{
-                                display: none;
-                            }
-
-                            @media (min-width: $desktop) {
-                                text-align: initial;
-                            }
-                        }
+                        }       
 
                         span{
                             font-weight: bold;
-                        }
-                    }
-
-                    &:last-child{
-
-                        li{
-                            &:nth-child(2) {
-                                padding-left: 0;
-                                &:before{
-                                    display: none;
-                                }
-                            }
                         }
                     }
                 }

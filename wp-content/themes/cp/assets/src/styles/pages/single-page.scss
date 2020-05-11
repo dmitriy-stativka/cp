@@ -31,10 +31,21 @@
             a{
                 color: #000000;
                 opacity: 0.6;
+                width: initial;
     
                 &:after{
                     background: #000;
                     opacity: 0.6;
+                }
+            }
+
+            .current{
+                text-align: center;
+                width: auto;
+                text-align: center;
+
+                @media (min-width: $desktop) {
+                    text-align: initial;
                 }
             }
         }
@@ -42,9 +53,20 @@
 }
 
 .main-content-article-nav__container{
-    max-width: 930px;
+    // max-width: 930px;
     width: 100%;
+    display: flex;    
     margin: 0 auto;
+    padding: 0 100px;
+
+    .flex_col-desk--1-4{
+        max-width: 200px;
+        display: none;
+
+        @media (min-width: $desktop) {
+            display: block;
+        }
+    }
 
     @media(min-width: 1024px) and (max-width: 1280px) {
         padding-top: 50px;
@@ -185,7 +207,8 @@
                         font-size: 15px;
                         font-weight: 700;
                         font-family: 'Merriweather Sans', sans-serif;
-                        letter-spacing: 0.38px;                        
+                        letter-spacing: 0.38px;   
+                        margin-bottom: 15px;                     
                     }
 
                     .position{

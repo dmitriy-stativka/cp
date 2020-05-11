@@ -7,9 +7,7 @@ Template Name: menu-section
 <section class="page-top page-menu">   
     <div class="page__container page__container-menu">
         <a class="back" href="<?php echo esc_url( home_url( '/' ) ); ?>"> <span class="left-arrow"></span> <?php pll_e('back'); ?></a>
-        <div class="top-nav__links page-menu__links">
-          <?php include('templates/breadcrumbs.php');?>
-        </div>
+          <?php include('templates/breadcrumbs.php');?>       
         <h1 class="page-title page-menu__title"><?php single_cat_title(); ?></h1>
     </div>
 </section>
@@ -25,7 +23,7 @@ Template Name: menu-section
               echo '<ul class="page-menu__content-links">';
               foreach ($childcats as $childcat) {
                 if (cat_is_ancestor_of($ancestor, $childcat->cat_ID) == false){
-                  echo '<li><svg class="icon"><use xlink:href="#line" /></svg><a href='.get_category_link($childcat->cat_ID).'>'.$childcat->cat_name . '</a></li>'; 
+                  echo '<li><a href='.get_category_link($childcat->cat_ID).'>'.$childcat->cat_name . '</a></li>'; 
                   $mycat=get_the_category(); $mycat=$mycat[0];  
                   $postslist = get_posts('posts_per_page=-1&category='.$childcat->cat_ID);
                   $ancestor = $childcat->cat_ID; 

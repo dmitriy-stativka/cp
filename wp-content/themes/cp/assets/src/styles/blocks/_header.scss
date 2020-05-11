@@ -9,7 +9,7 @@
   height: 100%;
   align-items: center;
   visibility: visible;
-  padding-left: 10px;
+  padding: 0 25px;
   opacity: 1;
   background: rgba(30, 30, 30, 0.98);
   transition: background 0.3s ease, visibility 0.3s ease,opacity 0.3s ease;
@@ -68,7 +68,6 @@
   .header_nav-tools {
     display: flex;
     justify-content: center;
-    padding-right: 5px;
 
     .nav-tools__search {
       display: flex;
@@ -241,10 +240,7 @@
           margin-bottom: -5px;
         }
       }    
-    }
-    @media(min-width:1440px) {      
-     padding-right: 40px;
-    }
+    }   
   }
   &.transparent-header {
     background: transparent;

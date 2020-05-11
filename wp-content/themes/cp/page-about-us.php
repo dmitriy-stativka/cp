@@ -8,10 +8,8 @@ Template Name: About-us
 
 <section class="page-top page-about">   
     <div class="page__container">
-        <a class="back" href="<?php echo esc_url( home_url( '/' ) ); ?>"> <span class="left-arrow"></span> <?php pll_e('back'); ?></a>
-        <div class="page__about-links top-nav__links">
+        <a class="back" href="<?php echo esc_url( home_url( '/' ) ); ?>"> <span class="left-arrow"></span> <?php pll_e('back'); ?></a>  
             <?php include('templates/breadcrumbs.php');?>
-        </div>
         <h1 class="page-title page-about__title"><?php the_title();?></h1>
     </div>
 </section>

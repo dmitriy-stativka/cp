@@ -16,7 +16,7 @@
 		<div class="error-page__link">
 			<span><?php pll_e('errorTitile'); ?></span>
 			<p><?php pll_e('errorText'); ?></p>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">Вернуться на главную  <?php pll_e('returnGeneral'); ?></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"> <?php pll_e('returnGeneral'); ?></a>
 		</div>
 	</div>
 

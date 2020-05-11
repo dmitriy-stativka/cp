@@ -7,9 +7,9 @@ Template Name: page-contacts
 <section class="page-top page-contacts">   
     <div class="page__container">
         <a class="back" href="<?php echo esc_url( home_url( '/' ) ); ?>"> <span class="left-arrow"></span> <?php pll_e('back'); ?></a>
-        <div class="top-nav__links page-contacts__links">
+        <!-- <div class="top-nav__links page-contacts__links"> -->
             <?php include('templates/breadcrumbs.php');?>
-        </div>
+        <!-- </div> -->
         <h1 class="page-title page-contacts__title"><?php the_title();?></h1>
     </div>
 </section>

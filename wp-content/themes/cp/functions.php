@@ -348,7 +348,7 @@ function dimox_breadcrumbs() {
 	$text['page'] = 'Страница %s'; // текст 'Страница N'
 	$text['cpage'] = 'Страница комментариев %s'; // текст 'Страница комментариев N'
   
-	$wrap_before = '<div class="page-single__links top-nav__links" itemscope>'; // открывающий тег обертки
+	$wrap_before = '<div class="top-nav__links page-single__links" itemscope>'; // открывающий тег обертки
 	$wrap_after = '</div><!-- .breadcrumbs -->'; // закрывающий тег обертки
 	$sep = ''; // разделитель между "крошками"
 	$sep_before = ''; // тег перед разделителем
