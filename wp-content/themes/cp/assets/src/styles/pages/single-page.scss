@@ -32,7 +32,7 @@
                 color: #000000;
                 opacity: 0.6;
     
-                &:before{
+                &:after{
                     background: #000;
                     opacity: 0.6;
                 }
@@ -149,8 +149,11 @@
                 flex-direction: column;
                 justify-content: space-between;
                 max-width: 100%;
+                position: relative;
 
                 .author-block{
+                    position: sticky;
+                    top: 110px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -173,6 +176,7 @@
                         font-family: "Montserrat", sans-serif;  
                         font-size: 20px;
                         font-weight: 700;
+                        text-align: center;
                     }
 
                     span{

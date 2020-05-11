@@ -3,11 +3,16 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    overflow: hidden;
     min-height: 100vh;
     min-width: 320px;
 }
 
+.current{
+    font-weight: 400;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;    
+    color: #efc066;
+}
 
 .page-top{
     margin-top: 100px;
@@ -73,8 +78,7 @@
             padding-top: 50px;
             flex-wrap: wrap;
 
-            a{
-                font-size: 14px;
+            a{               
                 font-weight: 400;
                 font-size: 14px;
                 font-family: "Montserrat", sans-serif;             
@@ -82,14 +86,14 @@
                 margin-bottom: 20px;
                 text-align: center;
 
-                &:first-child{
-                    margin-left: 0;
-                    &:before{
-                        display: none;
-                    }
-                }
+                // &:first-child{
+                //     margin-left: 0;
+                //     &:before{
+                //         display: none;
+                //     }
+                // }
 
-                &:before{
+                &:after{
                     content: "";
                     height: 1px;
                     width: 20px;
@@ -98,7 +102,7 @@
                     transform: rotate(-50deg);
                     position: absolute;
                     top: 8px;
-                    left: -30px;
+                    right: -30px;
 
                     @media (min-width: $desktop) {
                         display: block;
@@ -106,7 +110,7 @@
                 }   
 
                 @media (min-width: $desktop) {
-                   margin-left: 40px;
+                   margin-right: 40px;
                    margin-bottom: 0;
                    text-align: initial;
                 }
@@ -131,7 +135,7 @@
 }
 
 .about-content{
-    margin: 40px 0;
+
     .about-content__container{
         padding: 0px 20px;
         display: flex;
@@ -221,6 +225,13 @@
 
                 .mission-block{
                     margin-bottom: 70px;
+
+                    img{
+                        max-height: 200px;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
 
                     h4{
                         color: #232323;
@@ -424,7 +435,11 @@
             }
     
             .slider__main-block__img{
-    
+                 img{
+                     min-height: 400px;
+                     max-height: 400px;
+                     object-fit: cover;
+                 }
             }       
             
             @media (min-width: $desktop) {

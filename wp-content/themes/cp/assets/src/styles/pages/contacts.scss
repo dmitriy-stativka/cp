@@ -87,11 +87,12 @@
         flex-direction: column;
 
        .form-block{
+           padding-top: 20px;
 
             input{
                 border: 2px solid #d6d8da;
                 padding: 0px 15px;
-                margin: 15px 0;
+                margin: 15px 0 0 0;
 
                 &[type="text"]{                
                 width: 85%;
@@ -112,17 +113,16 @@
                 }
 
                 &:first-child{
-                  border-radius: 25px;
-                  margin-bottom: 20px;                  
+                  border-radius: 25px;                                   
                 }
 
                 &:focus{
                     border: #2863a7 2px solid;
                 }
 
-                @media (min-width:$desktop) {
-                    margin: 0;
-                }
+                // @media (min-width:$desktop) {
+                //     margin: 0;
+                // }
             }
 
             &:first-child{
@@ -140,11 +140,11 @@
 
             &:nth-child(2) {
                 display: flex;
-                justify-content: center;
+                justify-content: center;                
 
-                textarea{                
+                .textarea{                
                     height: 100%;
-                    min-height: 150px;              
+                    min-height: 110px;              
                     max-width: 85%;
                     padding: 15px;
                     width: 100%;
@@ -176,7 +176,7 @@
                 justify-content: center;
                 margin-top: 40px;
 
-                button{
+                input{
                     max-width: 420px;
                     width: 100%;
                     background-color: #2863a7;
