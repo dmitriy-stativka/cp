@@ -132,7 +132,9 @@
 
         .about-content__logo{
             img{
-                margin: 0 auto;
+                margin: 0 auto;               
+                max-height: 250px;
+                padding: 40px 0
             }
         }
 
