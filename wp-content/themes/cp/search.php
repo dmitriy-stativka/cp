@@ -8,10 +8,7 @@ Template Name: page-search
 <section class="page-top page-menu-search">   
     <div class="page__container">
         <a class="back" href="<?php echo esc_url( home_url( '/' ) ); ?>"> <span class="left-arrow"></span><?php pll_e('back'); ?></a>
-        <div class="top-nav__links page-menu-sub__links">
             <?php include('templates/breadcrumbs.php');?>
-
-        </div>
         <h1 class="page-title page-menu-sub__title"> <?php pll_e('resultSearch'); ?></h1>
     </div>
 </section>

@@ -216,9 +216,13 @@
           display: flex;
           justify-content: center;
 
-          img{
-            height: 70px;
-            width: 120px;
+          img{  
+            width: auto;
+            height: auto;
+            
+            @media (min-width: $tablet) {
+              max-width: 60%;              
+            }
 
             @media(min-width: $desktop) {
               height: auto;

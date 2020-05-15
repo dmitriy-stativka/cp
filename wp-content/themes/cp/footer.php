@@ -337,6 +337,17 @@
 <script>
   $('.slider-nav .slider-nav__block:first-child').addClass('active-block');
   $('.slider-for .slider-for__container:first-child').addClass('content-active');
+
+  $(".hidden-block__open").on("click", function () {
+    $(".text-block__half-hidden").toggleClass("text-block__half-hidden__open");
+
+    if ($(".text-block__half-hidden").hasClass("text-block__half-hidden__open")) {
+      $(".hidden-block__open").html("<?php pll_e('cancelMore'); ?>");
+    } else {
+      $(".hidden-block__open").html("<?php pll_e('seeMore'); ?>");
+    }
+  });
+
 </script>
 
 </body>

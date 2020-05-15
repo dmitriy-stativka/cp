@@ -138,15 +138,18 @@ Template Name: Front-page
                         wp_reset_postdata();
                       ?>
                       <div class="nav-bar__mobile">
-                            <div class="nav-bar__prev"></div>
-                            <div class="dots-mobile">
+                          <div class="nav-bar__prev">
+                            <span></span>
+                          </div>
+                          <div class="dots-mobile">
                               <div class="dot dot-active"></div>
                               <div class="dot"></div>
                               <div class="dot"></div>
                               <div class="dot"></div>
-                            </div>                        
-                            <div class="nav-bar__next"></div>
-                        <!-- </div>           -->
+                          </div>                        
+                          <div class="nav-bar__next">
+                            <span></span>
+                          </div>
                       </div>
                   </div>
               </div>
