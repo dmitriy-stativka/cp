@@ -168,10 +168,18 @@
     max-width: 1160px;
     width: 100%; 
     // height: fit-content;
-    display: flex;   
-    flex-direction: column;
-    // align-items: center;
+    display: block;   
+    // flex-direction: column;
+    align-items: center;
     justify-content: space-between;
+
+
+  @media (min-width: $desktop) {
+
+    display: flex;   
+
+
+  }
    
 
     .burger-menu__lists {
@@ -179,6 +187,7 @@
       flex-wrap: wrap;
       max-width: 870px;      
       height: fit-content;
+      margin: 0 auto;
 
       .burger-menu__lists-item {       
         display: flex;
@@ -280,9 +289,23 @@
         display: flex;
         flex-direction: column;
         // max-height: 100px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        // border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         text-align: center;
         margin-bottom: 30px;
+        position: relative;
+
+        &:after{
+          content: '';
+          max-width: 250px;
+          position: absolute;
+          background: rgba(255, 255, 255, 0.2);
+          height: 1px;
+          bottom: -10px;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+
         li {
           margin: 10px 0;
           color: #ffffff;
@@ -355,10 +378,8 @@
           &.lang {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
             max-height: 20px;
-            max-width: 150px;
-            margin: 20px 20px;
+            margin: 20px 0px;
             li {
               font-family: "Montserrat", sans-serif;
               font-size: 16px;
