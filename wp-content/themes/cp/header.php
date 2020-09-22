@@ -33,7 +33,31 @@ section and everything up until
       <div class="wrapper">
         <header class="header">
           <div class="header_logo">
-            <?php the_custom_logo();?>
+            <?php
+                if(pll_current_language() == 'ru'){
+                    $post_id = '147';
+                }elseif(pll_current_language() == 'uk'){
+                    $post_id = '47';
+                }elseif(pll_current_language() == 'en'){
+                    $post_id = '74';
+                }
+            ?>
+
+          <a href="<?php echo get_page_link($post_id); ?>">
+              <?php 
+                $logo_img = '';
+                if( $custom_logo_id = get_theme_mod('custom_logo') ){
+                  $logo_img = wp_get_attachment_image( $custom_logo_id, 'full', false, array(
+                    'class'    => 'custom-logo',
+                    'itemprop' => 'logo',
+                  ) );
+                }
+                
+                echo $logo_img;
+              ?>
+          </a>
+
+            
           </div>
             <?php
               $args = array(

@@ -6,7 +6,7 @@
   position: relative;
   z-index: 100;
   background-color: white;
-  padding: 40px 20px;
+  padding: 0px 20px;
 
   @media (max-width: 600px) {
     width: 90%;
@@ -112,11 +112,17 @@
 
   h1 {
     font-family: "Montserrat", sans-serif;
-    font-size: 26px;
+    font-size: 20px;
     color: #232323;
     max-width: 75%;
     margin: auto;
     margin-bottom: 30px;
+    margin-top: 30px;
+
+    @media (min-width:$tablet) {
+      font-size: 26px;
+      margin-top: 0;
+    }
   }
 
 
@@ -124,6 +130,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
 
     // input {
     //   margin: 10px auto;
@@ -141,8 +149,8 @@
     // }
     #textArea-connect {
       margin: 20px auto;
-      height: 120px;
-      min-height: 120px;
+      height: 80px;
+      min-height: 80px;
       max-width: 420px;
       padding: 15px;
       width: 100%;
@@ -153,6 +161,11 @@
       font-family: "Montserrat", sans-serif;
       font-weight: 500;
       font-size: 15px;
+
+      @media (min-width:$tablet) {
+        min-height: 120px;
+        height: 120px;
+      }
     }
     button {
       margin: 10px auto;
@@ -178,6 +191,9 @@
       }
     }
   }
+  @media (min-width:$tablet) {
+    padding: 40px 20px;
+  }
 }
 
 .footer{
@@ -200,9 +216,13 @@
           display: flex;
           justify-content: center;
 
-          img{
-            height: 70px;
-            width: 120px;
+          img{  
+            width: auto;
+            height: auto;
+            
+            @media (min-width: $tablet) {
+              max-width: 60%;              
+            }
 
             @media(min-width: $desktop) {
               height: auto;
@@ -227,7 +247,7 @@
           li{
             color: #ffffff;
             opacity: 0.6;
-            font-size: 16px;
+            font-size: 11px;
             font-weight: 500;
             margin-bottom: 15px;
 
@@ -235,14 +255,22 @@
               font-weight: 500;
               opacity: 1;
               font-family: "Montserrat", sans-serif;
-              font-size: 16px;
+              font-size: 13px;
               margin-bottom: 30px;
               transition: opacity 0.3s ease;
+
+              @media (min-width:$desktop) and (max-width:1440px) {
+                text-align: center;
+              }
             }    
             
             &:hover{
               opacity: 1;
               transition: opacity 0.3s ease;
+            }
+
+            @media (min-width:$desktop) and (max-width:1440px) {
+              text-align: center;
             }
           }
         }
@@ -287,8 +315,12 @@
           font-weight: 500;
           letter-spacing: 0.24px;
           font-family: "Montserrat", sans-serif;
-          font-size: 16px;
+          font-size: 13px;
           display: none;
+
+          @media (min-width:$desktop) and (max-width:1440px) {
+            text-align: center;
+          }
 
           @media(min-width: $desktop) {
             display: block;            
@@ -312,7 +344,7 @@
           margin: 30px auto;
 
           @media(min-width: $desktop) {  
-            margin: 0;
+            margin: 20px 0 0 0;
             justify-content: flex-start;
           }
         }

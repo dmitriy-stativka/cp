@@ -1,0 +1,44 @@
+.page-menu-search{
+    background: url(/wp-content/themes/cp/images/top-contacts-bg.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.page-search__main{
+    padding: 40px;
+
+    .search-top{
+        max-width: 60%;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        span{
+            font-size: 16px;
+            opacity: 0.8;
+            font-family: "Montserrat", sans-serif;    
+            text-align: center;
+        }
+
+        .search-block-line{
+
+            form{
+                position: relative;
+
+                input[type="submit"] {
+                    display: none;
+                  }
+
+                button{
+                    position: absolute;
+                    bottom: 18px;
+                    right: 0;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

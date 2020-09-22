@@ -83,8 +83,8 @@ input {
 
   &[type="text"] {
     margin: 10px auto;
-    height: 50px;
-    max-width: 420px;
+    height: 35px;
+    // max-width: 420px;
     width: 100%;
     border-radius: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -94,12 +94,15 @@ input {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 15px;
+
+    @media (min-width:$tablet) {
+      height: 50px;
+    }
   }
 
   &[type="email"] {
     margin: 10px auto;
-    height: 50px;
-    max-width: 420px;
+    height: 35px;   
     width: 100%;
     border-radius: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -109,6 +112,10 @@ input {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 15px;
+
+    @media (min-width:$tablet) {
+      height: 50px;
+    }
   }
 
   &:visited,
@@ -126,4 +133,19 @@ input {
 .icon {
   width: 1.5em;
   height: 1.5em;
+}
+
+
+
+.mini_desc{
+  max-height: 90px;
+  overflow: hidden;
+  color: #000;
+  line-height: 22px;
+}
+
+.page-news__content-blocks-items{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 40px 0;
 }

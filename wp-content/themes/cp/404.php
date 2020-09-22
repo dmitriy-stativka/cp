@@ -14,9 +14,9 @@
 			<span>404</span>	
 		</div>
 		<div class="error-page__link">
-			<span>Страница не найдена</span>
-			<p>Старница, на которую вы пытаетесь перейти временно не доступна.  Попробуйте перезагрузить страницу, или вернитесь на главную</p>
-			<a href="#">Вернуться на главную</a>
+			<span><?php pll_e('errorTitile'); ?></span>
+			<p><?php pll_e('errorText'); ?></p>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"> <?php pll_e('returnGeneral'); ?></a>
 		</div>
 	</div>
 

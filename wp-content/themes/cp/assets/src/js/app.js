@@ -11,6 +11,8 @@ $(document).ready(function () {
       }
     }
   });
+
+
   $(".nav-tools__search").on("click", function () {
     $(".nav-tools__search-block_click").toggleClass("nav-tools__search-block_click-show");
     $(".nav-tools__search").toggleClass("nav-tools-close"); // $('.header').toggleClass('header-onclick-search_and_burg');
@@ -32,13 +34,6 @@ $(document).ready(function () {
   var p = $(".popup__overlay");
   $(".popup__toggle").click(function () {
     p.addClass("popup_open");
-  });
-  p.click(function (event) {
-    e = event || window.event;
-
-    if (e.target == this) {
-      $(p).removeClass("popup_open");
-    }
   });
   $(".popup__close").click(function () {
     p.removeClass("popup_open");
@@ -78,9 +73,9 @@ $(document).ready(function () {
         $(".header").addClass("transparent-header");
       }
     });
-  } // Top-site slider functions 
-
-
+  } 
+  
+  // Top-site slider functions 
   var sliderNavBlock = $(".slider-nav__block");
   var dot = $(".dot");
   var leftArrow = $(".nav-bar__prev");
@@ -91,6 +86,7 @@ $(document).ready(function () {
     $('.slider-nav__block').removeClass('active-block');
     $(this).addClass('active-block');
   }); // End of Desktop slider
+
   // Mobile slider
 
   dot.click(function () {
@@ -148,19 +144,11 @@ $(document).ready(function () {
     $(".dot").eq($(".dot-active").index() - 1).css({
       "background": "#9d9d9d"
     });
-  }); // End of mobile slider
-  // End of top-site slider functions
-
-  $(".hidden-block__open").on("click", function () {
-    $(".text-block__half-hidden").toggleClass("text-block__half-hidden__open");
-
-    if ($(".text-block__half-hidden").hasClass("text-block__half-hidden__open")) {
-      $(".hidden-block__open").html("Свернуть");
-    } else {
-      $(".hidden-block__open").html("Развернуть");
-    }
   });
 
+  // End of mobile slider
+  // End of top-site slider functions
+  
 
   $('.slider-single').slick({
     slidesToShow: 1,
@@ -181,8 +169,8 @@ $(document).ready(function () {
       $('.slider-nav-about .slick-slide.slick-current').addClass('is-active');
     })
     .slick({
-      slidesToShow: 7,
-      slidesToScroll: 7,
+      slidesToShow: 5,
+      slidesToScroll: 5,
       dots: false,
       arrows: false,
       focusOnSelect: false,
@@ -226,3 +214,5 @@ $(document).ready(function () {
 
 
 });
+
+

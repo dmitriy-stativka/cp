@@ -9,6 +9,7 @@
   height: 100%;
   align-items: center;
   visibility: visible;
+  padding: 0 25px;
   opacity: 1;
   background: rgba(30, 30, 30, 0.98);
   transition: background 0.3s ease, visibility 0.3s ease,opacity 0.3s ease;
@@ -17,8 +18,28 @@
     display: flex;
     max-width: 10%;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
     min-width: 65px;
+
+    a{
+      overflow: hidden;
+      width: 60px;
+      display: block;
+
+      @media(min-width: $desktop) {
+        width: initial;
+        overflow: none;
+        display: inline;
+      }
+
+      img{
+        max-width: 170px;
+
+        @media(min-width: $desktop) {
+          max-width: 100%;
+        }
+      }
+    }
   }
 
     .header_nav-bar {
@@ -67,7 +88,6 @@
   .header_nav-tools {
     display: flex;
     justify-content: center;
-    padding-right: 5px;
 
     .nav-tools__search {
       display: flex;
@@ -240,14 +260,14 @@
           margin-bottom: -5px;
         }
       }    
-    }
-    @media(min-width:1440px) {      
-     padding-right: 40px;
-    }
+    }   
   }
-  &.transparent-header {
-    background: transparent;
+  &.transparent-header {  
     transition: background 0.3s ease;
+
+    @media(min-width: $desktop) {
+      background: transparent;
+    }
   }
   &.header-visibility-none{
     visibility:hidden;
